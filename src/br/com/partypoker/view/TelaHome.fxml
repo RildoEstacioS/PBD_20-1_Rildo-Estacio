@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.partypoker.controller.TelaController">
+   <children>
+      <Button fx:id="bttn" layoutX="380.0" layoutY="431.0" mnemonicParsing="false" onAction="#bttnAction" text="Testando" />
+      <Label fx:id="label" layoutX="351.0" layoutY="292.0" text="Funcionando até aqui..." />
+   </children>
+</AnchorPane>
