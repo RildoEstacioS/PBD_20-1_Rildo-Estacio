@@ -8,8 +8,6 @@ public class Jogador {
 	private boolean isAdmin;
 	private boolean isSuperUser;
 	
-	
-	
 	public Jogador(Long id, String nome, String cpf, String telefone, String login, String senha, int pontos,
 			boolean isAdmin, boolean isSuperUser) {
 		super();
@@ -77,7 +75,4 @@ public class Jogador {
 	public void setSuperUser(boolean isSuperUser) {
 		this.isSuperUser = isSuperUser;
 	}
-	
-	
-	
 }
