@@ -2,36 +2,40 @@ package br.com.partypoker;
 
 import java.io.IOException;
 
-import br.com.partypoker.controller.TelaController;
+import br.com.partypoker.controller.InicioController;
 import javafx.fxml.FXMLLoader;
 
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.application.Application;
 
 public class App extends Application{
 	
 	public static Stage telaStage;
-	
+	public static Scene sceneInicio;
+	public static Scene sceneMesa;
+	public static Scene sceneInfoMesa;
+
 	
 	public void start(Stage stage) {
 		try {
-			//Stage é como se fosse o JFrame, Scene é como se fosse o JPanel
-			telaStage = stage;
+			//Stage é como se fosse o JFrame, Scene é como se fosse o JPanel			
 			
+			Parent parentInicio = FXMLLoader.load(getClass().getResource("/br/com/partypoker/view/Inicio.fxml"));
+			sceneInicio = new Scene(parentInicio);
 			
-			Parent parentTelaUm = FXMLLoader.load(getClass().getResource("/br/com/partypoker/view/TelaHome.fxml"));
-			Scene sceneUm = new Scene(parentTelaUm);
+			Parent parentMesa = FXMLLoader.load(getClass().getResource("/br/com/partypoker/view/Mesa.fxml"));
+			sceneMesa = new Scene(parentMesa);
+			
+			Parent parentInfoMesa = FXMLLoader.load(getClass().getResource("/br/com/partypoker/view/InfoMesa.fxml"));
+			sceneInfoMesa = new Scene(parentInfoMesa);
 
-			
-//			Parent parentTelaDois = FXMLLoader.load(getClass().getResource("/br/com/partypoker/view/TelaSegunda.fxml"));			
-//			Scene sceneDois = new Scene(parentTelaDois);
-//			
-			stage.setTitle("Testando");
-			stage.setScene(sceneUm);
+			stage.initStyle(StageStyle.UNDECORATED);
+			stage.setResizable(false);
+			stage.setScene(sceneInfoMesa);
 			stage.show();
-//			new TelaController(sceneUm, sceneDois);
 			
 		} catch (IOException e) {
 			e.printStackTrace();

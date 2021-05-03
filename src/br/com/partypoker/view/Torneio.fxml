@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="608.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="108.0" layoutY="65.0" text="Torneio" AnchorPane.leftAnchor="123.0" AnchorPane.topAnchor="54.0">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="321.0" layoutY="65.0" text="Jogadores" AnchorPane.leftAnchor="360.0" AnchorPane.topAnchor="54.0">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="664.0" layoutY="96.0" text="Participar" AnchorPane.leftAnchor="821.0" AnchorPane.topAnchor="54.0">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="600.0" layoutY="60.0" text="Premiação" AnchorPane.leftAnchor="600.0" AnchorPane.topAnchor="54.0">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <ScrollPane hbarPolicy="NEVER" layoutY="158.0" prefHeight="462.0" prefWidth="1024.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="147.0">
+         <content>
+            <TableView prefHeight="458.0" prefWidth="1025.0">
+              <columns>
+                <TableColumn editable="false" prefWidth="256.0" sortable="false" text="Torneio" />
+                <TableColumn editable="false" prefWidth="256.0" sortable="false" text="Jogadores" />
+                  <TableColumn editable="false" prefWidth="256.0" resizable="false" sortable="false" text="Premiação" />
+                  <TableColumn editable="false" prefWidth="256.0" sortable="false" text="Participar" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

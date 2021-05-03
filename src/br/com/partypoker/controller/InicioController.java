@@ -10,29 +10,20 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
-public class TelaController implements Initializable{
+public class InicioController{
 	@FXML
-	public Scene telaUm;
+	private Label mesa;
 	@FXML
-	public Scene telaDois;
-	
-	public TelaController(Scene telaUm, Scene telaDois) {
-		super();
-		this.telaUm = telaUm;
-		this.telaDois = telaDois;
-	}
-	
-	@FXML
-	private Button bttn;
-	@FXML
-	private Label label;
+	private Label torneio;
 	
 	private int i = 0;
 	
 	@FXML
 	public void bttnAction() {
+		System.out.println("Pegou");
 		
-		App.telaStage.setScene(telaDois);
+		
+//		App.telaStage.setScene(telaDois);
 		
 //		if (i == 0) {
 //			label.setText("O botão funcionou!");
@@ -44,9 +35,4 @@ public class TelaController implements Initializable{
 //		}
 	}
 		
-	@Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
-		// TODO Auto-generated method stub
-		
-	}
 }
