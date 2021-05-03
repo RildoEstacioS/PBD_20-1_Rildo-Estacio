@@ -17,11 +17,12 @@ public class App extends Application{
 	public static Scene sceneInicio;
 	public static Scene sceneMesa;
 	public static Scene sceneInfoMesa;
+	public static Scene sceneLogin;
 
-	
+
 	public void start(Stage stage) {
 		try {
-			//Stage é como se fosse o JFrame, Scene é como se fosse o JPanel			
+			//Stage ï¿½ como se fosse o JFrame, Scene ï¿½ como se fosse o JPanel			
 			
 			Parent parentInicio = FXMLLoader.load(getClass().getResource("/br/com/partypoker/view/Inicio.fxml"));
 			sceneInicio = new Scene(parentInicio);
@@ -32,9 +33,12 @@ public class App extends Application{
 			Parent parentInfoMesa = FXMLLoader.load(getClass().getResource("/br/com/partypoker/view/InfoMesa.fxml"));
 			sceneInfoMesa = new Scene(parentInfoMesa);
 
+			Parent parentLogin = FXMLLoader.load(getClass().getResource("/br/com/partypoker/view/Login.fxml"));
+			sceneLogin = new Scene(parentLogin);
+
 			stage.initStyle(StageStyle.UNDECORATED);
 			stage.setResizable(false);
-			stage.setScene(sceneInfoMesa);
+			stage.setScene(sceneLogin);
 			stage.show();
 			
 		} catch (IOException e) {
