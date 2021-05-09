@@ -38,7 +38,7 @@ public class App extends Application{
 
 			stage.initStyle(StageStyle.UNDECORATED);
 			stage.setResizable(false);
-			stage.setScene(sceneMesa);
+			stage.setScene(sceneLogin);
 			stage.show();
 			
 		} catch (IOException e) {
