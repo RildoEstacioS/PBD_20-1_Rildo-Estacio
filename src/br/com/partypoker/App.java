@@ -18,27 +18,27 @@ public class App extends Application{
 	public static Scene sceneMesa;
 	public static Scene sceneInfoMesa;
 	public static Scene sceneLogin;
-
+	public static Scene sceneCadastrar;
 
 	public void start(Stage stage) {
 		try {
 			//Stage � como se fosse o JFrame, Scene � como se fosse o JPanel			
 			
-			Parent parentInicio = FXMLLoader.load(getClass().getResource("/br/com/partypoker/view/Inicio.fxml"));
-			sceneInicio = new Scene(parentInicio);
-			
-			Parent parentMesa = FXMLLoader.load(getClass().getResource("/br/com/partypoker/view/Mesa.fxml"));
-			sceneMesa = new Scene(parentMesa);
-			
-			Parent parentInfoMesa = FXMLLoader.load(getClass().getResource("/br/com/partypoker/view/InfoMesa.fxml"));
-			sceneInfoMesa = new Scene(parentInfoMesa);
-
-			Parent parentLogin = FXMLLoader.load(getClass().getResource("/br/com/partypoker/view/Login.fxml"));
-			sceneLogin = new Scene(parentLogin);
+			Parent parentCadastrar = FXMLLoader.load(getClass().getResource("/br/com/partypoker/view/Cadastrar.fxml"));
+			sceneCadastrar = new Scene(parentCadastrar);
+//			
+//			Parent parentMesa = FXMLLoader.load(getClass().getResource("/br/com/partypoker/view/Mesa.fxml"));
+//			sceneMesa = new Scene(parentMesa);
+//			
+//			Parent parentInfoMesa = FXMLLoader.load(getClass().getResource("/br/com/partypoker/view/InfoMesa.fxml"));
+//			sceneInfoMesa = new Scene(parentInfoMesa);
+//
+//			Parent parentLogin = FXMLLoader.load(getClass().getResource("/br/com/partypoker/view/Login.fxml"));
+//			sceneLogin = new Scene(parentLogin);
 
 			stage.initStyle(StageStyle.UNDECORATED);
 			stage.setResizable(false);
-			stage.setScene(sceneLogin);
+			stage.setScene(sceneCadastrar);
 			stage.show();
 			
 		} catch (IOException e) {
