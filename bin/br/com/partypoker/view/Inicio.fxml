@@ -1,36 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
-   <center>
-      <AnchorPane prefHeight="608.0" prefWidth="1024.0" BorderPane.alignment="CENTER">
-         <children>
-            <Label layoutX="498.0" layoutY="296.0" prefHeight="38.0" prefWidth="370.0" text="Escolha um Modo de Jogo" AnchorPane.bottomAnchor="285.0" AnchorPane.leftAnchor="324.0" AnchorPane.rightAnchor="324.0" AnchorPane.topAnchor="285.0">
-               <font>
-                  <Font size="32.0" />
-               </font>
-            </Label>
-         </children>
-      </AnchorPane>
-   </center>
+<BorderPane fx:id="bordePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.partypoker.controller.InicioController">
    <top>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="686.0" layoutY="62.0" text="Mesas" AnchorPane.bottomAnchor="62.0" AnchorPane.leftAnchor="686.0" AnchorPane.topAnchor="62.0">
+            <Label fx:id="mesaBttn" layoutX="681.0" layoutY="94.0" onMousePressed="#mudarPanel" text="Mesas">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label layoutX="873.0" layoutY="62.0" text="Torneios" AnchorPane.bottomAnchor="62.0" AnchorPane.leftAnchor="873.0" AnchorPane.rightAnchor="57.0" AnchorPane.topAnchor="62.0">
+            <Label fx:id="torneioBttn" layoutX="834.0" layoutY="74.0" onMousePressed="#mudarPanel" prefHeight="76.0" prefWidth="176.0" text="Torneios" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="834.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="74.0">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <ImageView fitHeight="89.0" fitWidth="125.0" layoutX="64.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="141.0" fitWidth="192.0" layoutX="49.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@logo%20(2).png" />
                </image>
@@ -38,11 +29,15 @@
          </children>
       </AnchorPane>
    </top>
-   <left>
-      <Label prefHeight="41.0" prefWidth="86.0" BorderPane.alignment="CENTER">
-         <font>
-            <Font name="Calibri" size="36.0" />
-         </font>
-      </Label>
-   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="242.0" layoutY="190.0" styleClass="h1" stylesheets="@DarkTheme.css" text="Escolha o modo de jogo">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
 </BorderPane>

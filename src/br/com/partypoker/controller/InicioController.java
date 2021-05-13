@@ -1,38 +1,40 @@
 package br.com.partypoker.controller;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-
-import br.com.partypoker.App;
+import br.com.partypoker.util.UtilTelas;
+import javafx.event.Event;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 
 public class InicioController{
-	@FXML
-	private Label mesa;
-	@FXML
-	private Label torneio;
 	
-	private int i = 0;
-	
-	@FXML
-	public void bttnAction() {
-		System.out.println("Pegou");
-		
-		
-//		App.telaStage.setScene(telaDois);
-		
-//		if (i == 0) {
-//			label.setText("O botão funcionou!");
-//			i++;
-//		
-//		}else{			
-//			label.setText("");
-//			i--;
-//		}
-	}
-		
+    @FXML
+    private BorderPane bordePane;
+
+    @FXML
+    private AnchorPane escolherModoPane;
+
+    @FXML
+    private Label mesaBttn;
+    
+    @FXML
+    private Label torneioBttn;
+
+    @FXML
+	public void mudarPanel(Event e) {			
+    	if (e.getSource().equals(mesaBttn)) {
+    		mesaBttn.setFont(Font.font(null, FontWeight.BOLD, 24));
+    		torneioBttn.setFont(Font.font(24));
+    		bordePane.setCenter(UtilTelas.parentMesa);
+		}
+    	
+    	if (e.getSource().equals(torneioBttn)) {
+    		torneioBttn.setFont(Font.font(null, FontWeight.BOLD, 24));
+    		mesaBttn.setFont(Font.font(24));
+    		bordePane.setCenter(UtilTelas.parentTorneio);
+		}
+    }
 }
