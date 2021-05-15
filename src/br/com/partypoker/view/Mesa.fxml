@@ -8,9 +8,9 @@
 
 <AnchorPane prefHeight="608.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.partypoker.controller.MesaController">
    <children>
-      <ScrollPane hbarPolicy="NEVER" layoutX="-1.0" prefHeight="608.0" prefWidth="1024.0" styleClass="column" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+      <ScrollPane hbarPolicy="NEVER" layoutX="-1.0" prefHeight="608.0" prefWidth="1024.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
          <content>
-            <TableView fx:id="tableView" prefHeight="606.0" prefWidth="1024.0" stylesheets="@DarkTheme.css">
+            <TableView fx:id="tableView" prefHeight="606.0" prefWidth="1024.0">
               <columns>
                 <TableColumn fx:id="mesaCollumn" editable="false" prefWidth="341.0" resizable="false" text="Mesas" />
                 <TableColumn fx:id="jogadoresCollumn" minWidth="0.0" prefWidth="341.0" resizable="false" text="Jogadores" />

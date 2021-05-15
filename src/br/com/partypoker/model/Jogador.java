@@ -3,21 +3,20 @@ package br.com.partypoker.model;
 public class Jogador {
 
 	private Long id;
-	private String nome, cpf, telefone, login, senha;
+	private String nome, cpf, telefone, email, senha;
 	private int pontos;
 	private boolean isAdmin;
 	private boolean isSuperUser;
 	
-	public Jogador(Long id, String nome, String cpf, String telefone, String login, String senha, int pontos,
+	public Jogador(Long id, String nome, String cpf, String telefone, String email, String senha, int pontos,
 			boolean isAdmin, boolean isSuperUser) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.cpf = cpf;
 		this.telefone = telefone;
-		this.login = login;
+		this.email = email;
 		this.senha = senha;
-		this.pontos = pontos;
 		this.isAdmin = isAdmin;
 		this.isSuperUser = isSuperUser;
 	}
@@ -46,10 +45,10 @@ public class Jogador {
 		this.telefone = telefone;
 	}
 	public String getLogin() {
-		return login;
+		return email;
 	}
 	public void setLogin(String login) {
-		this.login = login;
+		this.email = login;
 	}
 	public String getSenha() {
 		return senha;

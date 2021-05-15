@@ -12,8 +12,18 @@ public class Torneio {
 	
 	private ArrayList<Jogador> jogadoresArrayList;
 	
-	//MODIFICAR
-	public Torneio() {}
+	public Torneio(Long id, String titulo, String estruturaTorneio, String inicio, double buyin, boolean rebuy,
+			boolean addon) {
+		super();
+		this.id = id;
+		this.titulo = titulo;
+		this.estruturaTorneio = estruturaTorneio;
+		this.inicio = inicio;
+		this.buyin = buyin;
+		this.rebuy = rebuy;
+		this.addon = addon;
+		this.jogadoresArrayList = new ArrayList<>();
+	}
 
 	public Long getId() {
 		return id;

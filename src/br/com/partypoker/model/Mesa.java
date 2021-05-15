@@ -1,5 +1,6 @@
 package br.com.partypoker.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Mesa {
@@ -9,12 +10,21 @@ public class Mesa {
     private double buyin;
     private String blinds;
     private int tamanhoMesa;
-    private String tipoJogo;
+    private String tipoJogo;	
     private List<Jogador> jogadores;
-
-
-
-    public Mesa() {
+    private String infoJogadores;
+    
+    public Mesa(Long id, String titulo, double buyin, String blinds, int tamanhoMesa, String tipoJogo) {
+		super();
+		this.id = id;
+		this.titulo = titulo;
+		this.buyin = buyin;
+		this.blinds = blinds;
+		this.tamanhoMesa = tamanhoMesa;
+		this.tipoJogo = tipoJogo;
+		this.jogadores = new ArrayList<>();
+		this.infoJogadores = getInfoJogadores();
+		
     }
 
     public Long getId() {
@@ -72,5 +82,9 @@ public class Mesa {
     public void setJogadores(List<Jogador> jogadores) {
         this.jogadores = jogadores;
     }
-	
+
+	public String getInfoJogadores() {
+		return "" + getJogadores().size() + "/" + tamanhoMesa;
+	}
+
 }

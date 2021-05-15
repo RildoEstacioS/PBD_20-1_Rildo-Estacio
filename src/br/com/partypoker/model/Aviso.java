@@ -4,8 +4,6 @@ public class Aviso {
 	private Long id;
 	private String mensagem, data, autor;
 	
-	//Complementar classe Aviso
-	
 	public Aviso(Long id, String mensagem, String data, String autor) {
 		super();
 		this.id = id;
@@ -46,6 +44,4 @@ public class Aviso {
 		this.autor = autor;
 	}
 	
-	
-
 }

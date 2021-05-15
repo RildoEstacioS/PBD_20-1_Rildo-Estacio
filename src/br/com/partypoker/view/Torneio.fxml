@@ -5,16 +5,16 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="520.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="520.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.partypoker.view.Login">
    <children>
       <ScrollPane hbarPolicy="NEVER" prefHeight="520.0" prefWidth="1024.0">
          <content>
-            <TableView prefHeight="520.0" prefWidth="1024.0" styleClass="h2" stylesheets="@DarkTheme.css">
+            <TableView fx:id="tableView" prefHeight="520.0" prefWidth="1024.0" styleClass="h2" stylesheets="@DarkTheme.css">
                <columns>
-                  <TableColumn editable="false" prefWidth="256.0" resizable="false" sortable="false" text="Torneio" />
-                  <TableColumn editable="false" maxWidth="256.0" minWidth="-1.0" prefWidth="256.0" resizable="false" sortable="false" text="Jogadores" />
-                  <TableColumn editable="false" prefWidth="256.0" resizable="false" sortable="false" text="Premiação" />
-                  <TableColumn editable="false" prefWidth="256.0" resizable="false" sortable="false" text="Participar" />
+                  <TableColumn fx:id="torneioColumn" editable="false" prefWidth="256.0" resizable="false" sortable="false" text="Torneio" />
+                  <TableColumn fx:id="jogadoresColumn" editable="false" maxWidth="256.0" minWidth="-1.0" prefWidth="256.0" resizable="false" sortable="false" text="Jogadores" />
+                  <TableColumn fx:id="premiacaoColumn" editable="false" prefWidth="256.0" resizable="false" sortable="false" text="Premiação" />
+                  <TableColumn fx:id="participarColumn" editable="false" prefWidth="256.0" resizable="false" sortable="false" text="Participar" />
                </columns>
             </TableView>
          </content>
