@@ -13,7 +13,6 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.chart.XYChart.Data;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
@@ -41,7 +40,6 @@ public class MesaController implements Initializable{
     
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
-    	// TODO Auto-generated method stub
     	carregarTableView();
     }
     
@@ -73,15 +71,12 @@ public class MesaController implements Initializable{
     	
     	addBotaoTabela();
     	observableListMesas = FXCollections.observableArrayList(listaMesas);
-    	
     	tableView.setItems(observableListMesas);
-    	addBotaoTabela();
     	
     
     } 
     
     private void addBotaoTabela() {
-//    	TableColumn<Mesa, Void> participarColumn = new TableColumn<>("Participar");
     	
     	Callback<TableColumn<Mesa, Void>, TableCell<Mesa, Void>> cellFactory = new Callback<TableColumn<Mesa,Void>, TableCell<Mesa,Void>>() {
 		

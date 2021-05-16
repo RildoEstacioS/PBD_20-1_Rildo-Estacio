@@ -6,7 +6,6 @@ public class BaseDado {
 	
 	private static ArrayList<Mesa> listaMesas = new ArrayList<>();
 	
-	
 	public static void createMesa(Mesa mesa) {
 		if (reatriveMesa(mesa) == null) {
 			listaMesas.add(mesa);
