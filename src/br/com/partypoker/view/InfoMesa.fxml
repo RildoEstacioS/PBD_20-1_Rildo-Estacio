@@ -7,25 +7,25 @@
 
 <AnchorPane prefHeight="608.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button layoutX="55.0" layoutY="83.0" mnemonicParsing="false" prefHeight="14.0" prefWidth="56.0" text="Voltar" AnchorPane.bottomAnchor="500.0" AnchorPane.leftAnchor="55.0" />
-      <Label layoutX="164.0" layoutY="116.0" text="LabelNomeDaMesa" AnchorPane.bottomAnchor="489.0" AnchorPane.leftAnchor="133.0">
+      <Button fx:id="voltarButton" layoutX="55.0" layoutY="83.0" mnemonicParsing="false" onAction="#voltarButtonAction" prefHeight="14.0" prefWidth="56.0" text="Voltar" AnchorPane.bottomAnchor="500.0" AnchorPane.leftAnchor="55.0" />
+      <Label fx:id="nomeMesaLabel" layoutX="164.0" layoutY="116.0" text="LabelNomeDaMesa" AnchorPane.bottomAnchor="489.0" AnchorPane.leftAnchor="133.0">
          <font>
             <Font name="System Bold" size="32.0" />
          </font>
       </Label>
       <Label layoutY="111.0" text="*Lembra de trocar isso por um icone" />
-      <Label layoutX="810.0" layoutY="72.0" text="CdgDaMesa" AnchorPane.bottomAnchor="489.0" AnchorPane.rightAnchor="51.0" AnchorPane.topAnchor="72.0">
+      <Label fx:id="codigoLabel" layoutX="810.0" layoutY="72.0" text="CdgDaMesa" AnchorPane.bottomAnchor="489.0" AnchorPane.rightAnchor="51.0" AnchorPane.topAnchor="72.0">
          <font>
             <Font name="System Bold" size="32.0" />
          </font>
       </Label>
-      <Label layoutX="165.0" layoutY="197.0" text="Descrição" AnchorPane.leftAnchor="133.0" AnchorPane.topAnchor="196.0">
+      <Label layoutX="112.0" layoutY="222.0" text="Descrição" AnchorPane.leftAnchor="112.0" AnchorPane.topAnchor="222.0">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="133.0" layoutY="239.0" prefHeight="112.0" prefWidth="391.0" text="DescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescrição" wrapText="true" AnchorPane.leftAnchor="133.0" AnchorPane.topAnchor="248.0" />
-      <Button layoutX="857.0" layoutY="501.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="192.0" style="-fx-background-color: #0075FF; -fx-background-radius: 18;" text="Participar" textFill="#fcfcfc" AnchorPane.bottomAnchor="67.0" AnchorPane.leftAnchor="805.0" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="480.0">
+      <Label fx:id="descricaoTA" layoutX="111.0" layoutY="279.0" prefHeight="112.0" prefWidth="391.0" text="DescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescrição" wrapText="true" AnchorPane.leftAnchor="111.0" AnchorPane.topAnchor="279.0" />
+      <Button fx:id="participarBttn" layoutX="787.0" layoutY="453.0" mnemonicParsing="false" onAction="#participarEventButton" prefHeight="61.0" prefWidth="192.0" style="-fx-background-color: #0075FF; -fx-background-radius: 18;" text="Participar" textFill="#fcfcfc" AnchorPane.bottomAnchor="94.0" AnchorPane.leftAnchor="787.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="453.0">
          <font>
             <Font name="System Bold" size="28.0" />
          </font>

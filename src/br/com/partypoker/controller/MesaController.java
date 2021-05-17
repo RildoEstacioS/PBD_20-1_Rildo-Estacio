@@ -1,23 +1,28 @@
 package br.com.partypoker.controller;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Observable;
 import java.util.ResourceBundle;
 
+import br.com.partypoker.App;
 import br.com.partypoker.model.Jogador;
 import br.com.partypoker.model.Mesa;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 import javafx.util.Callback;
 
 public class MesaController implements Initializable{
@@ -33,17 +38,49 @@ public class MesaController implements Initializable{
 
     @FXML
     private TableColumn<Mesa, Void> participarCollumn;
+    
+    
 
     private List<Mesa> listaMesas = new ArrayList<Mesa>();
     
     private ObservableList<Mesa> observableListMesas;
     
+    InicioController inicioController;
+    
+    private Stage stageMesa;
+    private Scene sceneMesa;
+    
+    private Parent parentMesa;
+    
+	private Parent parentInfoMesa;
+
+    
+    public MesaController(InicioController inicioController) {
+    	
+    	this.inicioController = inicioController;
+    	
+
+    	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/br/com/partypoker/view/Mesa.fxml"));
+        fxmlLoader.setController(this);
+        
+        try {
+        	parentMesa = (Parent) fxmlLoader.load();
+//			sceneMesa = new Scene(parentMesa);
+//			parentInfoMesa = FXMLLoader.load(getClass().getResource("/br/com/partypoker/view/InfoMesa.fxml"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}        
+   }
+    
+    
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
-    	carregarTableView();
+        carregarTableView();
+
     }
     
-    public void carregarTableView() {
+    private void carregarTableView() {
     	//Depois colocar para puxar do banco
     	//Só alimentando para visualização
     	
@@ -77,7 +114,6 @@ public class MesaController implements Initializable{
     } 
     
     private void addBotaoTabela() {
-    	
     	Callback<TableColumn<Mesa, Void>, TableCell<Mesa, Void>> cellFactory = new Callback<TableColumn<Mesa,Void>, TableCell<Mesa,Void>>() {
 		
     		public TableCell<Mesa, Void> call(final TableColumn<Mesa, Void> param){
@@ -85,9 +121,8 @@ public class MesaController implements Initializable{
     				private final Button button = new Button("Participar");
     				{
 	    				button.setOnAction((ActionEvent event) ->{
-	    					Mesa mesa = getTableView().getItems().get(getIndex());
 	    					//Colocar o evento aqui
-	    					System.out.println("Mesa:" + mesa);
+	    					inicioController.getBordePane().setCenter(App.infoMesaController.getParentInfoMesa());
 	    				});
     					
     				}
@@ -106,5 +141,55 @@ public class MesaController implements Initializable{
     	};
     	
     	participarCollumn.setCellFactory(cellFactory);
-    }    
+    }
+
+
+	public TableView<Mesa> getTableView() {
+		return tableView;
+	}
+
+
+	public void setTableView(TableView<Mesa> tableView) {
+		this.tableView = tableView;
+	}
+
+
+	public Stage getStageMesa() {
+		return stageMesa;
+	}
+
+
+	public void setStageMesa(Stage stageMesa) {
+		this.stageMesa = stageMesa;
+	}
+
+
+	public Scene getSceneMesa() {
+		return sceneMesa;
+	}
+
+
+	public void setSceneMesa(Scene sceneMesa) {
+		this.sceneMesa = sceneMesa;
+	}
+
+
+	public Parent getParentMesa() {
+		return parentMesa;
+	}
+
+
+	public void setParentMesa(Parent parentMesa) {
+		this.parentMesa = parentMesa;
+	}
+
+
+	public Parent getParentInfoMesa() {
+		return parentInfoMesa;
+	}
+
+
+	public void setParentInfoMesa(Parent parentInfoMesa) {
+		this.parentInfoMesa = parentInfoMesa;
+	}    
 }

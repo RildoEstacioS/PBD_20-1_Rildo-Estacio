@@ -9,11 +9,14 @@ public class Torneio {
 	private String titulo, estruturaTorneio, inicio;
 	private double buyin;
 	private boolean rebuy, addon;
+	private String premio;
+	@SuppressWarnings("unused")
+	private String infoJogadores;
 	
-	private ArrayList<Jogador> jogadoresArrayList;
+	private ArrayList<Jogador> jogadores;
 	
 	public Torneio(Long id, String titulo, String estruturaTorneio, String inicio, double buyin, boolean rebuy,
-			boolean addon) {
+			boolean addon, String premio) {
 		super();
 		this.id = id;
 		this.titulo = titulo;
@@ -22,7 +25,13 @@ public class Torneio {
 		this.buyin = buyin;
 		this.rebuy = rebuy;
 		this.addon = addon;
-		this.jogadoresArrayList = new ArrayList<>();
+		this.premio = premio;
+		this.jogadores = new ArrayList<>();
+		this.infoJogadores = getInfoJogadores();
+	}
+
+	public String getInfoJogadores() {
+		return "" + getJogadores().size() + "";
 	}
 
 	public Long getId() {
@@ -81,12 +90,24 @@ public class Torneio {
 		this.addon = addon;
 	}
 
-	public ArrayList<Jogador> getJogadoresArrayList() {
-		return jogadoresArrayList;
+	public String getPremio() {
+		return premio;
 	}
 
-	public void setJogadoresArrayList(ArrayList<Jogador> jogadoresArrayList) {
-		this.jogadoresArrayList = jogadoresArrayList;
+	public void setPremio(String premio) {
+		this.premio = premio;
+	}
+
+	public void setInfoJogadores(String infoJogadores) {
+		this.infoJogadores = infoJogadores;
+	}
+
+	public ArrayList<Jogador> getJogadores() {
+		return jogadores;
+	}
+
+	public void setJogadores(ArrayList<Jogador> jogadores) {
+		this.jogadores = jogadores;
 	}
 	
 	
