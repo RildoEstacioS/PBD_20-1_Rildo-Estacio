@@ -65,8 +65,6 @@ public class MesaController implements Initializable{
         
         try {
         	parentMesa = (Parent) fxmlLoader.load();
-//			sceneMesa = new Scene(parentMesa);
-//			parentInfoMesa = FXMLLoader.load(getClass().getResource("/br/com/partypoker/view/InfoMesa.fxml"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
