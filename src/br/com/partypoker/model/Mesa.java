@@ -3,20 +3,33 @@ package br.com.partypoker.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Mesa {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "mesa")
+public class Mesa implements Entidade{
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
+	private List<Jogador> jogadores;
+	
     private String titulo;
     private double buyin;
     private String blinds;
     private int tamanhoMesa;
     private String tipoJogo;	
-    private List<Jogador> jogadores;
     private String infoJogadores;
     
-    public Mesa(Long id, String titulo, double buyin, String blinds, int tamanhoMesa, String tipoJogo) {
+    public Mesa() {}
+    
+    public Mesa(String titulo, double buyin, String blinds, int tamanhoMesa, String tipoJogo) {
 		super();
-		this.id = id;
 		this.titulo = titulo;
 		this.buyin = buyin;
 		this.blinds = blinds;

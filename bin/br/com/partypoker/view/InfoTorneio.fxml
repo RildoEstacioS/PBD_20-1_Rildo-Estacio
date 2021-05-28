@@ -5,10 +5,10 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="608.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="608.0" prefWidth="1024.0" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button fx:id="voltarBttnAction" layoutX="55.0" layoutY="83.0" mnemonicParsing="false" prefHeight="14.0" prefWidth="56.0" text="Voltar" AnchorPane.bottomAnchor="500.0" AnchorPane.leftAnchor="55.0" />
-      <Label layoutX="164.0" layoutY="116.0" text="NomeDoTorneio" AnchorPane.bottomAnchor="489.0" AnchorPane.leftAnchor="133.0">
+      <Button fx:id="voltarBttnAction" layoutX="55.0" layoutY="83.0" mnemonicParsing="false" onAction="#voltarActionButton" prefHeight="14.0" prefWidth="56.0" text="Voltar" AnchorPane.bottomAnchor="500.0" AnchorPane.leftAnchor="55.0" />
+      <Label layoutX="164.0" layoutY="116.0" stylesheets="@DarkTheme.css" text="NomeDoTorneio" AnchorPane.bottomAnchor="489.0" AnchorPane.leftAnchor="133.0">
          <font>
             <Font name="System Bold" size="32.0" />
          </font>
@@ -31,7 +31,7 @@
          <font>
             <Font size="18.0" />
          </font></Label>
-      <Button fx:id="ParticiparBttn" layoutX="737.0" layoutY="481.0" mnemonicParsing="false" onAction="#participarBttnAction" prefHeight="61.0" prefWidth="192.0" style="-fx-background-color: #0075FF; -fx-background-radius: 18;" text="Participar" textFill="#fcfcfc" AnchorPane.bottomAnchor="66.0" AnchorPane.leftAnchor="737.0" AnchorPane.rightAnchor="95.0" AnchorPane.topAnchor="481.0">
+      <Button fx:id="ParticiparBttn" layoutX="768.0" layoutY="481.0" mnemonicParsing="false" onAction="#participarBttnAction" prefHeight="61.0" prefWidth="192.0" stylesheets="@DarkTheme.css" text="Participar" textFill="#fcfcfc" AnchorPane.bottomAnchor="66.0" AnchorPane.leftAnchor="768.0" AnchorPane.rightAnchor="64.0" AnchorPane.topAnchor="481.0">
          <font>
             <Font name="System Bold" size="28.0" />
          </font>

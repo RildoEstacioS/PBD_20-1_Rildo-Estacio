@@ -2,9 +2,18 @@ package br.com.partypoker.model;
 
 import java.util.ArrayList;
 
-public class Torneio {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-	
+@Entity
+@Table(name = "torneio")
+public class Torneio implements Entidade {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String titulo, estruturaTorneio, inicio;
 	private double buyin;
@@ -15,10 +24,9 @@ public class Torneio {
 	
 	private ArrayList<Jogador> jogadores;
 	
-	public Torneio(Long id, String titulo, String estruturaTorneio, String inicio, double buyin, boolean rebuy,
+	public Torneio(String titulo, String estruturaTorneio, String inicio, double buyin, boolean rebuy,
 			boolean addon, String premio) {
 		super();
-		this.id = id;
 		this.titulo = titulo;
 		this.estruturaTorneio = estruturaTorneio;
 		this.inicio = inicio;

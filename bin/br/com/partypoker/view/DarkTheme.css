@@ -3,6 +3,7 @@
     -fx-text-fill: #fcfcfc;
     -fx-background-radius: 10px;
     -fx-padding: 10px;
+    -fx-alignment: center;
 }
 
 .light{
@@ -10,14 +11,15 @@
     -fx-text-fill: #02112C;
 }
 
-.label{
-    -fx-text-fill: #fcfcfc;
-}
-
 .input{
     -fx-background-radius: 10px;
 }
 
+.label_login{
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+    -fx-font-size: 28px;
+}
 .h1{
     -fx-text-fill: #02112C;
     -fx-font-weight: bold;
@@ -26,6 +28,55 @@
 
 .h2{
     -fx-text-fill: #040F16;
-    -fx-font-weight: 400;
+    -fx-font-weight: bold;
     -fx-font-size: 24px;
 }
+
+.table-view{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.table-view .column-header-background .filler {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.table-view .corner {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.table-view .column-header-background{
+    -fx-background-color: #02112C;
+    -fx-border-color: transparent;
+    -fx-padding: 0 0 5px 0;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .cell{
+    -fx-cell-size: 35;
+    -fx-background-color: #fcfcfc;
+    -fx-border-color: #fcfcfc;
+    -fx-text-fill: #040F16;
+    -fx-alignment: center;
+    -fx-font-size: 16px;
+}
+
+.table-view .column-header .label{
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-font-size: 18px;
+}
+
+.anchor-pane{
+    -fx-padding: 20px 10px;
+    -fx-background-color: #e0dfdf;
+}
+
+
+

@@ -87,13 +87,13 @@ public class MesaController implements Initializable{
     	
     	
     	
-    	Mesa mesa1 = new Mesa((long) 1, "mesa1", 200.0, "Sei lá o que é isso", 9, "Cashgame");
-    	Mesa mesa2 = new Mesa((long) 2, "mesa2", 200.0, "Sei lá o que é isso", 9, "Cashgame");
-    	Mesa mesa3 = new Mesa((long) 3, "mesa3", 200.0, "Sei lá o que é isso", 9, "Cashgame"); 
+    	Mesa mesa1 = new Mesa("mesa1", 200.0, "Sei lá o que é isso", 9, "Cashgame");
+    	Mesa mesa2 = new Mesa("mesa2", 200.0, "Sei lá o que é isso", 9, "Cashgame");
+    	Mesa mesa3 = new Mesa("mesa3", 200.0, "Sei lá o que é isso", 9, "Cashgame"); 
 
-    	Jogador j1 = new Jogador((long)10, "a", "", "", "", "", 100, false, false);
-    	Jogador j2 = new Jogador((long)20, "b", "", "", "", "", 100, false, false);
-    	Jogador j3 = new Jogador((long)30, "c", "", "", "", "", 100, false, false);
+    	Jogador j1 = new Jogador("a", "", "", "", "", 100, false, false);
+    	Jogador j2 = new Jogador("b", "", "", "", "", 100, false, false);
+    	Jogador j3 = new Jogador("c", "", "", "", "", 100, false, false);
 
     	
     	mesa1.getJogadores().add(j1);

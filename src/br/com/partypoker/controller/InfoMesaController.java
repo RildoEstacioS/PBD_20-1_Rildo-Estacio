@@ -41,7 +41,6 @@ public class InfoMesaController implements Initializable{
 	public InfoMesaController(InicioController inicioController) {
 		this.inicioController = inicioController;
     	
-
     	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/br/com/partypoker/view/InfoMesa.fxml"));
         fxmlLoader.setController(this);
         

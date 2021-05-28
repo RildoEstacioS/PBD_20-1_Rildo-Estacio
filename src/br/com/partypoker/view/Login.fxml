@@ -38,12 +38,12 @@
             <Font name="System Bold" size="50.0" />
          </font>
       </Label>
-      <Label layoutX="521.0" layoutY="293.0" stylesheets="@DarkTheme.css" text="Login">
+      <Label layoutX="521.0" layoutY="293.0" styleClass="label_login" stylesheets="@DarkTheme.css" text="Login">
          <font>
             <Font name="System Bold" size="28.0" />
          </font>
       </Label>
-      <Label layoutX="518.0" layoutY="393.0" stylesheets="@DarkTheme.css" text="Senha">
+      <Label layoutX="518.0" layoutY="393.0" styleClass="label_login" stylesheets="@DarkTheme.css" text="Senha">
          <font>
             <Font name="System Bold" size="28.0" />
          </font>

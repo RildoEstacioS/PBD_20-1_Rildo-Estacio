@@ -1,17 +1,29 @@
 package br.com.partypoker.model;
 
-public class Jogador {
+import javax.annotation.processing.Generated;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "user")
+public class Jogador implements Entidade {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nome, cpf, telefone, email, senha;
 	private int pontos;
 	private boolean isAdmin;
 	private boolean isSuperUser;
 	
-	public Jogador(Long id, String nome, String cpf, String telefone, String email, String senha, int pontos,
+	public Jogador() {}
+	
+	public Jogador(String nome, String cpf, String telefone, String email, String senha, int pontos,
 			boolean isAdmin, boolean isSuperUser) {
 		super();
-		this.id = id;
 		this.nome = nome;
 		this.cpf = cpf;
 		this.telefone = telefone;
