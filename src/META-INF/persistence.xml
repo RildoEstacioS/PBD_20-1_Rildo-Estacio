@@ -11,14 +11,14 @@
         <class>br.com.partypoker.model.Torneio</class>
 
         <properties>
-            <property name="javax.persistence.jdbc.driver"
+            <property name="java	x.persistence.jdbc.driver"
                 value="com.mysql.jdbc.Driver"/>
             <property name="javax.persistence.jdbc.url"
-                value="jdbc:mysql://localhost/Gerenciador"/>
+                value="jdbc:mysql://localhost/partypoker"/>
             <property name="javax.persistence.jdbc.user"
                 value="root"/>
             <property name="javax.persistence.jdbc.password"
-                value="Rildo@alucard1"/>
+                value="root"/>
             
             <property name="hibernate.dialect"
                 value="org.hibernate.dialect.MySQL57Dialect"/>
