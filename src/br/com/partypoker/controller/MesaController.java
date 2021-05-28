@@ -96,10 +96,10 @@ public class MesaController implements Initializable{
     	Jogador j3 = new Jogador("c", "", "", "", "", 100, false, false);
 
     	
-    	mesa1.getJogadores().add(j1);
-    	mesa1.getJogadores().add(j2);
-    	mesa2.getJogadores().add(j3);
-    	
+//    	mesa1.getJogadores().add(j1);
+//    	mesa1.getJogadores().add(j2);
+//    	mesa2.getJogadores().add(j3);
+//    	
     	listaMesas.add(mesa1);
     	listaMesas.add(mesa2);
     	listaMesas.add(mesa3);

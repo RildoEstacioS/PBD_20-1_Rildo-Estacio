@@ -5,6 +5,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
+import java.sql.DriverManager;
 
 import br.com.partypoker.model.Entidade;
 
@@ -32,12 +33,12 @@ public abstract class DAOGeneric<E extends Entidade> {
 		this.classe = classe;
 	}
 	
-	public DAOGeneric<E> abrirTransação(){
+	public DAOGeneric<E> abrirTransacao(){
 		em.getTransaction().begin();
 		return this;
 	}
 	
-	public DAOGeneric<E> fecharTransação(){
+	public DAOGeneric<E> fecharTransacao(){
 		em.getTransaction().commit();
 		return this;
 	}
@@ -47,7 +48,7 @@ public abstract class DAOGeneric<E extends Entidade> {
 	}
 	
 	public DAOGeneric<E> incluirAtomico(E entidade){
-		return this.abrirTransação().incluir(entidade).fecharTransação();
+		return this.abrirTransacao().incluir(entidade).fecharTransacao();
 	}
 	
 	public List<E> obterTodos(int qtde, int deslocamento){

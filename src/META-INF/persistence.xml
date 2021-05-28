@@ -5,14 +5,11 @@
     xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
     <persistence-unit name="partypoker">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        
-        <class>br.com.partypoker.model.Jogador</class>
-        <class>br.com.partypoker.model.Mesa</class>
-        <class>br.com.partypoker.model.Torneio</class>
 
         <properties>
-            <property name="java	x.persistence.jdbc.driver"
-                value="com.mysql.jdbc.Driver"/>
+            <property name="hibernate.archive.autodetection" value="class"/>
+            <property name="javax.persistence.jdbc.driver"
+                value="com.mysql.cj.jdbc.Driver"/>
             <property name="javax.persistence.jdbc.url"
                 value="jdbc:mysql://localhost/partypoker"/>
             <property name="javax.persistence.jdbc.user"
@@ -24,7 +21,7 @@
                 value="org.hibernate.dialect.MySQL57Dialect"/>
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.format_sql" value="true"/>
-            <property name="hibernate.hbm2ddl.auto" value="none"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
         </properties>
     </persistence-unit>
 </persistence>

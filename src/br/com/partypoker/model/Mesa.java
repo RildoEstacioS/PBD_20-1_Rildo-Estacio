@@ -17,7 +17,7 @@ public class Mesa implements Entidade{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	private List<Jogador> jogadores;
+//	private List<Jogador> jogadores;
 	
     private String titulo;
     private double buyin;
@@ -35,7 +35,7 @@ public class Mesa implements Entidade{
 		this.blinds = blinds;
 		this.tamanhoMesa = tamanhoMesa;
 		this.tipoJogo = tipoJogo;
-		this.jogadores = new ArrayList<>();
+//		this.jogadores = new ArrayList<>();
 		this.infoJogadores = getInfoJogadores();
 		
     }
@@ -88,16 +88,16 @@ public class Mesa implements Entidade{
         this.tipoJogo = tipoJogo;
     }
 
-    public List<Jogador> getJogadores() {
-        return jogadores;
-    }
-
-    public void setJogadores(List<Jogador> jogadores) {
-        this.jogadores = jogadores;
-    }
+//    public List<Jogador> getJogadores() {
+//        return jogadores;
+//    }
+//
+//    public void setJogadores(List<Jogador> jogadores) {
+//        this.jogadores = jogadores;
+//    }
 
 	public String getInfoJogadores() {
-		return "" + getJogadores().size() + "/" + tamanhoMesa;
+		return "" + getBlinds() + "/" + tamanhoMesa;
 	}
 
 }
