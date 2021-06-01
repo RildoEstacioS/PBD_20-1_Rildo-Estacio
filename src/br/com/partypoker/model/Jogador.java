@@ -1,6 +1,6 @@
 package br.com.partypoker.model;
 
-import javax.annotation.processing.Generated;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -8,30 +8,28 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "user")
+@Table(name = "player")
 public class Jogador implements Entidade {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String nome, cpf, telefone, email, senha;
+	private String nome, email, senha;
 	private int pontos;
-	private boolean isAdmin;
-	private boolean isSuperUser;
+	private boolean isAdmin = false;
+	private boolean isSuperUser = false;
 	
 	public Jogador() {}
 	
-	public Jogador(String nome, String cpf, String telefone, String email, String senha, int pontos,
-			boolean isAdmin, boolean isSuperUser) {
+	public Jogador(String nome, String email, String senha, int pontos) {
 		super();
 		this.nome = nome;
-		this.cpf = cpf;
-		this.telefone = telefone;
+//		this.telefone = telefone;
 		this.email = email;
 		this.senha = senha;
-		this.isAdmin = isAdmin;
-		this.isSuperUser = isSuperUser;
+		this.pontos = pontos;
 	}
+	
 	public Long getId() {
 		return id;
 	}
@@ -44,18 +42,7 @@ public class Jogador implements Entidade {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public String getCpf() {
-		return cpf;
-	}
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
-	}
-	public String getTelefone() {
-		return telefone;
-	}
-	public void setTelefone(String telefone) {
-		this.telefone = telefone;
-	}
+
 	public String getLogin() {
 		return email;
 	}
@@ -86,4 +73,12 @@ public class Jogador implements Entidade {
 	public void setSuperUser(boolean isSuperUser) {
 		this.isSuperUser = isSuperUser;
 	}
+
+	@Override
+	public String toString() {
+		return "Jogador [id=" + id + ", nome=" + nome + ", email=" + email + ", senha=" + senha + ", pontos=" + pontos
+				+ ", isAdmin=" + isAdmin + ", isSuperUser=" + isSuperUser + "]";
+	}
+	
+	
 }

@@ -2,11 +2,17 @@ package br.com.partypoker.controller;
 
 import java.io.IOException;
 
+import br.com.partypoker.App;
+import br.com.partypoker.exception.BusinessException;
+import br.com.partypoker.facade.Facade;
+import br.com.partypoker.model.Jogador;
+import br.com.partypoker.view.Alerts;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -34,9 +40,10 @@ public class CadastroController {
     private Scene sceneCadastrar;
     private Stage stageCadastrar;
     private LoginController loginController;
+    private Facade facade;
     
-    public CadastroController() {
-    	
+    public CadastroController(Facade facade) {
+    	this.facade = facade;
     	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/br/com/partypoker/view/Cadastrar.fxml"));
         fxmlLoader.setController(this);
         
@@ -57,10 +64,20 @@ public class CadastroController {
     		stageCadastrar.show();
     }
     
-    public void bttnCadastrarAction(Event e) {
+    public void bttnCadastrarAction(Event e) throws BusinessException {
     	if (e.getSource().equals(cadastrarButton)) {
-			System.out.println("VAi CARAI!!");
-			loginController.mudarScene();
+    		if (nomeTF.getText().equalsIgnoreCase("") || emailTF.getText().equalsIgnoreCase("") || senhaTF.getText().equalsIgnoreCase("") || senhaTF.getText().equalsIgnoreCase("")) {
+    			Alerts.showAlert("Campo(s) em branco", "Um ou mais campos em branco", AlertType.ERROR);
+			}
+    		else if (!(senhaTF.getText().equals(confirmarTF.getText()))) {
+    			Alerts.showAlert("Senhas diferentes", "As senhas precisam ser iguais", AlertType.ERROR);
+			}else {
+				facade.createJogador(new Jogador(nomeTF.getText(),emailTF.getText(), senhaTF.getText(), 10000));
+				Alerts.showAlert("Jogador cadastrado com sucesso", "O jogador foi cadastro no sistema com êxito", AlertType.CONFIRMATION);
+				loginController.mudarScene();
+				
+			}
+    		
     	}
     }
 

@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 import br.com.partypoker.App;
+import br.com.partypoker.facade.Facade;
 import br.com.partypoker.model.Jogador;
 import br.com.partypoker.model.Mesa;
 import javafx.collections.FXCollections;
@@ -53,10 +54,10 @@ public class MesaController implements Initializable{
     private Parent parentMesa;
     
 	private Parent parentInfoMesa;
-
+	private Facade facade;
     
-    public MesaController(InicioController inicioController) {
-    	
+    public MesaController(InicioController inicioController, Facade facade) {
+    	this.facade = facade;
     	this.inicioController = inicioController;
     	
 
@@ -91,9 +92,9 @@ public class MesaController implements Initializable{
     	Mesa mesa2 = new Mesa("mesa2", 200.0, "Sei lá o que é isso", 9, "Cashgame");
     	Mesa mesa3 = new Mesa("mesa3", 200.0, "Sei lá o que é isso", 9, "Cashgame"); 
 
-    	Jogador j1 = new Jogador("a", "", "", "", "", 100, false, false);
-    	Jogador j2 = new Jogador("b", "", "", "", "", 100, false, false);
-    	Jogador j3 = new Jogador("c", "", "", "", "", 100, false, false);
+    	Jogador j1 = new Jogador("a", "", "", 100);
+    	Jogador j2 = new Jogador("b", "", "", 100);
+    	Jogador j3 = new Jogador("c","", "", 100);
 
     	
 //    	mesa1.getJogadores().add(j1);

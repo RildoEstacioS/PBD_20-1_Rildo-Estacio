@@ -4,16 +4,15 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Observable;
 import java.util.ResourceBundle;
 
 import br.com.partypoker.App;
+import br.com.partypoker.facade.Facade;
 import br.com.partypoker.model.Jogador;
 import br.com.partypoker.model.Torneio;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -54,10 +53,11 @@ public class TorneioController implements Initializable{
     private Stage stageTorneio;
     private Scene sceneTorneio;
     private Parent parentTorneio;
-    
+    private Facade facade;
 
     
-    public TorneioController(InicioController inicioController) {
+    public TorneioController(InicioController inicioController, Facade facade) {
+    	this.facade = facade;
     	this.inicioController = inicioController;
     	
     	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/br/com/partypoker/view/Torneio.fxml"));
@@ -84,9 +84,9 @@ public class TorneioController implements Initializable{
 		Torneio t1 = new Torneio("Cabaré", "aUDASHDUSAHDASDUHA", "10hs", 50.0, true, false, "R$ 10.000,00");
 		Torneio t2 = new Torneio("Jubileu", "aUDASHDUSAHDASDUHA", "10hs", 50.0, true, false, "R$ 10.000,00");
 
-		Jogador j1 = new Jogador("a", "", "", "", "", 100, false, false);
-    	Jogador j2 = new Jogador("b", "", "", "", "", 100, false, false);
-    	Jogador j3 = new Jogador("c", "", "", "", "", 100, false, false);
+		Jogador j1 = new Jogador("a", "", "", 100);
+    	Jogador j2 = new Jogador("b", "", "", 100);
+    	Jogador j3 = new Jogador("c", "", "", 100);
 
     	t1.getJogadores().add(j1);
     	t1.getJogadores().add(j3);

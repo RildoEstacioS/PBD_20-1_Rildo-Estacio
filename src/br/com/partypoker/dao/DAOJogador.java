@@ -1,5 +1,11 @@
 package br.com.partypoker.dao;
 
-public class DAOJogador {
+import br.com.partypoker.model.Jogador;
 
+public class DAOJogador extends DAOGeneric<Jogador> implements IDAOJogador{
+
+	public DAOJogador() {
+		super(Jogador.class);
+	}
+	
 }

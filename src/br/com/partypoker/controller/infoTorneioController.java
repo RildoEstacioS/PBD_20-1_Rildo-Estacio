@@ -5,6 +5,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import br.com.partypoker.App;
+import br.com.partypoker.facade.Facade;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -37,8 +38,11 @@ public class infoTorneioController implements Initializable{
     private Stage stageinfoTorneio;
     private Scene sceneInfoTorneio;
     private Parent parentInfoTorneio;
+    private Facade facade;
     
-	public infoTorneioController(InicioController inicioController) {
+	public infoTorneioController(InicioController inicioController, Facade facade) {
+		
+		this.facade = facade;
 		this.inicioController = inicioController;
     	
 

@@ -5,6 +5,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import br.com.partypoker.App;
+import br.com.partypoker.facade.Facade;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -37,8 +38,11 @@ public class InfoMesaController implements Initializable{
     private Scene sceneInfoMesa;
     private Parent parentInfoMesa;
     private Parent parentMesa;
+    private Facade facade;
     
-	public InfoMesaController(InicioController inicioController) {
+	public InfoMesaController(InicioController inicioController, Facade facade) {
+		
+		this.facade = facade;
 		this.inicioController = inicioController;
     	
     	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/br/com/partypoker/view/InfoMesa.fxml"));

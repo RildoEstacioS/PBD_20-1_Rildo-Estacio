@@ -6,6 +6,9 @@ import java.util.ResourceBundle;
 
 import com.sun.javafx.application.LauncherImpl;
 
+import br.com.partypoker.exception.BusinessException;
+import br.com.partypoker.facade.Facade;
+import br.com.partypoker.view.Alerts;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,13 +18,14 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 public class LoginController implements Initializable{
 
     @FXML
-    private TextField lognTF;
+    private TextField loginTF;
 
     @FXML
     private Button buttonEntrar;
@@ -37,9 +41,10 @@ public class LoginController implements Initializable{
     private Stage stageLogin;
     private InicioController inicioController;
     private CadastroController cadastrarController;
+    private Facade facade;
     
-    public LoginController(InicioController inicioController, CadastroController cadastrarController) {
-    	
+    public LoginController(InicioController inicioController, CadastroController cadastrarController, Facade facade) {
+    	this.facade = facade;
     	this.inicioController = inicioController;
     	this.cadastrarController = cadastrarController;
     	cadastrarController.setLoginController(this);
@@ -62,21 +67,24 @@ public class LoginController implements Initializable{
     		stageLogin.initStyle(StageStyle.UNDECORATED);
     		stageLogin.setResizable(false);
     		stageLogin.show();
+
     }
     
     
 	@FXML
-	public void bttnEntrarEvent(Event e) {
+	public void bttnEntrarEvent(Event e) throws BusinessException {
 		if (e.getSource().equals(this.buttonEntrar)) {
-			System.out.println("Cabaré");
-			stageLogin.setScene(inicioController.getSceneInicio());		
+			if (facade.reatriveJogador(0).getNome().equals(loginTF.getText()) && facade.reatriveJogador(0).getSenha().equals(senhaTF.getText())) {
+				stageLogin.setScene(inicioController.getSceneInicio());		
+				
+			}
+			
 		}
 	}
 	
 	@FXML
 	public void bttnCadastrarEvent(Event e) {
 		if (e.getSource().equals(this.cadastrarButton)) {
-			System.out.println("VAi CARAI!!");
 			stageLogin.setScene(cadastrarController.getSceneCadastrar());		
 		}
 	}

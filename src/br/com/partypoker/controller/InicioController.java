@@ -3,6 +3,7 @@ package br.com.partypoker.controller;
 import java.io.IOException;
 
 import br.com.partypoker.App;
+import br.com.partypoker.facade.Facade;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -33,10 +34,11 @@ public class InicioController{
     private Parent parentInicio;
     private Scene sceneInicio;
     private Stage stageInicio;
-    
+    private Facade facade;
 
-	public InicioController() {
+	public InicioController(Facade facade) {
 
+		this.facade = facade;
     	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/br/com/partypoker/view/Inicio.fxml"));
         fxmlLoader.setController(this);
     
