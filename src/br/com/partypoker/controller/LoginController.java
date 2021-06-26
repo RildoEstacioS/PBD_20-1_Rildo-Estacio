@@ -74,11 +74,9 @@ public class LoginController implements Initializable{
 	@FXML
 	public void bttnEntrarEvent(Event e) throws BusinessException {
 		if (e.getSource().equals(this.buttonEntrar)) {
-			if (facade.reatriveJogador(0).getNome().equals(loginTF.getText()) && facade.reatriveJogador(0).getSenha().equals(senhaTF.getText())) {
+//			if (facade.reatriveJogador(0).getNome().equals(loginTF.getText()) && facade.reatriveJogador(0).getSenha().equals(senhaTF.getText())) {
 				stageLogin.setScene(inicioController.getSceneInicio());		
-				
-			}
-			
+//			}
 		}
 	}
 	
