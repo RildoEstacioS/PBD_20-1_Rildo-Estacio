@@ -11,7 +11,7 @@
    <top>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="mesaBttn" layoutX="681.0" layoutY="94.0" onDragDetected="#mudarPanel" onMousePressed="#mudarPanel" text="Mesas">
+            <Label fx:id="mesaBttn" layoutX="675.0" layoutY="95.0" onMousePressed="#mudarPanel" text="Mesas">
                <font>
                   <Font size="24.0" />
                </font>

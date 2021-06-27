@@ -35,7 +35,7 @@ public class InicioController{
     private Scene sceneInicio;
     private Stage stageInicio;
     private Facade facade;
-
+    
 	public InicioController(Facade facade) {
 
 		this.facade = facade;
