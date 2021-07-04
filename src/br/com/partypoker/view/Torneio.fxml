@@ -1,22 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="520.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="608.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ScrollPane hbarPolicy="NEVER" prefHeight="520.0" prefWidth="1024.0">
+      <TextField layoutX="112.0" layoutY="38.0" minHeight="100.0" minWidth="800.0" promptText="Buscar Torneio" styleClass="input" stylesheets="@DarkTheme.css">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="100.0" fitWidth="36.0" layoutX="859.0" layoutY="70.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@loupe.png" />
+         </image>
+      </ImageView>
+      <ScrollPane hbarPolicy="NEVER" layoutX="112.0" layoutY="166.0" prefHeight="408.0" prefWidth="800.0" stylesheets="@DarkTheme.css">
          <content>
-            <TableView fx:id="tableView" prefHeight="520.0" prefWidth="1024.0" styleClass="h2" stylesheets="@DarkTheme.css">
-               <columns>
-                  <TableColumn fx:id="torneioColumn" editable="false" prefWidth="256.0" resizable="false" sortable="false" text="Torneio" />
-                  <TableColumn fx:id="jogadoresColumn" editable="false" maxWidth="256.0" minWidth="-1.0" prefWidth="256.0" resizable="false" sortable="false" text="Jogadores" />
-                  <TableColumn fx:id="premiacaoColumn" editable="false" prefWidth="256.0" resizable="false" sortable="false" text="Premiação" />
-                  <TableColumn fx:id="participarColumn" editable="false" prefWidth="256.0" resizable="false" sortable="false" text="Participar" />
-               </columns>
-            </TableView>
+            <ListView prefHeight="406.0" prefWidth="800.0" stylesheets="@DarkTheme.css" />
          </content>
       </ScrollPane>
    </children>

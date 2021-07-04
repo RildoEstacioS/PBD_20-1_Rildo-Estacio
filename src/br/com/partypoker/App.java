@@ -10,7 +10,7 @@ import br.com.partypoker.controller.CadastroController;
 import br.com.partypoker.controller.InfoMesaController;
 import br.com.partypoker.controller.InicioController;
 import br.com.partypoker.controller.LoginController;
-import br.com.partypoker.controller.MesaController;
+import br.com.partypoker.controller.CashGameController;
 import br.com.partypoker.controller.TorneioController;
 import br.com.partypoker.controller.infoTorneioController;
 import br.com.partypoker.exception.BusinessException;
@@ -27,7 +27,7 @@ public class App extends Application{
 	public static LoginController loginController;
 	public static InicioController inicioController;
 	public static CadastroController cadastroController;
-	public static MesaController mesaController;
+	public static CashGameController mesaController;
 	public static TorneioController torneioController;
 	public static InfoMesaController infoMesaController;
 	public static infoTorneioController infoTorneioController;
@@ -44,10 +44,11 @@ public class App extends Application{
 		inicioController = new InicioController(facade);
 		cadastroController = new CadastroController(facade);
 		loginController = new LoginController(inicioController, cadastroController, facade);
-		mesaController = new MesaController(inicioController, facade);
+		mesaController = new CashGameController(inicioController, facade);
 		torneioController = new TorneioController(inicioController, facade);
 		infoMesaController = new InfoMesaController(inicioController, facade);
 		infoTorneioController = new infoTorneioController(inicioController, facade);
+
 
 		Application.launch(args);
 		

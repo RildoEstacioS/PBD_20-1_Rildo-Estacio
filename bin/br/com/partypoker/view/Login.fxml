@@ -38,17 +38,7 @@
             <Font name="System Bold" size="50.0" />
          </font>
       </Label>
-      <Label layoutX="521.0" layoutY="293.0" styleClass="label_login" stylesheets="@DarkTheme.css" text="Login">
-         <font>
-            <Font name="System Bold" size="28.0" />
-         </font>
-      </Label>
-      <Label layoutX="518.0" layoutY="393.0" styleClass="label_login" stylesheets="@DarkTheme.css" text="Senha">
-         <font>
-            <Font name="System Bold" size="28.0" />
-         </font>
-      </Label>
-      <TextField fx:id="loginTF" layoutX="521.0" layoutY="345.0" prefHeight="35.0" prefWidth="427.0" styleClass="input" stylesheets="@DarkTheme.css" />
+      <TextField fx:id="loginTF" layoutX="521.0" layoutY="345.0" prefHeight="35.0" prefWidth="427.0" promptText="Login" styleClass="input" stylesheets="@DarkTheme.css" />
       <Button fx:id="buttonEntrar" layoutX="698.0" layoutY="613.0" mnemonicParsing="false" onAction="#bttnEntrarEvent" stylesheets="@DarkTheme.css" text="Entrar" textFill="#0075ff">
          <font>
             <Font name="System Bold" size="18.0" />
@@ -61,7 +51,7 @@
          <font>
             <Font name="System Bold" size="18.0" />
          </font></Button>
-      <PasswordField fx:id="senhaTF" layoutX="521.0" layoutY="440.0" prefHeight="35.0" prefWidth="427.0" styleClass="input" stylesheets="@DarkTheme.css" />
+      <PasswordField fx:id="senhaTF" layoutX="521.0" layoutY="440.0" prefHeight="35.0" prefWidth="427.0" promptText="Senha" styleClass="input" stylesheets="@DarkTheme.css" />
       <Label layoutX="984.0" layoutY="14.0" prefHeight="5.0" prefWidth="27.0" text="x" textAlignment="RIGHT" textFill="#fcfcfc">
          <font>
             <Font name="Corbel Bold" size="36.0" />

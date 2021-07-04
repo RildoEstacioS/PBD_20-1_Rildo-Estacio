@@ -26,7 +26,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 
-public class MesaController implements Initializable{
+public class CashGameController implements Initializable{
 	
     @FXML
     private TableView<Mesa> tableView;
@@ -48,24 +48,24 @@ public class MesaController implements Initializable{
     
     InicioController inicioController;
     
-    private Stage stageMesa;
-    private Scene sceneMesa;
+    private Stage stageCashGame;
+    private Scene sceneCashGame;
     
-    private Parent parentMesa;
+    private Parent parentCashGame;
     
-	private Parent parentInfoMesa;
+	private Parent parentInfoCashGame;
 	private Facade facade;
     
-    public MesaController(InicioController inicioController, Facade facade) {
+    public CashGameController(InicioController inicioController, Facade facade) {
     	this.facade = facade;
     	this.inicioController = inicioController;
     	
 
-    	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/br/com/partypoker/view/Mesa.fxml"));
+    	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/br/com/partypoker/view/CashGame.fxml"));
         fxmlLoader.setController(this);
         
         try {
-        	parentMesa = (Parent) fxmlLoader.load();
+        	parentCashGame = (Parent) fxmlLoader.load();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -154,41 +154,41 @@ public class MesaController implements Initializable{
 
 
 	public Stage getStageMesa() {
-		return stageMesa;
+		return stageCashGame;
 	}
 
 
 	public void setStageMesa(Stage stageMesa) {
-		this.stageMesa = stageMesa;
+		this.stageCashGame = stageMesa;
 	}
 
 
 	public Scene getSceneMesa() {
-		return sceneMesa;
+		return sceneCashGame;
 	}
 
 
 	public void setSceneMesa(Scene sceneMesa) {
-		this.sceneMesa = sceneMesa;
+		this.sceneCashGame = sceneMesa;
 	}
 
 
 	public Parent getParentMesa() {
-		return parentMesa;
+		return parentCashGame;
 	}
 
 
 	public void setParentMesa(Parent parentMesa) {
-		this.parentMesa = parentMesa;
+		this.parentCashGame = parentMesa;
 	}
 
 
 	public Parent getParentInfoMesa() {
-		return parentInfoMesa;
+		return parentInfoCashGame;
 	}
 
 
 	public void setParentInfoMesa(Parent parentInfoMesa) {
-		this.parentInfoMesa = parentInfoMesa;
+		this.parentInfoCashGame = parentInfoMesa;
 	}    
 }

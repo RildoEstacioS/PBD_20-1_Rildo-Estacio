@@ -46,7 +46,7 @@ public class InicioController{
         	//Inicio padrão
         	parentInicio = (Parent) fxmlLoader.load();
         	sceneInicio = new Scene(parentInicio);
-        			
+
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -62,12 +62,13 @@ public class InicioController{
     }
     
     @FXML
-	public void mudarPanel(Event e) {			
+	public void mudarPanel(Event e) {		
+    	
+    	
     	if (e.getSource().equals(mesaBttn)) {
     		mesaBttn.setFont(Font.font(null, FontWeight.BOLD, 24));
     		torneioBttn.setFont(Font.font(24));
-    		bordePane.setCenter(App.mesaController.getParentMesa()
-    				);
+    		bordePane.setCenter(App.mesaController.getParentMesa());
 		}
     	
     	if (e.getSource().equals(torneioBttn)) {
