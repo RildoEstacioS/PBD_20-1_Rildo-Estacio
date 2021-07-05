@@ -96,7 +96,6 @@ public class InicioController{
     		torneios.setFont(Font.font(null, FontWeight.BOLD, 28));
     		cashGames.setFont(Font.font(28));
     		lugarRapido.setFont(Font.font(28));
-    		torneios.setFont(Font.font(28));
     		favoritos.setFont(Font.font(28));
     		
     		bordePane.setCenter(App.torneioController.getParentTorneio());
@@ -107,6 +106,8 @@ public class InicioController{
     		cashGames.setFont(Font.font(28));
     		torneios.setFont(Font.font(28));
     		favoritos.setFont(Font.font(28));
+    		
+    		bordePane.setCenter(App.lugarRapidoController.getParentLugarRapido());
 		}
     	
     	if (e.getSource().equals(favoritos)) {
@@ -114,7 +115,9 @@ public class InicioController{
     		cashGames.setFont(Font.font(28));
     		torneios.setFont(Font.font(28));
     		lugarRapido.setFont(Font.font(28));
-		}
+    		
+    		bordePane.setCenter(App.favoritoController.getParentFavorito());
+    	}
     	
     }
 

@@ -40,10 +40,12 @@ public class CadastroController {
     private Scene sceneCadastrar;
     private Stage stageCadastrar;
     private LoginController loginController;
+    private InicioController inicioController;
     private Facade facade;
     
-    public CadastroController(Facade facade) {
+    public CadastroController(InicioController inicioController, Facade facade) {
     	this.facade = facade;
+    	
     	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/br/com/partypoker/view/Cadastrar.fxml"));
         fxmlLoader.setController(this);
         

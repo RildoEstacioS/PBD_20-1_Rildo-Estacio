@@ -7,11 +7,12 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 import br.com.partypoker.controller.CadastroController;
-import br.com.partypoker.controller.CashController;
 import br.com.partypoker.controller.InfoMesaController;
 import br.com.partypoker.controller.InicioController;
 import br.com.partypoker.controller.LoginController;
+import br.com.partypoker.controller.LugarRapidoController;
 import br.com.partypoker.controller.CashGameController;
+import br.com.partypoker.controller.FavoritoController;
 import br.com.partypoker.controller.TorneioController;
 import br.com.partypoker.controller.infoTorneioController;
 import br.com.partypoker.exception.BusinessException;
@@ -26,12 +27,16 @@ public class App extends Application{
 	
 	
 	public static LoginController loginController;
+	
 	public static InicioController inicioController;
 	public static CadastroController cadastroController;
 	public static CashGameController cashGameController;
 	public static TorneioController torneioController;
 	public static InfoMesaController infoMesaController;
 	public static infoTorneioController infoTorneioController;
+	public static LugarRapidoController lugarRapidoController;
+	public static FavoritoController favoritoController;
+	
 	public static Facade facade;
 	
 	@Override
@@ -43,13 +48,15 @@ public class App extends Application{
 		facade = new Facade();
 
 		inicioController = new InicioController(facade);
-		cadastroController = new CadastroController(facade);
+		
+		cadastroController = new CadastroController(inicioController, facade);
 		loginController = new LoginController(inicioController, cadastroController, facade);
 		cashGameController = new CashGameController(inicioController, facade);
 		torneioController = new TorneioController(inicioController, facade);
 		infoMesaController = new InfoMesaController(inicioController, facade);
 		infoTorneioController = new infoTorneioController(inicioController, facade);
-
+		lugarRapidoController = new LugarRapidoController(inicioController, facade);
+		favoritoController = new FavoritoController(inicioController, facade);
 
 		Application.launch(args);
 		

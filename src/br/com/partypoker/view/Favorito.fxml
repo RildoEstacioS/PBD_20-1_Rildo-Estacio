@@ -6,29 +6,29 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="608.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="524.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ScrollPane hbarPolicy="NEVER" layoutX="561.0" layoutY="150.0" prefHeight="408.0" prefWidth="337.0" stylesheets="@DarkTheme.css">
+      <ScrollPane hbarPolicy="NEVER" layoutX="561.0" layoutY="112.0" prefHeight="363.0" prefWidth="337.0" stylesheets="@DarkTheme.css">
          <content>
-            <ListView prefHeight="406.0" prefWidth="337.0" />
+            <ListView fx:id="favoritosTorneioLV" prefHeight="360.0" prefWidth="337.0" />
          </content>
       </ScrollPane>
-      <ScrollPane hbarPolicy="NEVER" layoutX="127.0" layoutY="150.0" prefHeight="408.0" prefWidth="337.0" stylesheets="@DarkTheme.css">
+      <ScrollPane hbarPolicy="NEVER" layoutX="127.0" layoutY="112.0" prefHeight="363.0" prefWidth="337.0" stylesheets="@DarkTheme.css">
          <content>
-            <ListView prefHeight="406.0" prefWidth="336.0" />
+            <ListView fx:id="favoritosCashGameLV" prefHeight="361.0" prefWidth="336.0" />
          </content>
       </ScrollPane>
-      <Label layoutX="217.0" layoutY="110.0" text="Cash Games">
+      <Label layoutX="217.0" layoutY="72.0" text="Cash Games">
          <font>
             <Font name="System Bold" size="28.0" />
          </font>
       </Label>
-      <Label layoutX="672.0" layoutY="110.0" text="Torneios">
+      <Label layoutX="672.0" layoutY="72.0" text="Torneios">
          <font>
             <Font name="System Bold" size="28.0" />
          </font>
       </Label>
-      <Label layoutX="398.0" layoutY="46.0" text="Meus Favoritos">
+      <Label layoutX="398.0" layoutY="25.0" text="Meus Favoritos">
          <font>
             <Font name="System Bold" size="32.0" />
          </font>

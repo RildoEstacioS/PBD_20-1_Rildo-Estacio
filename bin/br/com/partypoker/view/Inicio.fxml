@@ -48,24 +48,24 @@
                </image>
             </ImageView>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#02112c" height="80.0" layoutY="116.0" stroke="BLACK" strokeType="INSIDE" width="1024.0" />
-            <Label fx:id="cashGames" layoutX="249.0" layoutY="140.0" onMousePressed="#mudarPanel" text="Cash Games" textFill="#fcfcfc">
+            <Label fx:id="cashGames" layoutX="244.0" layoutY="132.0" onMousePressed="#mudarPanel" text="Cash Games" textFill="#fcfcfc">
                <font>
-                  <Font name="SansSerif Regular" size="28.0" />
+                  <Font size="28.0" />
                </font>
             </Label>
-            <Label fx:id="torneios" layoutX="443.0" layoutY="140.0" onMousePressed="#mudarPanel" text="Torneios" textFill="#fcfcfc">
+            <Label fx:id="torneios" layoutX="438.0" layoutY="132.0" onMousePressed="#mudarPanel" text="Torneios" textFill="#fcfcfc">
                <font>
-                  <Font name="SansSerif Regular" size="28.0" />
+                  <Font size="28.0" />
                </font>
             </Label>
-            <Label fx:id="lugarRapido" layoutX="36.0" layoutY="140.0" onMousePressed="#mudarPanel" text="Lugar Rápido" textFill="#fcfcfc">
+            <Label fx:id="lugarRapido" layoutX="35.0" layoutY="132.0" onMousePressed="#mudarPanel" text="Lugar Rápido" textFill="#fcfcfc">
                <font>
-                  <Font name="SansSerif Regular" size="28.0" />
+                  <Font size="28.0" />
                </font>
             </Label>
-            <Label fx:id="favoritos" layoutX="604.0" layoutY="140.0" onDragDetected="#mudarPanel" onMousePressed="#mudarPanel" text="Favoritos" textFill="#fcfcfc">
+            <Label fx:id="favoritos" layoutX="600.0" layoutY="132.0" onDragDetected="#mudarPanel" onMousePressed="#mudarPanel" text="Favoritos" textFill="#fcfcfc">
                <font>
-                  <Font name="SansSerif Regular" size="28.0" />
+                  <Font size="28.0" />
                </font>
             </Label>
          </children>

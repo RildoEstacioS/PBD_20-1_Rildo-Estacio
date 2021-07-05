@@ -6,13 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
-import com.sun.tools.javac.launcher.Main;
-
 import br.com.partypoker.App;
 import br.com.partypoker.facade.Facade;
-import br.com.partypoker.model.Jogador;
 import br.com.partypoker.model.Mesa;
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -21,28 +17,21 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 
 public class CashGameController implements Initializable{
 	
     @FXML
-    private TableView<Mesa> tableView;
-    
-    @FXML
-    private TableColumn<Mesa, String> mesaCollumn;
+    private TextField buscarCashGameTF;
 
     @FXML
-    private TableColumn<Mesa, String> jogadoresCollumn;
-
-    @FXML
-    private TableColumn<Mesa, Void> participarCollumn;
-    
-    
+    private ListView<?> listView;    
 
     private List<Mesa> listaMesas = new ArrayList<Mesa>();
     
@@ -142,18 +131,18 @@ public class CashGameController implements Initializable{
     			}
     	};
     	
-    	participarCollumn.setCellFactory(cellFactory);
+//    	participarCollumn.setCellFactory(cellFactory);
     }
 
 
-	public TableView<Mesa> getTableView() {
-		return tableView;
-	}
-
-
-	public void setTableView(TableView<Mesa> tableView) {
-		this.tableView = tableView;
-	}
+//	public TableView<Mesa> getTableView() {
+//		return tableView;
+//	}
+//
+//
+//	public void setTableView(TableView<Mesa> tableView) {
+//		this.tableView = tableView;
+//	}
 
 
 	public Stage getStageMesa() {
@@ -193,5 +182,105 @@ public class CashGameController implements Initializable{
 
 	public void setParentInfoMesa(Parent parentInfoMesa) {
 		this.parentInfoCashGame = parentInfoMesa;
+	}
+
+
+	public TextField getBuscarCashGameTF() {
+		return buscarCashGameTF;
+	}
+
+
+	public void setBuscarCashGameTF(TextField buscarCashGameTF) {
+		this.buscarCashGameTF = buscarCashGameTF;
+	}
+
+
+	public ListView<?> getListView() {
+		return listView;
+	}
+
+
+	public void setListView(ListView<?> listView) {
+		this.listView = listView;
+	}
+
+
+	public List<Mesa> getListaMesas() {
+		return listaMesas;
+	}
+
+
+	public void setListaMesas(List<Mesa> listaMesas) {
+		this.listaMesas = listaMesas;
+	}
+
+
+	public ObservableList<Mesa> getObservableListMesas() {
+		return observableListMesas;
+	}
+
+
+	public void setObservableListMesas(ObservableList<Mesa> observableListMesas) {
+		this.observableListMesas = observableListMesas;
+	}
+
+
+	public InicioController getInicioController() {
+		return inicioController;
+	}
+
+
+	public void setInicioController(InicioController inicioController) {
+		this.inicioController = inicioController;
+	}
+
+
+	public Stage getStageCashGame() {
+		return stageCashGame;
+	}
+
+
+	public void setStageCashGame(Stage stageCashGame) {
+		this.stageCashGame = stageCashGame;
+	}
+
+
+	public Scene getSceneCashGame() {
+		return sceneCashGame;
+	}
+
+
+	public void setSceneCashGame(Scene sceneCashGame) {
+		this.sceneCashGame = sceneCashGame;
+	}
+
+
+	public Parent getParentCashGame() {
+		return parentCashGame;
+	}
+
+
+	public void setParentCashGame(Parent parentCashGame) {
+		this.parentCashGame = parentCashGame;
+	}
+
+
+	public Parent getParentInfoCashGame() {
+		return parentInfoCashGame;
+	}
+
+
+	public void setParentInfoCashGame(Parent parentInfoCashGame) {
+		this.parentInfoCashGame = parentInfoCashGame;
+	}
+
+
+	public Facade getFacade() {
+		return facade;
+	}
+
+
+	public void setFacade(Facade facade) {
+		this.facade = facade;
 	}    
 }

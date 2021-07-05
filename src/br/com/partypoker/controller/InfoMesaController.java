@@ -34,10 +34,9 @@ public class InfoMesaController implements Initializable{
     private Button participarBttn;
 
     InicioController inicioController;
-    private Stage stageInfoMesa;
-    private Scene sceneInfoMesa;
+//    private Stage stageInfoMesa;
+//    private Scene sceneInfoMesa;
     private Parent parentInfoMesa;
-    private Parent parentMesa;
     private Facade facade;
     
 	public InfoMesaController(InicioController inicioController, Facade facade) {
@@ -112,22 +111,6 @@ public class InfoMesaController implements Initializable{
 		this.participarBttn = participarBttn;
 	}
 
-	public Stage getStageInfoMesa() {
-		return stageInfoMesa;
-	}
-
-	public void setStageInfoMesa(Stage stageInfoMesa) {
-		this.stageInfoMesa = stageInfoMesa;
-	}
-
-	public Scene getSceneInfoMesa() {
-		return sceneInfoMesa;
-	}
-
-	public void setSceneInfoMesa(Scene sceneInfoMesa) {
-		this.sceneInfoMesa = sceneInfoMesa;
-	}
-
 	public Parent getParentInfoMesa() {
 		return parentInfoMesa;
 	}
@@ -136,11 +119,4 @@ public class InfoMesaController implements Initializable{
 		this.parentInfoMesa = parentInfoMesa;
 	}
 
-	public Parent getParentMesa() {
-		return parentMesa;
-	}
-
-	public void setParentMesa(Parent parentMesa) {
-		this.parentMesa = parentMesa;
-	}
 }
