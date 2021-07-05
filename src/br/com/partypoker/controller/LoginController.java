@@ -64,7 +64,7 @@ public class LoginController implements Initializable{
     public void launch(Stage stage) {
     		this.stageLogin = stage;
     		stageLogin.setScene(sceneLogin);
-    		stageLogin.initStyle(StageStyle.UNDECORATED);
+//    		stageLogin.initStyle(StageStyle.UNDECORATED);
     		stageLogin.setResizable(false);
     		stageLogin.show();
 

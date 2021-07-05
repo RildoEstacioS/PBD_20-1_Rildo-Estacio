@@ -69,7 +69,7 @@ public class InfoMesaController implements Initializable{
 	
 	@FXML
 	void voltarButtonAction(ActionEvent event) {
-		inicioController.getBordePane().setCenter(App.mesaController.getParentMesa());
+		inicioController.getBordePane().setCenter(App.cashGameController.getParentMesa());
 	}
 
 	public Button getVoltarButton() {

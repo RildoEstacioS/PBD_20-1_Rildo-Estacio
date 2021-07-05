@@ -10,73 +10,73 @@
 
 <BorderPane fx:id="bordePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
    <top>
-      <AnchorPane prefHeight="143.0" prefWidth="1024.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="196.0" prefWidth="1024.0" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="141.0" fitWidth="108.0" layoutX="24.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="141.0" fitWidth="108.0" layoutX="24.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@logo%20(2).png" />
                </image>
             </ImageView>
-            <Label layoutX="132.0" layoutY="38.0" text="PartyPoker">
+            <Label layoutX="132.0" layoutY="23.0" text="PartyPoker">
                <font>
                   <Font name="System Bold" size="48.0" />
                </font>
             </Label>
-            <ImageView fitHeight="64.0" fitWidth="64.0" layoutX="727.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="64.0" fitWidth="64.0" layoutX="713.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@user.png" />
                </image>
             </ImageView>
-            <Label fx:id="torneioBttn11" layoutX="798.0" layoutY="41.0" onDragDetected="#mudarPanel" onMousePressed="#mudarPanel" text="NomeUser">
+            <Label fx:id="userNameLabel" layoutX="784.0" layoutY="25.0" onDragDetected="#mudarPanel" onMousePressed="#mudarPanel" text="NomeUser">
                <font>
                   <Font name="SansSerif Bold" size="28.0" />
                </font>
             </Label>
-            <Label fx:id="torneioBttn111" layoutX="798.0" layoutY="79.0" onDragDetected="#mudarPanel" onMousePressed="#mudarPanel" opacity="0.51" text="R$ 0,00">
+            <Label fx:id="cashLabel" layoutX="784.0" layoutY="63.0" onDragDetected="#mudarPanel" onMousePressed="#mudarPanel" opacity="0.51" text="R$ 0,00">
                <font>
                   <Font name="SansSerif Regular" size="18.0" />
                </font>
             </Label>
-            <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="945.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="downIcon" fitHeight="24.0" fitWidth="24.0" layoutX="931.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@arrow-down-sign-to-navigate.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="986.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="closeButton" fitHeight="24.0" fitWidth="24.0" layoutX="986.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@close.png" />
                </image>
             </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#02112c" height="80.0" layoutY="116.0" stroke="BLACK" strokeType="INSIDE" width="1024.0" />
+            <Label fx:id="cashGames" layoutX="249.0" layoutY="140.0" onMousePressed="#mudarPanel" text="Cash Games" textFill="#fcfcfc">
+               <font>
+                  <Font name="SansSerif Regular" size="28.0" />
+               </font>
+            </Label>
+            <Label fx:id="torneios" layoutX="443.0" layoutY="140.0" onMousePressed="#mudarPanel" text="Torneios" textFill="#fcfcfc">
+               <font>
+                  <Font name="SansSerif Regular" size="28.0" />
+               </font>
+            </Label>
+            <Label fx:id="lugarRapido" layoutX="36.0" layoutY="140.0" onMousePressed="#mudarPanel" text="Lugar Rápido" textFill="#fcfcfc">
+               <font>
+                  <Font name="SansSerif Regular" size="28.0" />
+               </font>
+            </Label>
+            <Label fx:id="favoritos" layoutX="604.0" layoutY="140.0" onDragDetected="#mudarPanel" onMousePressed="#mudarPanel" text="Favoritos" textFill="#fcfcfc">
+               <font>
+                  <Font name="SansSerif Regular" size="28.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </top>
    <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="486.0" prefWidth="1024.0" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="230.0" layoutY="254.0" styleClass="h1" stylesheets="@DarkTheme.css" text="Selecione uma das opções">
+            <Label layoutX="218.0" layoutY="192.0" styleClass="h1" stylesheets="@DarkTheme.css" text="Selecione uma das opções">
                <font>
                   <Font size="36.0" />
-               </font>
-            </Label>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#02112c" height="80.0" stroke="BLACK" strokeType="INSIDE" width="1024.0" />
-            <Label fx:id="mesaBttn" layoutX="252.0" layoutY="23.0" onMousePressed="#mudarPanel" text="Cash Games" textFill="#fcfcfc">
-               <font>
-                  <Font name="SansSerif Bold" size="28.0" />
-               </font>
-            </Label>
-            <Label fx:id="torneioBttn" layoutX="464.0" layoutY="23.0" onDragDetected="#mudarPanel" onMousePressed="#mudarPanel" text="Torneios" textFill="#fcfcfc">
-               <font>
-                  <Font name="SansSerif Bold" size="28.0" />
-               </font>
-            </Label>
-            <Label fx:id="mesaBttn1" layoutX="35.0" layoutY="22.0" onMousePressed="#mudarPanel" text="Lugar Rápido" textFill="#fcfcfc">
-               <font>
-                  <Font name="SansSerif Bold" size="28.0" />
-               </font>
-            </Label>
-            <Label fx:id="torneioBttn1" layoutX="630.0" layoutY="23.0" onDragDetected="#mudarPanel" onMousePressed="#mudarPanel" text="Favoritos" textFill="#fcfcfc">
-               <font>
-                  <Font name="SansSerif Bold" size="28.0" />
                </font>
             </Label>
          </children>

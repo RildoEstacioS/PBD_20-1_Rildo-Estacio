@@ -10,6 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Font;
@@ -21,15 +22,31 @@ public class InicioController{
 	
     @FXML
     private BorderPane bordePane;
-    
-    @FXML
-    private AnchorPane escolherModoPane;
 
     @FXML
-    private Label mesaBttn;
-    
+    private Label userNameLabel;
+
     @FXML
-    private Label torneioBttn;
+    private Label cashLabel;
+
+    @FXML
+    private ImageView downIcon;
+
+    @FXML
+    private ImageView closeButton;
+
+    @FXML
+    private Label cashGames;
+
+    @FXML
+    private Label torneios;
+
+    @FXML
+    private Label lugarRapido;
+
+    @FXML
+    private Label favoritos;
+
     
     private Parent parentInicio;
     private Scene sceneInicio;
@@ -56,7 +73,7 @@ public class InicioController{
     public void launch(Stage stage) {
 		this.stageInicio = stage;
 		stageInicio.setScene(sceneInicio);
-		stageInicio.initStyle(StageStyle.UNDECORATED);
+//		stageInicio.initStyle(StageStyle.UNDECORATED);
 		stageInicio.setResizable(false);
 		stageInicio.show();
     }
@@ -65,21 +82,40 @@ public class InicioController{
 	public void mudarPanel(Event e) {		
     	
     	
-    	if (e.getSource().equals(mesaBttn)) {
-    		mesaBttn.setFont(Font.font(null, FontWeight.BOLD, 24));
-    		torneioBttn.setFont(Font.font(24));
-    		bordePane.setCenter(App.mesaController.getParentMesa());
+    	if (e.getSource().equals(cashGames)) {
+    		cashGames.setFont(Font.font(null, FontWeight.BOLD, 28));
+    		torneios.setFont(Font.font(28));
+    		lugarRapido.setFont(Font.font(28));
+    		torneios.setFont(Font.font(28));
+    		favoritos.setFont(Font.font(28));
+
+    		bordePane.setCenter(App.cashGameController.getParentMesa());
 		}
     	
-    	if (e.getSource().equals(torneioBttn)) {
-    		torneioBttn.setFont(Font.font(null, FontWeight.BOLD, 24));
-    		mesaBttn.setFont(Font.font(24));
+    	if (e.getSource().equals(torneios)) {
+    		torneios.setFont(Font.font(null, FontWeight.BOLD, 28));
+    		cashGames.setFont(Font.font(28));
+    		lugarRapido.setFont(Font.font(28));
+    		torneios.setFont(Font.font(28));
+    		favoritos.setFont(Font.font(28));
+    		
     		bordePane.setCenter(App.torneioController.getParentTorneio());
 		}
-    }
-    
-    public void mudarPanelCentral(Event e) {  
-//    	bordePane.setCenter(UtilTelas.parentInfoTorneio);
+    	
+    	if (e.getSource().equals(lugarRapido)) {
+    		lugarRapido.setFont(Font.font(null, FontWeight.BOLD, 28));
+    		cashGames.setFont(Font.font(28));
+    		torneios.setFont(Font.font(28));
+    		favoritos.setFont(Font.font(28));
+		}
+    	
+    	if (e.getSource().equals(favoritos)) {
+    		favoritos.setFont(Font.font(null, FontWeight.BOLD, 28));
+    		cashGames.setFont(Font.font(28));
+    		torneios.setFont(Font.font(28));
+    		lugarRapido.setFont(Font.font(28));
+		}
+    	
     }
 
 	public BorderPane getBordePane() {
@@ -90,28 +126,68 @@ public class InicioController{
 		this.bordePane = bordePane;
 	}
 
-	public AnchorPane getEscolherModoPane() {
-		return escolherModoPane;
+	public Label getUserNameLabel() {
+		return userNameLabel;
 	}
 
-	public void setEscolherModoPane(AnchorPane escolherModoPane) {
-		this.escolherModoPane = escolherModoPane;
+	public void setUserNameLabel(Label userNameLabel) {
+		this.userNameLabel = userNameLabel;
 	}
 
-	public Label getMesaBttn() {
-		return mesaBttn;
+	public Label getCashLabel() {
+		return cashLabel;
 	}
 
-	public void setMesaBttn(Label mesaBttn) {
-		this.mesaBttn = mesaBttn;
+	public void setCashLabel(Label cashLabel) {
+		this.cashLabel = cashLabel;
 	}
 
-	public Label getTorneioBttn() {
-		return torneioBttn;
+	public ImageView getDownIcon() {
+		return downIcon;
 	}
 
-	public void setTorneioBttn(Label torneioBttn) {
-		this.torneioBttn = torneioBttn;
+	public void setDownIcon(ImageView downIcon) {
+		this.downIcon = downIcon;
+	}
+
+	public ImageView getCloseButton() {
+		return closeButton;
+	}
+
+	public void setCloseButton(ImageView closeButton) {
+		this.closeButton = closeButton;
+	}
+
+	public Label getCashGames() {
+		return cashGames;
+	}
+
+	public void setCashGames(Label cashGames) {
+		this.cashGames = cashGames;
+	}
+
+	public Label getTorneios() {
+		return torneios;
+	}
+
+	public void setTorneios(Label torneios) {
+		this.torneios = torneios;
+	}
+
+	public Label getLugarRapido() {
+		return lugarRapido;
+	}
+
+	public void setLugarRapido(Label lugarRapido) {
+		this.lugarRapido = lugarRapido;
+	}
+
+	public Label getFavoritos() {
+		return favoritos;
+	}
+
+	public void setFavoritos(Label favoritos) {
+		this.favoritos = favoritos;
 	}
 
 	public Parent getParentInicio() {
@@ -137,7 +213,14 @@ public class InicioController{
 	public void setStageInicio(Stage stageInicio) {
 		this.stageInicio = stageInicio;
 	}
+
+	public Facade getFacade() {
+		return facade;
+	}
+
+	public void setFacade(Facade facade) {
+		this.facade = facade;
+	}
     
-    
-    
+       
 }

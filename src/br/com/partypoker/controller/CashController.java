@@ -28,7 +28,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 
-public class CashGameController implements Initializable{
+public class CashController implements Initializable{
 	
     @FXML
     private TableView<Mesa> tableView;
@@ -58,7 +58,7 @@ public class CashGameController implements Initializable{
 	private Parent parentInfoCashGame;
 	private Facade facade;
     
-    public CashGameController(InicioController inicioController, Facade facade) {
+    public CashController(InicioController inicioController, Facade facade) {
     	this.facade = facade;
     	this.inicioController = inicioController;
     	
@@ -78,22 +78,22 @@ public class CashGameController implements Initializable{
     
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
-        carregarTableView();
+//        carregarTableView();
 
     }
     
     private void carregarTableView() {
     	//Depois colocar para puxar do banco
-    	//Só alimentando para visualização
+    	//Sï¿½ alimentando para visualizaï¿½ï¿½o
 //    	
 //    	mesaCollumn.setCellValueFactory(new PropertyValueFactory<>("titulo"));
 //    	jogadoresCollumn.setCellValueFactory(new PropertyValueFactory<>("infoJogadores"));
 //    	
 //    	
 //    	
-//    	Mesa mesa1 = new Mesa("mesa1", 200.0, "Sei la o que e isso", 9, "Cashgame");
-//    	Mesa mesa2 = new Mesa("mesa2", 200.0, "Sei la o que e isso", 9, "Cashgame");
-//    	Mesa mesa3 = new Mesa("mesa3", 200.0, "Sei la o que e isso", 9, "Cashgame"); 
+//    	Mesa mesa1 = new Mesa("mesa1", 200.0, "Sei lï¿½ o que ï¿½ isso", 9, "Cashgame");
+//    	Mesa mesa2 = new Mesa("mesa2", 200.0, "Sei lï¿½ o que ï¿½ isso", 9, "Cashgame");
+//    	Mesa mesa3 = new Mesa("mesa3", 200.0, "Sei lï¿½ o que ï¿½ isso", 9, "Cashgame"); 
 //
 //    	Jogador j1 = new Jogador("a", "", "", 100);
 //    	Jogador j2 = new Jogador("b", "", "", 100);

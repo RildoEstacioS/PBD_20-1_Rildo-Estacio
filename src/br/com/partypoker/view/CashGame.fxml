@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="608.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="506.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TextField layoutX="112.0" layoutY="38.0" minHeight="100.0" minWidth="800.0" promptText="Buscar Cash Game" styleClass="input" stylesheets="@DarkTheme.css">
+      <TextField fx:id="buscarCashGameTF" layoutX="112.0" layoutY="38.0" minHeight="100.0" minWidth="800.0" promptText="Buscar Cash Game" styleClass="input" stylesheets="@DarkTheme.css">
          <font>
             <Font size="24.0" />
          </font>
@@ -20,7 +20,7 @@
             <Image url="@loupe.png" />
          </image>
       </ImageView>
-      <ScrollPane hbarPolicy="NEVER" layoutX="112.0" layoutY="166.0" prefHeight="408.0" prefWidth="800.0" styleClass="input" stylesheets="@DarkTheme.css">
+      <ScrollPane hbarPolicy="NEVER" layoutX="112.0" layoutY="153.0" prefHeight="331.0" prefWidth="800.0" styleClass="input" stylesheets="@DarkTheme.css">
          <content>
             <ListView prefHeight="406.0" prefWidth="800.0" styleClass="input" stylesheets="@DarkTheme.css" />
          </content>
