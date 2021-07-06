@@ -5,6 +5,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DisplacementMap?>
+<?import javafx.scene.effect.FloatMap?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -16,7 +18,7 @@
 
 <AnchorPane prefHeight="720.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" height="720.0" layoutX="443.0" stroke="BLACK" strokeLineCap="BUTT" strokeWidth="0.0" width="582.0">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="720.0" stroke="BLACK" strokeLineCap="BUTT" strokeWidth="0.0" width="1024.0">
          <fill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -33,16 +35,23 @@
                </stops>
             </LinearGradient>
          </fill></Rectangle>
-      <Label layoutX="99.0" layoutY="460.0" styleClass="h1" stylesheets="@DarkTheme.css" text="PartyPoker">
+      <Label layoutX="397.0" layoutY="392.0" styleClass="h1" text="PartyPoker" textFill="#fcfcfc">
          <font>
             <Font name="System Bold" size="50.0" />
          </font>
       </Label>
-      <TextField fx:id="loginTF" layoutX="521.0" layoutY="427.0" prefHeight="35.0" prefWidth="427.0" promptText="Login" styleClass="input" stylesheets="@DarkTheme.css">
+      <TextField fx:id="loginTF" layoutX="314.0" layoutY="524.0" prefHeight="35.0" prefWidth="427.0" promptText="Login" styleClass="input" stylesheets="@DarkTheme.css">
          <font>
             <Font name="System Bold" size="16.0" />
-         </font></TextField>
-      <Button fx:id="buttonEntrar" layoutX="698.0" layoutY="613.0" mnemonicParsing="false" onAction="#bttnEntrarEvent" stylesheets="@DarkTheme.css" text="Entrar" textFill="#0075ff">
+         </font>
+         <effect>
+            <DisplacementMap>
+               <mapData>
+                  <FloatMap />
+               </mapData>
+            </DisplacementMap>
+         </effect></TextField>
+      <Button fx:id="buttonEntrar" layoutX="492.0" layoutY="647.0" mnemonicParsing="false" onAction="#bttnEntrarEvent" stylesheets="@DarkTheme.css" text="Entrar" textFill="#0075ff">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -50,11 +59,7 @@
             <String fx:value="button" />
             <String fx:value="light" />
          </styleClass></Button>
-      <Button fx:id="cadastrarButton" layoutX="164.0" layoutY="608.0" mnemonicParsing="false" onAction="#bttnCadastrarEvent" prefHeight="58.0" stylesheets="@DarkTheme.css" text="Cadastre-se" textFill="#02112c">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font></Button>
-      <PasswordField fx:id="senhaTF" layoutX="521.0" layoutY="486.0" prefHeight="35.0" prefWidth="427.0" promptText="Senha" styleClass="input" stylesheets="@DarkTheme.css">
+      <PasswordField fx:id="senhaTF" layoutX="314.0" layoutY="583.0" prefHeight="35.0" prefWidth="427.0" promptText="Senha" styleClass="input" stylesheets="@DarkTheme.css">
          <font>
             <Font name="System Bold" size="16.0" />
          </font></PasswordField>
@@ -63,32 +68,22 @@
             <Font name="Corbel Bold" size="36.0" />
          </font>
       </Label>
-      <Label layoutX="545.0" layoutY="186.0" prefHeight="70.0" prefWidth="379.0" text="Vamos Começar!" textFill="#fcfcfc">
-         <font>
-            <Font name="System Bold" size="48.0" />
-         </font>
-      </Label>
-      <Label layoutX="148.0" layoutY="433.0" styleClass="h2" stylesheets="@DarkTheme.css" text="Bem-Vindo ao" textAlignment="CENTER">
+      <Label layoutX="421.0" layoutY="360.0" styleClass="h2" text="Bem-Vindo ao" textAlignment="CENTER" textFill="#fcfcfc">
          <font>
             <Font name="Corbel" size="36.0" />
          </font>
       </Label>
-      <ImageView fitHeight="299.0" fitWidth="394.0" layoutX="27.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="299.0" fitWidth="394.0" layoutX="331.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@logo%20(2).png" />
          </image>
       </ImageView>
-      <Label layoutX="677.0" layoutY="351.0" text="Faça login" textFill="#fcfcfc">
+      <Label layoutX="470.0" layoutY="474.0" text="Faça login" textFill="#fcfcfc">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Label fx:id="esqueceuSenhaLabel" layoutX="800.0" layoutY="540.0" text="Esqueceu sua senha?" textFill="#5100ff">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Label>
-      <Label fx:id="entrarAdminLabel" layoutX="811.0" layoutY="687.0" text="Entrar como administrador" textFill="#fcfcfc">
+      <Label layoutX="855.0" layoutY="681.0" text="Entrar como jogador" textFill="#fcfcfc">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
