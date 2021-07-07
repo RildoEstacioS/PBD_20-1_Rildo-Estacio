@@ -11,27 +11,26 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.stage.Stage;
+import javafx.scene.image.ImageView;
 
 public class InfoMesaController implements Initializable{
 
     @FXML
-    private Button voltarButton;
-
-    @FXML
     private Label nomeMesaLabel;
-
-    @FXML
-    private Label codigoLabel;
 
     @FXML
     private Label descricaoTA;
 
     @FXML
     private Button participarBttn;
+
+    @FXML
+    private ImageView voltarButton;
+
+    @FXML
+    private ImageView closeButton;
 
     InicioController inicioController;
 //    private Stage stageInfoMesa;

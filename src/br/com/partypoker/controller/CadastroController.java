@@ -2,7 +2,6 @@ package br.com.partypoker.controller;
 
 import java.io.IOException;
 
-import br.com.partypoker.App;
 import br.com.partypoker.exception.BusinessException;
 import br.com.partypoker.facade.Facade;
 import br.com.partypoker.model.Jogador;
@@ -16,6 +15,7 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -35,7 +35,13 @@ public class CadastroController {
 
     @FXML
     private Button cadastrarButton;
-    
+
+    @FXML
+    private ImageView backButton;
+
+    @FXML
+    private ImageView closeCadastrarButton;
+
     private Parent parentCadastrar;
     private Scene sceneCadastrar;
     private Stage stageCadastrar;
@@ -113,5 +119,77 @@ public class CadastroController {
 
 	public void setLoginController(LoginController loginController) {
 		this.loginController = loginController;
+	}
+
+	public TextField getNomeTF() {
+		return nomeTF;
+	}
+
+	public void setNomeTF(TextField nomeTF) {
+		this.nomeTF = nomeTF;
+	}
+
+	public TextField getEmailTF() {
+		return emailTF;
+	}
+
+	public void setEmailTF(TextField emailTF) {
+		this.emailTF = emailTF;
+	}
+
+	public PasswordField getSenhaTF() {
+		return senhaTF;
+	}
+
+	public void setSenhaTF(PasswordField senhaTF) {
+		this.senhaTF = senhaTF;
+	}
+
+	public PasswordField getConfirmarTF() {
+		return confirmarTF;
+	}
+
+	public void setConfirmarTF(PasswordField confirmarTF) {
+		this.confirmarTF = confirmarTF;
+	}
+
+	public Button getCadastrarButton() {
+		return cadastrarButton;
+	}
+
+	public void setCadastrarButton(Button cadastrarButton) {
+		this.cadastrarButton = cadastrarButton;
+	}
+
+	public ImageView getBackButton() {
+		return backButton;
+	}
+
+	public void setBackButton(ImageView backButton) {
+		this.backButton = backButton;
+	}
+
+	public ImageView getCloseCadastrarButton() {
+		return closeCadastrarButton;
+	}
+
+	public void setCloseCadastrarButton(ImageView closeCadastrarButton) {
+		this.closeCadastrarButton = closeCadastrarButton;
+	}
+
+	public InicioController getInicioController() {
+		return inicioController;
+	}
+
+	public void setInicioController(InicioController inicioController) {
+		this.inicioController = inicioController;
+	}
+
+	public Facade getFacade() {
+		return facade;
+	}
+
+	public void setFacade(Facade facade) {
+		this.facade = facade;
 	}
 }

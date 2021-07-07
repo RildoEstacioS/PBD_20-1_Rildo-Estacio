@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -37,11 +38,6 @@
                   <Font name="SansSerif Regular" size="18.0" />
                </font>
             </Label>
-            <ImageView fx:id="downIcon" fitHeight="24.0" fitWidth="24.0" layoutX="931.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@arrow-down-sign-to-navigate.png" />
-               </image>
-            </ImageView>
             <ImageView fx:id="closeButton" fitHeight="24.0" fitWidth="24.0" layoutX="986.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@close.png" />
@@ -68,6 +64,7 @@
                   <Font size="28.0" />
                </font>
             </Label>
+            <ChoiceBox fx:id="comboBoxInicio" layoutX="960.0" layoutY="134.0" prefHeight="45.0" prefWidth="45.0" styleClass="combo-box" stylesheets="@DarkTheme.css" />
          </children>
       </AnchorPane>
    </top>

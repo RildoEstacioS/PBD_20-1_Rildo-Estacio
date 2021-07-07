@@ -14,24 +14,28 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 public class infoTorneioController implements Initializable{
 
-	  @FXML
-	    private Button voltarBttnAction;
+    @FXML
+    private Label nomeDoTorneioLabel;
 
-	    @FXML
-	    private Label nomeTorneioLabel;
+    @FXML
+    private Label descriçãoTA;
 
-	    @FXML
-	    private Label descricaoLabel;
+    @FXML
+    private Button ParticiparBttn;
 
-	    @FXML
-	    private Button ParticiparBttn;
+    @FXML
+    private Label premiaçãoLabel;
 
-	    @FXML
-	    private Label premiacaoLabel;
+    @FXML
+    private ImageView voltarButton;
+
+    @FXML
+    private ImageView closeButton;
 
 
     InicioController inicioController;
@@ -106,30 +110,6 @@ public class infoTorneioController implements Initializable{
 		this.parentInfoTorneio = parentInfoTorneio;
 	}
 
-	public Button getVoltarBttnAction() {
-		return voltarBttnAction;
-	}
-
-	public void setVoltarBttnAction(Button voltarBttnAction) {
-		this.voltarBttnAction = voltarBttnAction;
-	}
-
-	public Label getNomeTorneioLabel() {
-		return nomeTorneioLabel;
-	}
-
-	public void setNomeTorneioLabel(Label nomeTorneioLabel) {
-		this.nomeTorneioLabel = nomeTorneioLabel;
-	}
-
-	public Label getDescricaoLabel() {
-		return descricaoLabel;
-	}
-
-	public void setDescricaoLabel(Label descricaoLabel) {
-		this.descricaoLabel = descricaoLabel;
-	}
-
 	public Button getParticiparBttn() {
 		return ParticiparBttn;
 	}
@@ -138,13 +118,52 @@ public class infoTorneioController implements Initializable{
 		ParticiparBttn = participarBttn;
 	}
 
-	public Label getPremiacaoLabel() {
-		return premiacaoLabel;
+	public Label getNomeDoTorneioLabel() {
+		return nomeDoTorneioLabel;
 	}
 
-	public void setPremiacaoLabel(Label premiacaoLabel) {
-		this.premiacaoLabel = premiacaoLabel;
+	public void setNomeDoTorneioLabel(Label nomeDoTorneioLabel) {
+		this.nomeDoTorneioLabel = nomeDoTorneioLabel;
 	}
 
+	public Label getDescriçãoTA() {
+		return descriçãoTA;
+	}
+
+	public void setDescriçãoTA(Label descriçãoTA) {
+		this.descriçãoTA = descriçãoTA;
+	}
+
+	public Label getPremiaçãoLabel() {
+		return premiaçãoLabel;
+	}
+
+	public void setPremiaçãoLabel(Label premiaçãoLabel) {
+		this.premiaçãoLabel = premiaçãoLabel;
+	}
+
+	public ImageView getVoltarButton() {
+		return voltarButton;
+	}
+
+	public void setVoltarButton(ImageView voltarButton) {
+		this.voltarButton = voltarButton;
+	}
+
+	public ImageView getCloseButton() {
+		return closeButton;
+	}
+
+	public void setCloseButton(ImageView closeButton) {
+		this.closeButton = closeButton;
+	}
+
+	public Facade getFacade() {
+		return facade;
+	}
+
+	public void setFacade(Facade facade) {
+		this.facade = facade;
+	}
 	
 }

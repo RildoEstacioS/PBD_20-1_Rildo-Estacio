@@ -20,33 +20,32 @@ import javafx.stage.StageStyle;
 
 public class InicioController{
 	
-    @FXML
-    private BorderPane bordePane;
+	   @FXML
+	    private BorderPane bordePane;
 
-    @FXML
-    private Label userNameLabel;
+	    @FXML
+	    private Label userNameLabel;
 
-    @FXML
-    private Label cashLabel;
+	    @FXML
+	    private Label cashLabel;
 
-    @FXML
-    private ImageView downIcon;
+	    @FXML
+	    private ImageView closeButton;
 
-    @FXML
-    private ImageView closeButton;
+	    @FXML
+	    private Label cashGames;
 
-    @FXML
-    private Label cashGames;
+	    @FXML
+	    private Label torneios;
 
-    @FXML
-    private Label torneios;
+	    @FXML
+	    private Label lugarRapido;
 
-    @FXML
-    private Label lugarRapido;
+	    @FXML
+	    private Label favoritos;
 
-    @FXML
-    private Label favoritos;
-
+	    @FXML
+	    private ChoiceBox<?> comboBoxInicio;
     
     private Parent parentInicio;
     private Scene sceneInicio;
