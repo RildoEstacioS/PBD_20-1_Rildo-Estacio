@@ -15,7 +15,7 @@
             <Font size="24.0" />
          </font>
       </TextField>
-      <ImageView fitHeight="29.0" fitWidth="28.0" layoutX="764.0" layoutY="36.0" opacity="0.3" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="buscarBttn" fitHeight="29.0" fitWidth="28.0" layoutX="764.0" layoutY="36.0" opacity="0.3" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@loupe.png" />
          </image>

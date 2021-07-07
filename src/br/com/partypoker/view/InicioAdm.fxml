@@ -28,7 +28,7 @@
                   <Image url="@user.png" />
                </image>
             </ImageView>
-            <Label fx:id="torneioBttn11" layoutX="764.0" layoutY="43.0" onDragDetected="#mudarPanel" onMousePressed="#mudarPanel" text="Administrador">
+            <Label fx:id="administradorLabel" layoutX="764.0" layoutY="43.0" onDragDetected="#mudarPanel" onMousePressed="#mudarPanel" text="Administrador">
                <font>
                   <Font name="SansSerif Bold" size="28.0" />
                </font>
@@ -49,12 +49,12 @@
                   <Font size="28.0" />
                </font>
             </Label>
-            <Label fx:id="relatoriosLabel" layoutX="594.0" layoutY="133.0" onMousePressed="#mudarPanel" text="Relatórios" textFill="#fcfcfc">
+            <Label fx:id="relatoriosLabel" layoutX="609.0" layoutY="135.0" onMousePressed="#mudarPanel" text="Relatórios" textFill="#fcfcfc">
                <font>
                   <Font size="28.0" />
                </font>
             </Label>
-            <Label fx:id="usuarioLabel" layoutX="441.0" layoutY="134.0" onDragDetected="#mudarPanel" onMousePressed="#mudarPanel" text="Usuários" textFill="#fcfcfc">
+            <Label fx:id="usuarioLabel" layoutX="441.0" layoutY="134.0" onMousePressed="#mudarPanel" text="Usuários" textFill="#fcfcfc">
                <font>
                   <Font size="28.0" />
                </font>
@@ -63,15 +63,15 @@
          </children>
       </AnchorPane>
    </top>
-   <left>
+   <center>
       <AnchorPane prefHeight="486.0" prefWidth="1024.0" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="218.0" layoutY="265.0" prefWidth="669.0" styleClass="h1" stylesheets="@DarkTheme.css" text="Selecione uma das opções">
+            <Label layoutX="214.0" layoutY="227.0" prefWidth="669.0" styleClass="h1" stylesheets="@DarkTheme.css" text="Selecione uma das opções">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
          </children>
       </AnchorPane>
-   </left>
+   </center>
 </BorderPane>

@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="608.0" prefWidth="1024.0" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="164.0" layoutY="116.0" stylesheets="@DarkTheme.css" text="NomeDoTorneio" AnchorPane.bottomAnchor="489.0" AnchorPane.leftAnchor="133.0">
+      <Label fx:id="nomeDoTorneioLabel" layoutX="164.0" layoutY="116.0" stylesheets="@DarkTheme.css" text="NomeDoTorneio" AnchorPane.bottomAnchor="489.0" AnchorPane.leftAnchor="133.0">
          <font>
             <Font name="System Bold" size="32.0" />
          </font>
@@ -19,7 +19,7 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="133.0" layoutY="239.0" prefHeight="112.0" prefWidth="391.0" text="DescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescrição" wrapText="true" AnchorPane.leftAnchor="133.0" AnchorPane.topAnchor="248.0">
+      <Label fx:id="descriçãoTA" layoutX="133.0" layoutY="239.0" prefHeight="112.0" prefWidth="391.0" text="DescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescrição" wrapText="true" AnchorPane.leftAnchor="133.0" AnchorPane.topAnchor="248.0">
          <font>
             <Font size="18.0" />
          </font></Label>
@@ -33,7 +33,7 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="133.0" layoutY="481.0" text="R$: 10.000,00" AnchorPane.leftAnchor="133.0" AnchorPane.topAnchor="481.0">
+      <Label fx:id="premiaçãoLabel" layoutX="133.0" layoutY="481.0" text="R$: 10.000,00" AnchorPane.leftAnchor="133.0" AnchorPane.topAnchor="481.0">
          <font>
             <Font size="20.0" />
          </font>
