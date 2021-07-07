@@ -39,8 +39,10 @@ public class LoginController implements Initializable{
     private Parent parentLogin;
     private Scene sceneLogin;
     private Stage stageLogin;
+    
     private InicioController inicioController;
     private CadastroController cadastrarController;
+    
     private Facade facade;
     
     public LoginController(InicioController inicioController, CadastroController cadastrarController, Facade facade) {

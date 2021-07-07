@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="506.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField fx:id="buscarTorneioTF" layoutX="225.0" layoutY="26.0" minHeight="36.0" minWidth="574.0" prefHeight="48.0" prefWidth="574.0" promptText="Buscar Torneio" styleClass="input" stylesheets="@DarkTheme.css">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <ImageView fx:id="buscarBttn" fitHeight="29.0" fitWidth="28.0" layoutX="764.0" layoutY="36.0" opacity="0.3" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@loupe.png" />
+         </image>
+      </ImageView>
+      <ScrollPane hbarPolicy="NEVER" layoutX="112.0" layoutY="93.0" prefHeight="384.0" prefWidth="800.0" styleClass="input" stylesheets="@DarkTheme.css">
+         <content>
+            <ListView fx:id="listViewTorneio" prefHeight="382.0" prefWidth="800.0" styleClass="input" stylesheets="@DarkTheme.css" />
+         </content>
+      </ScrollPane>
+      <Circle fill="#02112c" layoutX="987.0" layoutY="458.0" radius="23.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label fx:id="plusButton" layoutX="970.0" layoutY="419.0" text="+" textFill="WHITE">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -16,6 +16,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class InicioController {
 
@@ -71,7 +72,7 @@ public class InicioController {
 	public void launch(Stage stage) {
 		this.stageInicio = stage;
 		stageInicio.setScene(sceneInicio);
-//		stageInicio.initStyle(StageStyle.UNDECORATED);
+		stageInicio.initStyle(StageStyle.UNDECORATED);
 		stageInicio.setResizable(false);
 		stageInicio.show();
 	}

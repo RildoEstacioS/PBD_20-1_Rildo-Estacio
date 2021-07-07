@@ -72,6 +72,7 @@ public class InicioAdmController {
 	
 	public void mudarPanel(Event e) {
 		if (e.getSource().equals(cashGameLabel)) {
+			
 			System.out.println("CashGame admin");
 			
 		}

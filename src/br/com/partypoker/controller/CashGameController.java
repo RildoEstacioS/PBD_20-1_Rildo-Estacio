@@ -35,6 +35,7 @@ public class CashGameController implements Initializable{
 
     @FXML
     private ListView<?> listView;
+    
     private List<Mesa> listaMesas = new ArrayList<Mesa>();
     
     private ObservableList<Mesa> observableListMesas;
@@ -284,5 +285,15 @@ public class CashGameController implements Initializable{
 
 	public void setFacade(Facade facade) {
 		this.facade = facade;
+	}
+
+
+	public ImageView getBuscarButton() {
+		return buscarButton;
+	}
+
+
+	public void setBuscarButton(ImageView buscarButton) {
+		this.buscarButton = buscarButton;
 	}    
 }
