@@ -25,7 +25,7 @@ public class BusinessJogador implements IBusinessJogador{
 	}
 
 	@Override
-	public Jogador reatriveJogador(int id) throws BusinessException {
+	public Jogador reatriveJogador(Long id) throws BusinessException {
 		// TODO Auto-generated method stub
 		try {
 			return daoJogador.search(Jogador.class, id);
@@ -54,6 +54,16 @@ public class BusinessJogador implements IBusinessJogador{
 		} catch (DaoException e) {
 			// TODO Auto-generated catch block
 			throw new BusinessException(e.getMessage());		
+		}
+	}
+
+	@Override
+	public Jogador login(String login) throws BusinessException {
+		try{
+			Jogador jogador = (Jogador) new DAOJogador().login(login);
+			return jogador;
+		} catch (DaoException e){
+			throw new BusinessException(e.getMessage());
 		}
 	}
 

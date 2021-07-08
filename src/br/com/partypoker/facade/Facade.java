@@ -7,9 +7,11 @@ import br.com.partypoker.business.IBusinessJogador;
 import br.com.partypoker.business.IBusinessMesa;
 import br.com.partypoker.business.IBusinessTorneio;
 import br.com.partypoker.exception.BusinessException;
+import br.com.partypoker.model.CashGame;
 import br.com.partypoker.model.Jogador;
-import br.com.partypoker.model.Mesa;
 import br.com.partypoker.model.Torneio;
+
+import java.util.List;
 
 public class Facade implements IFacade{
 	private static Facade instance;
@@ -42,7 +44,7 @@ public class Facade implements IFacade{
 	}
 
 	@Override
-	public Jogador reatriveJogador(int id) throws BusinessException {
+	public Jogador reatriveJogador(Long id) throws BusinessException {
 		return businessJogador.reatriveJogador(id);
 	}
 
@@ -58,7 +60,12 @@ public class Facade implements IFacade{
 		return businessJogador.removeJogador(jogador);
 	}
 
-	
+	@Override
+	public Jogador login(String login) throws BusinessException {
+		return businessJogador.login(login);
+	}
+
+
 	//TORNEIO
 	@Override
 	public void createTorneio(Torneio torneio) throws BusinessException {
@@ -66,7 +73,7 @@ public class Facade implements IFacade{
 	}
 
 	@Override
-	public Torneio reatriveTorneio(int id) throws BusinessException {
+	public Torneio reatriveTorneio(Long id) throws BusinessException {
 		return businessTorneio.reatriveTorneio(id);
 	}
 
@@ -85,28 +92,36 @@ public class Facade implements IFacade{
 	//MESA
 	
 	@Override
-	public void createMesa(Mesa mesa) throws BusinessException {
-		businessMesa.createMesa(mesa);
+	public void createMesa(CashGame cashGame) throws BusinessException {
+		businessMesa.createMesa(cashGame);
 	}
 
 	@Override
-	public Mesa reatriveMesa(int id) throws BusinessException {
+	public CashGame reatriveMesa(Long id) throws BusinessException {
 		// TODO Auto-generated method stub
 		return businessMesa.reatriveMesa(id);
 	}
 
 	@Override
-	public boolean updateMesa(Mesa mesa) throws BusinessException {
+	public boolean updateMesa(CashGame cashGame) throws BusinessException {
 		// TODO Auto-generated method stub
-		return businessMesa.updateMesa(mesa);
+		return businessMesa.updateMesa(cashGame);
 	}
 
 	@Override
-	public boolean removeMesa(Mesa mesa) throws BusinessException {
+	public boolean removeMesa(CashGame cashGame) throws BusinessException {
 		// TODO Auto-generated method stub
-		return businessMesa.removeMesa(mesa);
+		return businessMesa.removeMesa(cashGame);
 	}
-	
-	
-	
+
+
+	public List<CashGame> loadCashGames() {
+		return businessMesa.selectAll();
+	}
+
+	public List<Torneio> selectAllTorneio() {
+		return businessTorneio.selectAll();
+	}
+
+
 }

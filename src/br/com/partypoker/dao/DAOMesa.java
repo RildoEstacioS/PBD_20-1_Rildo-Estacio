@@ -1,12 +1,11 @@
 package br.com.partypoker.dao;
 
-import br.com.partypoker.exception.BusinessException;
-import br.com.partypoker.model.Mesa;
+import br.com.partypoker.model.CashGame;
 
-public class DAOMesa extends DAOGeneric<Mesa> implements IDAOMesa{
+public class DAOMesa extends DAOGeneric<CashGame> implements IDAOMesa{
 
 	public DAOMesa() {
-		super(Mesa.class);
+		super(CashGame.class);
 	}
 
 }

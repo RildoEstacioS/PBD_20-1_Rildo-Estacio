@@ -72,11 +72,17 @@
     -fx-alignment: center;
     -fx-font-size: 18px;
 }
-
+	
 .anchor-pane{
     -fx-padding: 20px 10px;
     -fx-background-color: #e0dfdf;
 }
 
-
+.combo-box{
+    -fx-background-color: #02112C;
+    -fx-text-fill: #fcfcfc;
+    -fx-background-radius: 10px;
+    -fx-padding: 10px;
+    -fx-alignment: center;
+}
 

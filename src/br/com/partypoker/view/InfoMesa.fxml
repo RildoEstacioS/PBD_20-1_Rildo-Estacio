@@ -27,12 +27,12 @@
       </Button>
       <ImageView fx:id="voltarButton" fitHeight="35.0" fitWidth="34.0" layoutX="52.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@left-arrow%20(1).png" />
+            <Image url="@../assets/left-arrow%20(1).png" />
          </image>
       </ImageView>
       <ImageView fx:id="closeButton" fitHeight="34.0" fitWidth="26.0" layoutX="987.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@close.png" />
+            <Image url="@../assets/close.png" />
          </image>
       </ImageView>
    </children>

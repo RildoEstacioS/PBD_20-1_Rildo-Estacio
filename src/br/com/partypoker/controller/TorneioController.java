@@ -2,31 +2,22 @@ package br.com.partypoker.controller;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
-import br.com.partypoker.App;
 import br.com.partypoker.facade.Facade;
-import br.com.partypoker.model.Jogador;
 import br.com.partypoker.model.Torneio;
+import br.com.partypoker.view.TorneioListCell;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
-import javafx.scene.control.TableCell;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-import javafx.util.Callback;
 
 public class TorneioController implements Initializable{
 
@@ -35,9 +26,9 @@ public class TorneioController implements Initializable{
     private TextField buscarTorneioTF;
 
     @FXML
-    private ListView<?> listViewTorneio;
+    private ListView<Torneio> listView;
     
-    private List<Torneio> listaTorneio = new ArrayList<>();
+    private List<Torneio> listTorneio;
     
     private ObservableList<Torneio> observableLisTorneio;
     
@@ -56,74 +47,22 @@ public class TorneioController implements Initializable{
     	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/br/com/partypoker/view/Torneio.fxml"));
         fxmlLoader.setController(this);
         
+        observableLisTorneio = FXCollections.observableArrayList();
+        listTorneio = facade.selectAllTorneio();
+        observableLisTorneio.addAll(listTorneio);
         try {
         	parentTorneio = (Parent) fxmlLoader.load();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}        
+		}
+
     }
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-//		carregarTableView();		
+		listView.setItems(observableLisTorneio);
+		listView.setCellFactory(cell -> new TorneioListCell());
 	}
-	
-
-	private void carregarTableView() {
-//		torneioColumn.setCellValueFactory(new PropertyValueFactory<>("titulo"));
-//		jogadoresColumn.setCellValueFactory(new PropertyValueFactory<>("infoJogadores"));
-//		premiacaoColumn.setCellValueFactory(new PropertyValueFactory<>("premio"));
-//		
-//		Torneio t1 = new Torneio("Cabaré", "aUDASHDUSAHDASDUHA", "10hs", 50.0, true, false, "R$ 10.000,00");
-//		Torneio t2 = new Torneio("Jubileu", "aUDASHDUSAHDASDUHA", "10hs", 50.0, true, false, "R$ 10.000,00");
-//
-//		Jogador j1 = new Jogador("a", "", "", 100);
-//    	Jogador j2 = new Jogador("b", "", "", 100);
-//    	Jogador j3 = new Jogador("c", "", "", 100);
-//
-//    	t1.getJogadores().add(j1);
-//    	t1.getJogadores().add(j3);
-//    	t1.getJogadores().add(j2);
-//    	
-//		listaTorneio.add(t1);
-//		listaTorneio.add(t2);
-//		
-//		addBotaoTabela();
-//		observableLisTorneio = FXCollections.observableArrayList(listaTorneio);
-//		tableView.setItems(observableLisTorneio);
-	}
-	
-    private void addBotaoTabela() {
-    	
-    	Callback<TableColumn<Torneio, Void>, TableCell<Torneio, Void>> cellFactory = new Callback<TableColumn<Torneio,Void>, TableCell<Torneio,Void>>() {
-		
-    		public TableCell<Torneio, Void> call(final TableColumn<Torneio, Void> param){
-    			final TableCell<Torneio, Void> cell = new TableCell<Torneio, Void>() {
-    				private final Button button = new Button("Participar");
-    				{
-	    				button.setOnAction((ActionEvent event) ->{
-	    					Torneio torneio = getTableView().getItems().get(getIndex());
-	    					//Colocar o evento aqui
-	    					inicioController.getBordePane().setCenter(App.infoTorneioController.getParentInfoTorneio());
-	    				});
-    					
-    				}
-    				@Override
-    				public void updateItem(Void item, boolean empty) {
-    					super.updateItem(item, empty);
-    					if (empty) {
-							setGraphic(null);
-						} else {
-							setGraphic(button);
-						}
-    				}
-    			};
-    				return cell;
-    			}
-    	};
-    	
-//    	participarColumn.setCellFactory(cellFactory);
-    }
 	public Stage getStageTorneio() {
 		return stageTorneio;
 	}

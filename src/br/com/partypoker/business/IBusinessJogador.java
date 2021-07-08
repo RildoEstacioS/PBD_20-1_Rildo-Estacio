@@ -11,12 +11,13 @@ public interface IBusinessJogador {
 	public void createJogador(Jogador jogador) throws BusinessException;
 	
 	//Buscar
-	public Jogador reatriveJogador(int id) throws BusinessException;
+	public Jogador reatriveJogador(Long id) throws BusinessException;
 	
 	//Atualizar
 	public boolean updateJogador(Jogador jogador) throws BusinessException;
 
 	//Remover
 	public boolean removeJogador(Jogador jogador) throws BusinessException;
-	
+
+	public Jogador login(String login) throws BusinessException;
 }

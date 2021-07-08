@@ -58,7 +58,7 @@
          <font>
             <Font name="System Bold" size="16.0" />
          </font></PasswordField>
-      <Label layoutX="984.0" layoutY="14.0" prefHeight="5.0" prefWidth="27.0" text="x" textAlignment="RIGHT" textFill="#fcfcfc">
+      <Label fx:id="closeBttn" layoutX="984.0" layoutY="14.0" prefHeight="5.0" prefWidth="27.0" text="x" textAlignment="RIGHT" textFill="#fcfcfc">
          <font>
             <Font name="Corbel Bold" size="36.0" />
          </font>
@@ -75,7 +75,7 @@
       </Label>
       <ImageView fitHeight="299.0" fitWidth="394.0" layoutX="27.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@logo%20(2).png" />
+            <Image url="@../assets/logo%20(2).png" />
          </image>
       </ImageView>
       <Label layoutX="677.0" layoutY="351.0" text="Faça login" textFill="#fcfcfc">
@@ -88,7 +88,7 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <Label fx:id="entrarAdminLabel" layoutX="811.0" layoutY="687.0" text="Entrar como administrador" textFill="#fcfcfc">
+      <Label fx:id="entrarAdminLabel" layoutX="811.0" layoutY="687.0" onMousePressed="#loginAdmEvent" text="Entrar como administrador" textFill="#fcfcfc">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>

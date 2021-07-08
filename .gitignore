@@ -4,3 +4,5 @@ src/Testando/ContentA.java
 src/Testando/Controller.java
 src/Testando/Main.fxml
 src/Testando/Main.java
+.idea/uiDesigner.xml
+*.xml

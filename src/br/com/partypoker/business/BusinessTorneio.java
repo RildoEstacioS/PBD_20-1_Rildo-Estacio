@@ -6,6 +6,8 @@ import br.com.partypoker.exception.BusinessException;
 import br.com.partypoker.exception.DaoException;
 import br.com.partypoker.model.Torneio;
 
+import java.util.List;
+
 public class BusinessTorneio implements IBusinessTorneio{
 
 	private IDAOTorneio daoTorneio;
@@ -25,7 +27,7 @@ public class BusinessTorneio implements IBusinessTorneio{
 	}
 
 	@Override
-	public Torneio reatriveTorneio(int id) throws BusinessException {
+	public Torneio reatriveTorneio(Long id) throws BusinessException {
 		// TODO Auto-generated method stub
 		try {
 			return daoTorneio.search(Torneio.class, id);
@@ -57,4 +59,14 @@ public class BusinessTorneio implements IBusinessTorneio{
 		}
 	}
 
+	@Override
+	public List<Torneio> selectAll() {
+		List<Torneio> list = null;
+		try {
+			list = daoTorneio.searchAll();
+		} catch (DaoException e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
 }

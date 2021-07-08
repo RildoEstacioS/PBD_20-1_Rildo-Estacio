@@ -1,22 +1,25 @@
 package br.com.partypoker.business;
 
 import br.com.partypoker.exception.BusinessException;
-import br.com.partypoker.model.Mesa;
-import br.com.partypoker.model.Torneio;
+import br.com.partypoker.model.CashGame;
+
+import java.util.List;
 
 public interface IBusinessMesa {
 	
 	//Mesa
 
 	//Criar
-	public void createMesa(Mesa mesa) throws BusinessException;
+	public void createMesa(CashGame cashGame) throws BusinessException;
 	
 	//Buscar
-	public Mesa reatriveMesa(int id) throws BusinessException;
+	public CashGame reatriveMesa(Long id) throws BusinessException;
 	
 	//Atualizar
-	public boolean updateMesa(Mesa mesa) throws BusinessException;
+	public boolean updateMesa(CashGame cashGame) throws BusinessException;
 	
 	//Remover
-	public boolean removeMesa(Mesa mesa) throws BusinessException;
+	public boolean removeMesa(CashGame cashGame) throws BusinessException;
+
+    List<CashGame> selectAll();
 }

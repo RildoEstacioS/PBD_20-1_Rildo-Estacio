@@ -4,7 +4,9 @@ import br.com.partypoker.dao.DAOMesa;
 import br.com.partypoker.dao.IDAOMesa;
 import br.com.partypoker.exception.BusinessException;
 import br.com.partypoker.exception.DaoException;
-import br.com.partypoker.model.Mesa;
+import br.com.partypoker.model.CashGame;
+
+import java.util.List;
 
 public class BusinessMesa implements IBusinessMesa{
 
@@ -15,9 +17,9 @@ public class BusinessMesa implements IBusinessMesa{
 	}
 	
 	@Override
-	public void createMesa(Mesa mesa) throws BusinessException {
+	public void createMesa(CashGame cashGame) throws BusinessException {
 		try {
-			daoMesa.create(mesa);
+			daoMesa.create(cashGame);
 		} catch (DaoException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -25,11 +27,11 @@ public class BusinessMesa implements IBusinessMesa{
 	}
 
 	@Override
-	public Mesa reatriveMesa(int id) throws BusinessException {
+	public CashGame reatriveMesa(Long id) throws BusinessException {
 		// TODO Auto-generated method stub
-		Mesa m = null;
+		CashGame m = null;
 		try {
-			m = daoMesa.search(Mesa.class, id);
+			m = daoMesa.search(CashGame.class, id);
 			return m;
 		} catch (DaoException e) {
 			// TODO Auto-generated catch block
@@ -38,10 +40,10 @@ public class BusinessMesa implements IBusinessMesa{
 	}
 
 	@Override
-	public boolean updateMesa(Mesa mesa) throws BusinessException {
+	public boolean updateMesa(CashGame cashGame) throws BusinessException {
 		// TODO Auto-generated method stub
 		try {
-			return daoMesa.update(mesa);
+			return daoMesa.update(cashGame);
 		} catch (DaoException e) {
 			// TODO Auto-generated catch block
 			throw new BusinessException(e.getMessage());		
@@ -49,14 +51,25 @@ public class BusinessMesa implements IBusinessMesa{
 	}
 
 	@Override
-	public boolean removeMesa(Mesa mesa) throws BusinessException {
+	public boolean removeMesa(CashGame cashGame) throws BusinessException {
 		// TODO Auto-generated method stub
 		try {
-			return daoMesa.remove(mesa);
+			return daoMesa.remove(cashGame);
 		} catch (DaoException e) {
 			// TODO Auto-generated catch block
 			throw new BusinessException(e.getMessage());		
 		}
+	}
+
+	@Override
+	public List<CashGame> selectAll() {
+		List<CashGame> list = null;
+		try {
+			list =  daoMesa.searchAll();
+		} catch (DaoException e) {
+			e.printStackTrace();
+		}
+		return list;
 	}
 
 }

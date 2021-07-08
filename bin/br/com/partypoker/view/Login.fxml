@@ -38,7 +38,10 @@
             <Font name="System Bold" size="50.0" />
          </font>
       </Label>
-      <TextField fx:id="loginTF" layoutX="521.0" layoutY="345.0" prefHeight="35.0" prefWidth="427.0" promptText="Login" styleClass="input" stylesheets="@DarkTheme.css" />
+      <TextField fx:id="loginTF" layoutX="521.0" layoutY="427.0" prefHeight="35.0" prefWidth="427.0" promptText="Login" styleClass="input" stylesheets="@DarkTheme.css">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></TextField>
       <Button fx:id="buttonEntrar" layoutX="698.0" layoutY="613.0" mnemonicParsing="false" onAction="#bttnEntrarEvent" stylesheets="@DarkTheme.css" text="Entrar" textFill="#0075ff">
          <font>
             <Font name="System Bold" size="18.0" />
@@ -51,15 +54,18 @@
          <font>
             <Font name="System Bold" size="18.0" />
          </font></Button>
-      <PasswordField fx:id="senhaTF" layoutX="521.0" layoutY="440.0" prefHeight="35.0" prefWidth="427.0" promptText="Senha" styleClass="input" stylesheets="@DarkTheme.css" />
-      <Label layoutX="984.0" layoutY="14.0" prefHeight="5.0" prefWidth="27.0" text="x" textAlignment="RIGHT" textFill="#fcfcfc">
+      <PasswordField fx:id="senhaTF" layoutX="521.0" layoutY="486.0" prefHeight="35.0" prefWidth="427.0" promptText="Senha" styleClass="input" stylesheets="@DarkTheme.css">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></PasswordField>
+      <Label fx:id="closeBttn" layoutX="984.0" layoutY="14.0" prefHeight="5.0" prefWidth="27.0" text="x" textAlignment="RIGHT" textFill="#fcfcfc">
          <font>
             <Font name="Corbel Bold" size="36.0" />
          </font>
       </Label>
-      <Label layoutX="608.0" layoutY="191.0" text="Vamos Começar!" textFill="#fcfcfc">
+      <Label layoutX="545.0" layoutY="186.0" prefHeight="70.0" prefWidth="379.0" text="Vamos Começar!" textFill="#fcfcfc">
          <font>
-            <Font name="System Bold" size="32.0" />
+            <Font name="System Bold" size="48.0" />
          </font>
       </Label>
       <Label layoutX="148.0" layoutY="433.0" styleClass="h2" stylesheets="@DarkTheme.css" text="Bem-Vindo ao" textAlignment="CENTER">
@@ -69,8 +75,23 @@
       </Label>
       <ImageView fitHeight="299.0" fitWidth="394.0" layoutX="27.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@logo%20(2).png" />
+            <Image url="@../assets/logo%20(2).png" />
          </image>
       </ImageView>
+      <Label layoutX="677.0" layoutY="351.0" text="Faça login" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="esqueceuSenhaLabel" layoutX="800.0" layoutY="540.0" text="Esqueceu sua senha?" textFill="#5100ff">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="entrarAdminLabel" layoutX="811.0" layoutY="687.0" onMousePressed="#loginAdmEvent" text="Entrar como administrador" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

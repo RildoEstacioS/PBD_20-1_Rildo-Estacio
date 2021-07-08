@@ -14,7 +14,7 @@
          <children>
             <ImageView fitHeight="141.0" fitWidth="108.0" layoutX="24.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@logo%20(2).png" />
+                  <Image url="@../assets/logo%20(2).png" />
                </image>
             </ImageView>
             <Label layoutX="132.0" layoutY="38.0" text="PartyPoker">
@@ -24,7 +24,7 @@
             </Label>
             <ImageView fitHeight="64.0" fitWidth="64.0" layoutX="677.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@user.png" />
+                  <Image url="@../assets/user.png" />
                </image>
             </ImageView>
             <Label fx:id="torneioBttn11" layoutX="760.0" layoutY="57.0" onDragDetected="#mudarPanel" onMousePressed="#mudarPanel" text="Administrador">
@@ -39,7 +39,7 @@
             </ImageView>
             <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="986.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@close.png" />
+                  <Image url="@../assets/close.png" />
                </image>
             </ImageView>
          </children>

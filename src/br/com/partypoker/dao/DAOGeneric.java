@@ -45,18 +45,17 @@ public class DAOGeneric<E extends Entidade> implements IDAOGeneric<E>{
 			em.getTransaction().begin();
 			em.persist(e);
 			em.getTransaction().commit();
+			em.close();
 		} catch (Exception err) {
 			System.err.println(err.getMessage());
 			err.printStackTrace();
 			em.getTransaction().rollback();
 			throw new DaoException("Erro ao inserir " + e.getClass().getSimpleName() + err.getMessage());
-		}finally {
-			em.close();
 		}
 	}
 	
 	@Override
-	public E search(Class<E> e, int id) throws DaoException {
+	public E search(Class<E> e, Long id) throws DaoException {
 		em = entityManager();
 		E result = null;
 		
@@ -66,14 +65,13 @@ public class DAOGeneric<E extends Entidade> implements IDAOGeneric<E>{
 			System.err.println(ex.getMessage());
 			ex.printStackTrace();
 			throw new DaoException("Nenhum resultado encontrado para " + e.getSimpleName());
+
 		}catch (Exception e2) {
 			System.err.println(e2.getMessage());
 			e2.printStackTrace();
 			throw new DaoException("Erro ao buscar " + e.getSimpleName() + " " + e2.getMessage());
-		}finally {
-			em.close();
 		}
-		
+		em.close();
 		return result;
 	}
 	
@@ -85,6 +83,8 @@ public class DAOGeneric<E extends Entidade> implements IDAOGeneric<E>{
 			em.find(classe, e);
 			em.remove(e);
 			em.getTransaction().commit();
+			em.close();
+			return true;
 			
 		} catch (NoResultException ex) {
 			ex.printStackTrace();
@@ -96,9 +96,6 @@ public class DAOGeneric<E extends Entidade> implements IDAOGeneric<E>{
 			ex.printStackTrace();
 			em.getTransaction().rollback();
 			throw new DaoException("Erro ao remover" + e.getClass().getSimpleName() + ". " + ex.getMessage());
-		}finally {
-			em.close();
-			return true;
 		}
 		
 	}
@@ -110,6 +107,7 @@ public class DAOGeneric<E extends Entidade> implements IDAOGeneric<E>{
 			em.getTransaction().begin();
 			em.merge(e);
 			em.getTransaction().commit();
+			em.close();
 			return true;
 		}catch (Exception ex) {
 			// TODO: handle exception
@@ -134,10 +132,8 @@ public class DAOGeneric<E extends Entidade> implements IDAOGeneric<E>{
 			System.err.println(ex.getMessage());
 			ex.printStackTrace();
 			throw new DaoException("Erro ao buscar a lista " + classe.getSimpleName());
-		}finally {
-			em.close();
 		}
-		
+		em.close();
 		return ent;
 	}
 

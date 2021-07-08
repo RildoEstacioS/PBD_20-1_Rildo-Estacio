@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import br.com.partypoker.facade.Facade;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -12,12 +13,11 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 public class LoginAdmController {
 	
-	@FXML
+    @FXML
     private TextField loginTF;
 
     @FXML
@@ -27,11 +27,10 @@ public class LoginAdmController {
     private PasswordField senhaTF;
 
     @FXML
-    private Label closeButton;
+    private Label closeBttn;
 
     @FXML
-    private Label usuarioBttn;
-
+    private Label loginJogadorLabel;
     
     private Parent parentLoginAdm;
     private Scene sceneLoginAdm;
@@ -59,24 +58,27 @@ public class LoginAdmController {
 	
 
     @FXML
-    void bttnEntrarAdmEvent(ActionEvent event) {
+    void bttnEntrarAdmEvent(Event event) {
     	if(event.getSource().equals(this.buttonEntrar)) {
     		System.out.println("Pegou entrar adm");
     	}
     }
 
     @FXML
-    void closeBttnEvent(MouseEvent event) {
-    	if (event.getSource().equals(this.closeButton)) {
+    void closeBttnEvent(Event event) {
+    	if (event.getSource().equals(this.closeBttn)) {
 			System.out.println("Fechou");
 		}
     }
 
     @FXML
-    void loginJogadorBttnEvent(MouseEvent event) {
-    	if (event.getSource().equals(this.usuarioBttn)) {
-			System.out.println("Voltar para tela login usuario");
-		}
+    void loginJogadorEvent(Event event) {
+		System.out.println("Entrou aqui");
+
+    	if (event.getSource().equals(this.loginJogadorLabel)) {
+    		System.out.println("Entrou aqui");
+    		loginController.mudarScene();
+    	}
     }
 
 
@@ -108,27 +110,6 @@ public class LoginAdmController {
 	public void setSenhaTF(PasswordField senhaTF) {
 		this.senhaTF = senhaTF;
 	}
-
-
-	public Label getCloseButton() {
-		return closeButton;
-	}
-
-
-	public void setCloseButton(Label closeButton) {
-		this.closeButton = closeButton;
-	}
-
-
-	public Label getUsuarioBttn() {
-		return usuarioBttn;
-	}
-
-
-	public void setUsuarioBttn(Label usuarioBttn) {
-		this.usuarioBttn = usuarioBttn;
-	}
-
 
 	public Parent getParentLoginAdm() {
 		return parentLoginAdm;

@@ -9,6 +9,7 @@ import javax.persistence.Persistence;
 import br.com.partypoker.controller.CadastroController;
 import br.com.partypoker.controller.InfoMesaController;
 import br.com.partypoker.controller.InicioController;
+import br.com.partypoker.controller.LoginAdmController;
 import br.com.partypoker.controller.LoginController;
 import br.com.partypoker.controller.LugarRapidoController;
 import br.com.partypoker.controller.CashGameController;
@@ -36,6 +37,8 @@ public class App extends Application{
 	public static infoTorneioController infoTorneioController;
 	public static LugarRapidoController lugarRapidoController;
 	public static FavoritoController favoritoController;
+	public static LoginAdmController loginAdmController;
+	
 	
 	public static Facade facade;
 	
@@ -58,6 +61,8 @@ public class App extends Application{
 		lugarRapidoController = new LugarRapidoController(inicioController, facade);
 		favoritoController = new FavoritoController(inicioController, facade);
 
+		loginAdmController = new LoginAdmController(loginController, facade);
+		
 		Application.launch(args);
 		
 	}

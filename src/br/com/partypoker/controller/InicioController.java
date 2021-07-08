@@ -4,11 +4,13 @@ import java.io.IOException;
 
 import br.com.partypoker.App;
 import br.com.partypoker.facade.Facade;
+import br.com.partypoker.model.Jogador;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -51,6 +53,8 @@ public class InicioController{
     private Scene sceneInicio;
     private Stage stageInicio;
     private Facade facade;
+
+    private Jogador jogador;
     
 	public InicioController(Facade facade) {
 
@@ -59,7 +63,7 @@ public class InicioController{
         fxmlLoader.setController(this);
     
         try {
-        	//Inicio padrão
+        	//Inicio padrï¿½o
         	parentInicio = (Parent) fxmlLoader.load();
         	sceneInicio = new Scene(parentInicio);
 
@@ -144,14 +148,6 @@ public class InicioController{
 		this.cashLabel = cashLabel;
 	}
 
-	public ImageView getDownIcon() {
-		return downIcon;
-	}
-
-	public void setDownIcon(ImageView downIcon) {
-		this.downIcon = downIcon;
-	}
-
 	public ImageView getCloseButton() {
 		return closeButton;
 	}
@@ -223,6 +219,12 @@ public class InicioController{
 	public void setFacade(Facade facade) {
 		this.facade = facade;
 	}
-    
-       
+
+	public Jogador getJogador() {
+		return jogador;
+	}
+
+	public void setJogador(Jogador jogador) {
+		this.jogador = jogador;
+	}
 }
