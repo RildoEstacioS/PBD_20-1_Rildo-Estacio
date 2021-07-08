@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="608.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Circle fill="#02112c" layoutX="979.0" layoutY="553.0" radius="23.0" stroke="BLACK" strokeType="INSIDE" />
+      <TextField fx:id="buscarCashGameTF" layoutX="29.0" layoutY="38.0" minHeight="100.0" minWidth="700.0" promptText="Buscar Cash Game" styleClass="input" stylesheets="@DarkTheme.css">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <ImageView fx:id="buscarButton" fitHeight="100.0" fitWidth="36.0" layoutX="675.0" layoutY="70.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/loupe.png" />
+         </image>
+      </ImageView>
+      <ScrollPane hbarPolicy="NEVER" layoutX="29.0" layoutY="168.0" prefHeight="408.0" prefWidth="700.0" stylesheets="@DarkTheme.css">
+         <content>
+            <ListView fx:id="mesasLV" prefHeight="406.0" prefWidth="700.0" stylesheets="@DarkTheme.css" />
+         </content>
+      </ScrollPane>
+      <Label fx:id="nomeMesa" layoutX="750.0" layoutY="25.0" text="Nome: Dessa budega">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="blindsLabel" layoutX="750.0" layoutY="60.0" text="Blinds: ">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="buyinLabel" layoutX="750.0" layoutY="101.0" text="Buy-in: R$ 10,00">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="numJogadoresLabel" layoutX="809.0" layoutY="131.0" text="0/0 Jogadores">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <ScrollPane hbarPolicy="NEVER" layoutX="750.0" layoutY="165.0" prefHeight="297.0" prefWidth="252.0">
+         <content>
+            <ListView fx:id="jogadoresLV" prefHeight="295.0" prefWidth="251.0" stylesheets="@DarkTheme.css" />
+         </content>
+      </ScrollPane>
+      <Label fx:id="plusButton" layoutX="962.0" layoutY="514.0" text="+" textFill="WHITE">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

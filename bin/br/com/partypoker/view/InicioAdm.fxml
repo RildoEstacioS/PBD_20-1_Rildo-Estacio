@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="bordePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <AnchorPane prefHeight="143.0" prefWidth="1024.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="141.0" fitWidth="108.0" layoutX="24.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/logo%20(2).png" />
+               </image>
+            </ImageView>
+            <Label layoutX="132.0" layoutY="38.0" text="PartyPoker">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="64.0" fitWidth="64.0" layoutX="677.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/user.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="torneioBttn11" layoutX="760.0" layoutY="57.0" onDragDetected="#mudarPanel" onMousePressed="#mudarPanel" text="Administrador">
+               <font>
+                  <Font name="SansSerif Bold" size="28.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="962.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@arrow-down-sign-to-navigate.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="986.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/close.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <AnchorPane prefHeight="420.0" prefWidth="1024.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="218.0" layoutY="265.0" prefWidth="669.0" styleClass="h1" stylesheets="@DarkTheme.css" text="Selecione uma das opções">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#02112c" height="80.0" stroke="BLACK" strokeType="INSIDE" width="1024.0" />
+            <Label fx:id="mesaBttn" layoutX="26.0" layoutY="24.0" onMousePressed="#mudarPanel" text="Cash Games" textFill="#fcfcfc">
+               <font>
+                  <Font name="SansSerif Bold" size="28.0" />
+               </font>
+            </Label>
+            <Label fx:id="torneioBttn" layoutX="230.0" layoutY="24.0" onDragDetected="#mudarPanel" onMousePressed="#mudarPanel" text="Torneios" textFill="#fcfcfc">
+               <font>
+                  <Font name="SansSerif Bold" size="28.0" />
+               </font>
+            </Label>
+            <Label fx:id="mesaBttn1" layoutX="552.0" layoutY="24.0" onMousePressed="#mudarPanel" text="Relatórios" textFill="#fcfcfc">
+               <font>
+                  <Font name="SansSerif Bold" size="28.0" />
+               </font>
+            </Label>
+            <Label fx:id="torneioBttn1" layoutX="392.0" layoutY="24.0" onDragDetected="#mudarPanel" onMousePressed="#mudarPanel" text="Usuários" textFill="#fcfcfc">
+               <font>
+                  <Font name="SansSerif Bold" size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>
