@@ -23,13 +23,13 @@ public class infoTorneioController implements Initializable{
     private Label nomeDoTorneioLabel;
 
     @FXML
-    private Label descriçãoTA;
+    private Label descricaoLabel;
 
     @FXML
     private Button ParticiparBttn;
 
     @FXML
-    private Label premiaçãoLabel;
+    private Label premiacaoLabel;
 
     @FXML
     private ImageView voltarButton;
@@ -126,20 +126,20 @@ public class infoTorneioController implements Initializable{
 		this.nomeDoTorneioLabel = nomeDoTorneioLabel;
 	}
 
-	public Label getDescriçãoTA() {
-		return descriçãoTA;
+	public Label getDescricaoLabel() {
+		return descricaoLabel;
 	}
 
-	public void setDescriçãoTA(Label descriçãoTA) {
-		this.descriçãoTA = descriçãoTA;
+	public void setDescricaoLabel(Label descricaoLabel) {
+		this.descricaoLabel = descricaoLabel;
 	}
 
-	public Label getPremiaçãoLabel() {
-		return premiaçãoLabel;
+	public Label getPremiacaoLabel() {
+		return premiacaoLabel;
 	}
 
-	public void setPremiaçãoLabel(Label premiaçãoLabel) {
-		this.premiaçãoLabel = premiaçãoLabel;
+	public void setPremiacaoLabel(Label premiacaoLabel) {
+		this.premiacaoLabel = premiacaoLabel;
 	}
 
 	public ImageView getVoltarButton() {

@@ -1,12 +1,9 @@
 package br.com.partypoker.model;
 
 import java.util.ArrayList;
+import java.util.List;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "torneio")
@@ -15,32 +12,23 @@ public class Torneio implements Entidade {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String titulo, estruturaTorneio, inicio;
+	@Column(nullable = false, unique = true)
+	private String titulo;
+	@Column(nullable = false)
+	private String descricao;
+	@Column(nullable = false)
 	private double buyin;
-	private boolean rebuy, addon;
+	@Column(nullable = false)
+	private boolean rebuy;
+	@Column(nullable = false)
+	private String dataInicio;
+	@Column(nullable = false)
 	private String premio;
-	@SuppressWarnings("unused")
-	private String infoJogadores;
-	
-	private ArrayList<Jogador> jogadores;
-	
-	public Torneio(String titulo, String estruturaTorneio, String inicio, double buyin, boolean rebuy,
-			boolean addon, String premio) {
-		super();
-		this.titulo = titulo;
-		this.estruturaTorneio = estruturaTorneio;
-		this.inicio = inicio;
-		this.buyin = buyin;
-		this.rebuy = rebuy;
-		this.addon = addon;
-		this.premio = premio;
-		this.jogadores = new ArrayList<>();
-		this.infoJogadores = getInfoJogadores();
-	}
+	@ManyToMany
+	@JoinTable(name = "torneio_jogador", joinColumns = {@JoinColumn(name = "id_torneio")}, inverseJoinColumns = {@JoinColumn(name = "id_jogador")})
+	private List<Jogador> jogadores;
 
-	public String getInfoJogadores() {
-		return "" + getJogadores().size() + "";
-	}
+	public Torneio() { }
 
 	public Long getId() {
 		return id;
@@ -58,20 +46,12 @@ public class Torneio implements Entidade {
 		this.titulo = titulo;
 	}
 
-	public String getEstruturaTorneio() {
-		return estruturaTorneio;
+	public String getDescricao() {
+		return descricao;
 	}
 
-	public void setEstruturaTorneio(String estruturaTorneio) {
-		this.estruturaTorneio = estruturaTorneio;
-	}
-
-	public String getInicio() {
-		return inicio;
-	}
-
-	public void setInicio(String inicio) {
-		this.inicio = inicio;
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
 
 	public double getBuyin() {
@@ -90,12 +70,12 @@ public class Torneio implements Entidade {
 		this.rebuy = rebuy;
 	}
 
-	public boolean isAddon() {
-		return addon;
+	public String getDataInicio() {
+		return dataInicio;
 	}
 
-	public void setAddon(boolean addon) {
-		this.addon = addon;
+	public void setDataInicio(String dataInicio) {
+		this.dataInicio = dataInicio;
 	}
 
 	public String getPremio() {
@@ -105,20 +85,4 @@ public class Torneio implements Entidade {
 	public void setPremio(String premio) {
 		this.premio = premio;
 	}
-
-	public void setInfoJogadores(String infoJogadores) {
-		this.infoJogadores = infoJogadores;
-	}
-
-	public ArrayList<Jogador> getJogadores() {
-		return jogadores;
-	}
-
-	public void setJogadores(ArrayList<Jogador> jogadores) {
-		this.jogadores = jogadores;
-	}
-	
-	
-	
-	
 }

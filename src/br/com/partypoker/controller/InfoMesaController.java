@@ -70,28 +70,8 @@ public class InfoMesaController implements Initializable{
 		inicioController.getBordePane().setCenter(App.cashGameController.getParentMesa());
 	}
 
-	public Button getVoltarButton() {
-		return voltarButton;
-	}
-
-	public void setVoltarButton(Button voltarButton) {
-		this.voltarButton = voltarButton;
-	}
-
 	public Label getNomeMesaLabel() {
 		return nomeMesaLabel;
-	}
-
-	public void setNomeMesaLabel(Label nomeMesaLabel) {
-		this.nomeMesaLabel = nomeMesaLabel;
-	}
-
-	public Label getCodigoLabel() {
-		return codigoLabel;
-	}
-
-	public void setCodigoLabel(Label codigoLabel) {
-		this.codigoLabel = codigoLabel;
 	}
 
 	public Label getDescricaoTA() {
