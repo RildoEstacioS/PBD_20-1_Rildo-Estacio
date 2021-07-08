@@ -63,7 +63,7 @@
          <font>
             <Font name="System Bold" size="16.0" />
          </font></PasswordField>
-      <Label fx:id="closeButton" layoutX="984.0" layoutY="14.0" prefHeight="5.0" prefWidth="27.0" text="x" textAlignment="RIGHT" textFill="#fcfcfc">
+      <Label layoutX="984.0" layoutY="14.0" prefHeight="5.0" prefWidth="27.0" text="x" textAlignment="RIGHT" textFill="#fcfcfc">
          <font>
             <Font name="Corbel Bold" size="36.0" />
          </font>
@@ -83,7 +83,7 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Label fx:id="usuarioBttn" layoutX="855.0" layoutY="681.0" text="Entrar como jogador" textFill="#fcfcfc">
+      <Label layoutX="855.0" layoutY="681.0" text="Entrar como jogador" textFill="#fcfcfc">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>

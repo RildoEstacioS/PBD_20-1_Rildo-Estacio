@@ -10,19 +10,19 @@
 
 <AnchorPane prefHeight="524.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="385.0" layoutY="32.0" text="Novo Cash Game">
+      <Label layoutX="384.0" layoutY="90.0" text="Novo Cash Game">
          <font>
             <Font name="System Bold" size="32.0" />
          </font>
       </Label>
-      <RadioButton fx:id="cashGameRB" layoutX="627.0" layoutY="393.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="5.0" selected="true">
+      <RadioButton fx:id="cashGameRB" layoutX="625.0" layoutY="380.0" mnemonicParsing="false" selected="true" text="6">
          <font>
-            <Font name="System Bold" size="18.0" />
+            <Font name="System Bold" size="24.0" />
          </font>
       </RadioButton>
-      <RadioButton fx:id="torneioRB" layoutX="709.0" layoutY="393.0" mnemonicParsing="false">
+      <RadioButton fx:id="torneioRB" layoutX="707.0" layoutY="380.0" mnemonicParsing="false" text="9">
          <font>
-            <Font name="System Bold" size="18.0" />
+            <Font name="System Bold" size="24.0" />
          </font>
       </RadioButton>
       <Button fx:id="entrarBttn" layoutX="422.0" layoutY="443.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="182.0" stylesheets="@DarkTheme.css" text="Salvar">
@@ -30,31 +30,21 @@
             <Font name="System Bold" size="32.0" />
          </font>
       </Button>
-      <TextField layoutX="251.0" layoutY="111.0" prefHeight="45.0" prefWidth="511.0" promptText="Título" styleClass="input" stylesheets="@DarkTheme.css">
+      <TextField layoutX="251.0" layoutY="165.0" prefHeight="35.0" prefWidth="511.0" promptText="Título" styleClass="input" stylesheets="@DarkTheme.css">
          <font>
-            <Font name="System Bold" size="18.0" />
+            <Font name="System Bold" size="16.0" />
          </font>
       </TextField>
-      <TextField layoutX="250.0" layoutY="325.0" prefHeight="45.0" prefWidth="511.0" promptText="Buy-in" styleClass="input" stylesheets="@DarkTheme.css">
+      <TextField layoutX="250.0" layoutY="345.0" prefHeight="35.0" prefWidth="511.0" promptText="Buy-in" styleClass="input" stylesheets="@DarkTheme.css">
          <font>
-            <Font name="System Bold" size="18.0" />
+            <Font name="System Bold" size="16.0" />
          </font>
       </TextField>
-      <ChoiceBox fx:id="choiceBoxField" layoutX="251.0" layoutY="184.0" prefHeight="45.0" prefWidth="511.0" styleClass="input" stylesheets="@DarkTheme.css" />
-      <ChoiceBox fx:id="choiceBoxField1" layoutX="250.0" layoutY="262.0" prefHeight="45.0" prefWidth="511.0" styleClass="input" stylesheets="@DarkTheme.css" />
-      <Label layoutX="251.0" layoutY="389.0" text="Tamanho">
+      <ChoiceBox fx:id="choiceBoxField" layoutX="250.0" layoutY="216.0" prefHeight="45.0" prefWidth="511.0" styleClass="input" stylesheets="@DarkTheme.css" />
+      <ChoiceBox fx:id="choiceBoxField1" layoutX="250.0" layoutY="284.0" prefHeight="45.0" prefWidth="511.0" styleClass="input" stylesheets="@DarkTheme.css" />
+      <Label layoutX="250.0" layoutY="389.0" text="Tamanho">
          <font>
-            <Font name="System Bold" size="24.0" />
-         </font>
-      </Label>
-      <Label layoutX="657.0" layoutY="389.0" text="6">
-         <font>
-            <Font name="System Bold" size="24.0" />
-         </font>
-      </Label>
-      <Label layoutX="739.0" layoutY="389.0" text="9">
-         <font>
-            <Font name="System Bold" size="24.0" />
+            <Font name="System Bold" size="16.0" />
          </font>
       </Label>
    </children>
