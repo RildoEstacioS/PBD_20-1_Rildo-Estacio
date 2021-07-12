@@ -16,7 +16,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
-public class cashGameAdmController implements Initializable{
+public class cashGameAdmController implements Initializable {
 
 	@FXML
 	private TextField buscarCashGameTF;
@@ -47,34 +47,30 @@ public class cashGameAdmController implements Initializable{
 
 	private InicioAdmController inicioAdmController;
 
-	private Stage stageCashGameAdm;
-	private Scene sceneCashGameAdm;
-
 	private Parent parentCashGameAdm;
 
-	private Parent parentInfoCashGameAdm;
 	private Facade facade;
 
 	public cashGameAdmController(InicioAdmController inicioAdmController, Facade facade) {
 		super();
 		this.inicioAdmController = inicioAdmController;
 		this.facade = facade;
-		
+
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/br/com/partypoker/view/CashGame.fxml"));
 
-        fxmlLoader.setController(this);
-        try {
-        	parentCashGameAdm = (Parent) fxmlLoader.load();
+		fxmlLoader.setController(this);
+		try {
+			parentCashGameAdm = (Parent) fxmlLoader.load();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}   
+		}
 	}
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	public TextField getBuscarCashGameTF() {
@@ -157,22 +153,6 @@ public class cashGameAdmController implements Initializable{
 		this.inicioAdmController = inicioAdmController;
 	}
 
-	public Stage getStageCashGameAdm() {
-		return stageCashGameAdm;
-	}
-
-	public void setStageCashGameAdm(Stage stageCashGameAdm) {
-		this.stageCashGameAdm = stageCashGameAdm;
-	}
-
-	public Scene getSceneCashGameAdm() {
-		return sceneCashGameAdm;
-	}
-
-	public void setSceneCashGameAdm(Scene sceneCashGameAdm) {
-		this.sceneCashGameAdm = sceneCashGameAdm;
-	}
-
 	public Parent getParentCashGameAdm() {
 		return parentCashGameAdm;
 	}
@@ -181,13 +161,6 @@ public class cashGameAdmController implements Initializable{
 		this.parentCashGameAdm = parentCashGameAdm;
 	}
 
-	public Parent getParentInfoCashGameAdm() {
-		return parentInfoCashGameAdm;
-	}
-
-	public void setParentInfoCashGameAdm(Parent parentInfoCashGameAdm) {
-		this.parentInfoCashGameAdm = parentInfoCashGameAdm;
-	}
 
 	public Facade getFacade() {
 		return facade;
@@ -197,6 +170,4 @@ public class cashGameAdmController implements Initializable{
 		this.facade = facade;
 	}
 
-	
-	
 }

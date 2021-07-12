@@ -16,44 +16,42 @@ import javafx.stage.Stage;
 
 public class LugarRapidoController {
 
-    @FXML
-    private RadioButton cashGameRB;
+	@FXML
+	private RadioButton cashGameRB;
 
-    @FXML
-    private RadioButton torneioRB;
+	@FXML
+	private RadioButton torneioRB;
 
-    @FXML
-    private Button entrarBttn;
+	@FXML
+	private Button entrarBttn;
 
-    private ToggleGroup toggleGroup;
-    private Facade facade;
-    private InicioController inicioController;
-//    private Stage stageLugarRapido;
-//    private Scene sceneLugarRapido;
-    private Parent parentLugarRapido;
-    
-    public LugarRapidoController(InicioController inicioController, Facade facade) {
-    
-    	this.inicioController = inicioController;
-    	this.facade = facade;
-    	this.toggleGroup = new ToggleGroup();
+	private ToggleGroup toggleGroup;
+	private Parent parentLugarRapido;
+	private Facade facade;
+	private TelasController telasController;
 
-    	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/br/com/partypoker/view/LugarRapido.fxml"));
-        fxmlLoader.setController(this);
-        
-        try {
-        	parentLugarRapido = (Parent) fxmlLoader.load();
+	public LugarRapidoController(TelasController telasController, Facade facade) {
+		this.facade = facade;
+
+		this.telasController = telasController;
+		this.toggleGroup = new ToggleGroup();
+
+		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/br/com/partypoker/view/LugarRapido.fxml"));
+		fxmlLoader.setController(this);
+
+		try {
+			parentLugarRapido = (Parent) fxmlLoader.load();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}   	
+		}
 
-        this.cashGameRB.setToggleGroup(toggleGroup);
-        this.torneioRB.setToggleGroup(toggleGroup);
-        
-        this.cashGameRB.setSelected(true);
-        
-    }
+		this.cashGameRB.setToggleGroup(toggleGroup);
+		this.torneioRB.setToggleGroup(toggleGroup);
+
+		this.cashGameRB.setSelected(true);
+
+	}
 
 	public RadioButton getCashGameRB() {
 		return cashGameRB;
@@ -87,14 +85,6 @@ public class LugarRapidoController {
 		this.facade = facade;
 	}
 
-	public InicioController getInicioController() {
-		return inicioController;
-	}
-
-	public void setInicioController(InicioController inicioController) {
-		this.inicioController = inicioController;
-	}
-
 	public Parent getParentLugarRapido() {
 		return parentLugarRapido;
 	}
@@ -102,8 +92,5 @@ public class LugarRapidoController {
 	public void setParentLugarRapido(Parent parentLugarRapido) {
 		this.parentLugarRapido = parentLugarRapido;
 	}
-    
-    
-    
-    
+
 }

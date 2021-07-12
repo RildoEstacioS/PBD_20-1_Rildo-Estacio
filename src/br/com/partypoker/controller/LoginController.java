@@ -47,16 +47,16 @@ public class LoginController implements Initializable {
 	private Parent parentLogin;
 	private Scene sceneLogin;
 	private Stage stageLogin;
-	private InicioController inicioController;
-	private CadastroController cadastrarController;
+
 	private Facade facade;
+
+	private TelasController telasController;
+
 	public static Jogador jogador = null;
 
-	public LoginController(InicioController inicioController, CadastroController cadastrarController, Facade facade) {
+	public LoginController(TelasController telasController, Facade facade) {
 		this.facade = facade;
-		this.inicioController = inicioController;
-		this.cadastrarController = cadastrarController;
-		cadastrarController.setLoginController(this);
+		this.telasController = telasController;
 
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/br/com/partypoker/view/Login.fxml"));
 		fxmlLoader.setController(this);
@@ -85,17 +85,18 @@ public class LoginController implements Initializable {
 			String login = loginTF.getText();
 			String senha = senhaTF.getText();
 			if (loginTF.getText().equals("") || senhaTF.getText().equals("")) {
-				Alerts.showAlert("Campo(s) em branco", "Um ou mais campos em branco", AlertType.ERROR);				
+				Alerts.showAlert("Campo(s) em branco", "Um ou mais campos em branco", AlertType.ERROR);
 				return;
 			}
 			jogador = facade.login(login);
 			if (jogador != null) {
 				if (Cripto.decode(jogador.getSenha()).equals(senha)) {
 					Alerts.showAlert("Logado com Sucesso!", "Usuário Logado com Sucesso.", AlertType.CONFIRMATION);
-					inicioController.setJogador(jogador);
-					inicioController.getUserNameLabel().setText(jogador.getNome());
-					inicioController.getCashLabel().setText("R$ " + jogador.getBanca());
-					stageLogin.setScene(inicioController.getSceneInicio());
+					telasController.inicioController.setJogador(jogador);
+					telasController.inicioController.getUserNameLabel().setText(jogador.getNome());
+					telasController.inicioController.getCashLabel().setText("R$ " + jogador.getBanca());
+//					stageLogin.setScene(inicioController.getSceneInicio());
+					telasController.stageGeral.setScene(telasController.inicioController.getSceneInicio());
 
 				} else {
 					Alerts.showAlert("Senha invalida!", "Senha pode estar incorreta", AlertType.ERROR);
@@ -107,7 +108,7 @@ public class LoginController implements Initializable {
 	@FXML
 	public void bttnCadastrarEvent(Event e) {
 		if (e.getSource().equals(this.cadastrarButton)) {
-			stageLogin.setScene(cadastrarController.getSceneCadastrar());
+			telasController.stageGeral.setScene(telasController.cadastroController.getSceneCadastrar());
 		}
 	}
 
@@ -116,12 +117,8 @@ public class LoginController implements Initializable {
 		System.out.println(e.getSource().equals(this.entrarAdminLabel));
 		if (e.getSource().equals(this.entrarAdminLabel)) {
 			System.out.println("entrou");
-			stageLogin.setScene(App.loginAdmController.getSceneLoginAdm());
+			stageLogin.setScene(telasController.loginAdmController.getSceneLoginAdm());
 		}
-	}
-
-	public void mudarScene() {
-		stageLogin.setScene(sceneLogin);
 	}
 
 	@Override

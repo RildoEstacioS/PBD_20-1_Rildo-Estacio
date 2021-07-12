@@ -31,17 +31,17 @@ public class InfoMesaController implements Initializable{
 
     @FXML
     private ImageView closeButton;
-
-    InicioController inicioController;
-//    private Stage stageInfoMesa;
-//    private Scene sceneInfoMesa;
-    private Parent parentInfoMesa;
+    
+	private Parent parentInfoMesa;
+    
     private Facade facade;
     
-	public InfoMesaController(InicioController inicioController, Facade facade) {
+    private TelasController telasController;
+    
+	public InfoMesaController(TelasController telasController, Facade facade) {
 		
 		this.facade = facade;
-		this.inicioController = inicioController;
+		this.telasController = telasController;
     	
     	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/br/com/partypoker/view/InfoMesa.fxml"));
         fxmlLoader.setController(this);
@@ -67,7 +67,7 @@ public class InfoMesaController implements Initializable{
 	
 	@FXML
 	void voltarButtonAction(ActionEvent event) {
-		inicioController.getBordePane().setCenter(App.cashGameController.getParentMesa());
+		telasController.inicioController.getBordePane().setCenter(telasController.cashGameController.getParentMesa());
 	}
 
 	public Label getNomeMesaLabel() {

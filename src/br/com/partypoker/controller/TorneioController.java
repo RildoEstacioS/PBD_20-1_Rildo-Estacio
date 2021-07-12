@@ -19,66 +19,99 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class TorneioController implements Initializable{
+public class TorneioController implements Initializable {
 
+	@FXML
+	private TextField buscarTorneioTF;
 
-    @FXML
-    private TextField buscarTorneioTF;
+	@FXML
+	private ListView<Torneio> listView;
 
-    @FXML
-    private ListView<Torneio> listView;
-    
-    private List<Torneio> listTorneio;
-    
-    private ObservableList<Torneio> observableLisTorneio;
-    
-    InicioController inicioController;
-    
-    private Stage stageTorneio;
-    private Scene sceneTorneio;
-    private Parent parentTorneio;
-    private Facade facade;
+	private List<Torneio> listTorneio;
+	private ObservableList<Torneio> observableLisTorneio;
+	private Parent parentTorneio;
+	private Facade facade;
+	private TelasController telasController;
 
-    
-    public TorneioController(InicioController inicioController, Facade facade) {
-    	this.facade = facade;
-    	this.inicioController = inicioController;
-    	
-    	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/br/com/partypoker/view/Torneio.fxml"));
-        fxmlLoader.setController(this);
-        
-        observableLisTorneio = FXCollections.observableArrayList();
-        listTorneio = facade.selectAllTorneio();
-        observableLisTorneio.addAll(listTorneio);
-        try {
-        	parentTorneio = (Parent) fxmlLoader.load();
+	public TorneioController(TelasController telasController, Facade facade) {
+		super();
+		this.facade = facade;
+		this.telasController = telasController;
+
+		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/br/com/partypoker/view/Torneio.fxml"));
+		fxmlLoader.setController(this);
+
+		observableLisTorneio = FXCollections.observableArrayList();
+		listTorneio = facade.selectAllTorneio();
+		observableLisTorneio.addAll(listTorneio);
+		try {
+			parentTorneio = (Parent) fxmlLoader.load();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
-    }
+	}
+
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		listView.setItems(observableLisTorneio);
 		listView.setCellFactory(cell -> new TorneioListCell());
 	}
-	public Stage getStageTorneio() {
-		return stageTorneio;
-	}
-	public void setStageTorneio(Stage stageTorneio) {
-		this.stageTorneio = stageTorneio;
-	}
-	public Scene getSceneTorneio() {
-		return sceneTorneio;
-	}
-	public void setSceneTorneio(Scene sceneTorneio) {
-		this.sceneTorneio = sceneTorneio;
-	}
+
 	public Parent getParentTorneio() {
 		return parentTorneio;
 	}
+
 	public void setParentTorneio(Parent parentTorneio) {
 		this.parentTorneio = parentTorneio;
+	}
+
+	public TextField getBuscarTorneioTF() {
+		return buscarTorneioTF;
+	}
+
+	public void setBuscarTorneioTF(TextField buscarTorneioTF) {
+		this.buscarTorneioTF = buscarTorneioTF;
+	}
+
+	public ListView<Torneio> getListView() {
+		return listView;
+	}
+
+	public void setListView(ListView<Torneio> listView) {
+		this.listView = listView;
+	}
+
+	public List<Torneio> getListTorneio() {
+		return listTorneio;
+	}
+
+	public void setListTorneio(List<Torneio> listTorneio) {
+		this.listTorneio = listTorneio;
+	}
+
+	public ObservableList<Torneio> getObservableLisTorneio() {
+		return observableLisTorneio;
+	}
+
+	public void setObservableLisTorneio(ObservableList<Torneio> observableLisTorneio) {
+		this.observableLisTorneio = observableLisTorneio;
+	}
+
+	public Facade getFacade() {
+		return facade;
+	}
+
+	public void setFacade(Facade facade) {
+		this.facade = facade;
+	}
+
+	public TelasController getTelasController() {
+		return telasController;
+	}
+
+	public void setTelasController(TelasController telasController) {
+		this.telasController = telasController;
 	}
 }

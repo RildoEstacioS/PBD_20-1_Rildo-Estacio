@@ -22,7 +22,7 @@
          </font>
       </Label>
       <TextField fx:id="nomeTF" layoutX="199.0" layoutY="258.0" prefHeight="51.0" prefWidth="627.0" promptText="Nome" styleClass="input" stylesheets="@DarkTheme.css" AnchorPane.leftAnchor="199.0" AnchorPane.rightAnchor="199.0" AnchorPane.topAnchor="258.0" />
-      <TextField fx:id="nomeTF1" layoutX="199.0" layoutY="320.0" prefHeight="51.0" prefWidth="627.0" promptText="Cpf" styleClass="input" stylesheets="@DarkTheme.css" />
+      <TextField fx:id="cpfTF" layoutX="199.0" layoutY="320.0" prefHeight="51.0" prefWidth="627.0" promptText="Cpf" styleClass="input" stylesheets="@DarkTheme.css" />
       <TextField fx:id="emailTF" layoutX="199.0" layoutY="387.0" prefHeight="51.0" prefWidth="627.0" promptText="E-mail" styleClass="input" stylesheets="@DarkTheme.css" AnchorPane.leftAnchor="199.0" AnchorPane.rightAnchor="199.0" AnchorPane.topAnchor="387.0" />
       <PasswordField fx:id="senhaTF" layoutX="199.0" layoutY="452.0" prefHeight="51.0" prefWidth="627.0" promptText="Senha" styleClass="input" stylesheets="@DarkTheme.css" AnchorPane.leftAnchor="199.0" AnchorPane.rightAnchor="199.0" AnchorPane.topAnchor="452.0" />
       <PasswordField fx:id="confirmarTF" layoutX="200.0" layoutY="516.0" prefHeight="51.0" prefWidth="627.0" promptText="Confirmar senha" styleClass="input" stylesheets="@DarkTheme.css" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="198.0" AnchorPane.topAnchor="516.0" />

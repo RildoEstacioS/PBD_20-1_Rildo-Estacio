@@ -40,16 +40,18 @@ public class CadastroController {
 
     @FXML
     private Button cadastrarButton;
+
+    private TelasController telasController;
     
-    private Parent parentCadastrar;
+	private Parent parentCadastrar;
     private Scene sceneCadastrar;
-    private Stage stageCadastrar;
-    private LoginController loginController;
-    private InicioController inicioController;
+
     private Facade facade;
     
-    public CadastroController(InicioController inicioController, Facade facade) {
+    public CadastroController(TelasController telasController, Facade facade) {
+    	super();
     	this.facade = facade;
+    	this.telasController = telasController;
     	
     	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/br/com/partypoker/view/Cadastrar.fxml"));
         fxmlLoader.setController(this);
@@ -63,14 +65,7 @@ public class CadastroController {
 		}
     }
     
-    public void launch(Stage stage) {
-    		this.stageCadastrar = stage;
-    		stageCadastrar.setScene(sceneCadastrar);
-    		stageCadastrar.initStyle(StageStyle.UNDECORATED);
-    		stageCadastrar.setResizable(false);
-    		stageCadastrar.show();
-    }
-    
+
     public void bttnCadastrarAction(Event e) throws BusinessException {
     	if (e.getSource().equals(cadastrarButton)) {
     		if (nomeTF.getText().equalsIgnoreCase("") || emailTF.getText().equalsIgnoreCase("") || senhaTF.getText().equalsIgnoreCase("") || senhaTF.getText().equalsIgnoreCase("")) {
@@ -94,9 +89,8 @@ public class CadastroController {
 
 				facade.createJogador(jogador);
 				Alerts.showAlert("Jogador cadastrado com sucesso", "O jogador foi cadastro no sistema com Êxito", AlertType.CONFIRMATION);
-				loginController.mudarScene();
-				
-			}
+				telasController.stageGeral.setScene(telasController.loginController.getSceneLogin());
+				}
     		
     	}
     }
@@ -117,19 +111,81 @@ public class CadastroController {
 		this.sceneCadastrar = sceneCadastrar;
 	}
 
-	public Stage getStageCadastrar() {
-		return stageCadastrar;
+	public TelasController getTelasController() {
+		return telasController;
 	}
 
-	public void setStageCadastrar(Stage stageCadastrar) {
-		this.stageCadastrar = stageCadastrar;
+	public void setTelasController(TelasController telasController) {
+		this.telasController = telasController;
 	}
 
-	public LoginController getLoginController() {
-		return loginController;
+	public TextField getNomeTF() {
+		return nomeTF;
 	}
 
-	public void setLoginController(LoginController loginController) {
-		this.loginController = loginController;
+
+	public void setNomeTF(TextField nomeTF) {
+		this.nomeTF = nomeTF;
 	}
+
+
+	public TextField getEmailTF() {
+		return emailTF;
+	}
+
+
+	public void setEmailTF(TextField emailTF) {
+		this.emailTF = emailTF;
+	}
+
+
+	public PasswordField getSenhaTF() {
+		return senhaTF;
+	}
+
+
+	public void setSenhaTF(PasswordField senhaTF) {
+		this.senhaTF = senhaTF;
+	}
+
+
+	public PasswordField getConfirmarTF() {
+		return confirmarTF;
+	}
+
+
+	public void setConfirmarTF(PasswordField confirmarTF) {
+		this.confirmarTF = confirmarTF;
+	}
+
+
+	public TextField getCpfTF() {
+		return cpfTF;
+	}
+
+
+	public void setCpfTF(TextField cpfTF) {
+		this.cpfTF = cpfTF;
+	}
+
+
+	public Button getCadastrarButton() {
+		return cadastrarButton;
+	}
+
+
+	public void setCadastrarButton(Button cadastrarButton) {
+		this.cadastrarButton = cadastrarButton;
+	}
+
+
+	public Facade getFacade() {
+		return facade;
+	}
+
+
+	public void setFacade(Facade facade) {
+		this.facade = facade;
+	}
+
 }

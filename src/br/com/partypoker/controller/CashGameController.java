@@ -27,167 +27,101 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 
-public class CashGameController implements Initializable{
-	
-    @FXML
-    private TextField buscarCashGameTF;
+public class CashGameController implements Initializable {
 
-    @FXML
-    private ListView<CashGame> listView;
+	@FXML
+	private TextField buscarCashGameTF;
 
-    private List<CashGame> listMesas = new ArrayList<CashGame>();
-    
-    private ObservableList<CashGame> observableListMesas;
-    
-    InicioController inicioController;
-    
-    private Stage stageCashGame;
-    private Scene sceneCashGame;
-    
-    private Parent parentCashGame;
-    
-	private Parent parentInfoCashGame;
+	@FXML
+	private ListView<CashGame> listView;
+
+	private List<CashGame> listMesas = new ArrayList<CashGame>();
+
+	private ObservableList<CashGame> observableListMesas;
+
+	private Stage stageCashGame;
+	private Parent parentCashGame;
+
 	private Facade facade;
-    
-    public CashGameController(InicioController inicioController, Facade facade) {
-    	this.facade = facade;
-    	this.inicioController = inicioController;
 
-    	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/br/com/partypoker/view/CashGame.fxml"));
+	private TelasController telasController;
 
-        fxmlLoader.setController(this);
+	public CashGameController(TelasController telasController, Facade facade) {
+		this.facade = facade;
+		this.telasController = telasController;
+
+		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/br/com/partypoker/view/CashGame.fxml"));
+
+		fxmlLoader.setController(this);
 
 		observableListMesas = FXCollections.observableArrayList();
 		listMesas = facade.loadCashGames();
 		observableListMesas.addAll(listMesas);
-        try {
-        	parentCashGame = (Parent) fxmlLoader.load();
+		try {
+			parentCashGame = (Parent) fxmlLoader.load();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
-   }
-    
-    
-    @Override
-    public void initialize(URL arg0, ResourceBundle arg1) {
+	}
+
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
 		listView.setItems(observableListMesas);
 		listView.setCellFactory(cell -> new CashListCell());
 
-    }
+	}
 
 	public Stage getStageMesa() {
 		return stageCashGame;
 	}
 
-
 	public void setStageMesa(Stage stageMesa) {
 		this.stageCashGame = stageMesa;
 	}
-
-
-	public Scene getSceneMesa() {
-		return sceneCashGame;
-	}
-
-
-	public void setSceneMesa(Scene sceneMesa) {
-		this.sceneCashGame = sceneMesa;
-	}
-
 
 	public Parent getParentMesa() {
 		return parentCashGame;
 	}
 
-
 	public void setParentMesa(Parent parentMesa) {
 		this.parentCashGame = parentMesa;
 	}
-
-
-	public Parent getParentInfoMesa() {
-		return parentInfoCashGame;
-	}
-
-
-	public void setParentInfoMesa(Parent parentInfoMesa) {
-		this.parentInfoCashGame = parentInfoMesa;
-	}
-
 
 	public TextField getBuscarCashGameTF() {
 		return buscarCashGameTF;
 	}
 
-
 	public void setBuscarCashGameTF(TextField buscarCashGameTF) {
 		this.buscarCashGameTF = buscarCashGameTF;
 	}
-
 
 	public ListView<?> getListView() {
 		return listView;
 	}
 
-
-	public InicioController getInicioController() {
-		return inicioController;
-	}
-
-
-	public void setInicioController(InicioController inicioController) {
-		this.inicioController = inicioController;
-	}
-
-
 	public Stage getStageCashGame() {
 		return stageCashGame;
 	}
-
 
 	public void setStageCashGame(Stage stageCashGame) {
 		this.stageCashGame = stageCashGame;
 	}
 
-
-	public Scene getSceneCashGame() {
-		return sceneCashGame;
-	}
-
-
-	public void setSceneCashGame(Scene sceneCashGame) {
-		this.sceneCashGame = sceneCashGame;
-	}
-
-
 	public Parent getParentCashGame() {
 		return parentCashGame;
 	}
-
 
 	public void setParentCashGame(Parent parentCashGame) {
 		this.parentCashGame = parentCashGame;
 	}
 
-
-	public Parent getParentInfoCashGame() {
-		return parentInfoCashGame;
-	}
-
-
-	public void setParentInfoCashGame(Parent parentInfoCashGame) {
-		this.parentInfoCashGame = parentInfoCashGame;
-	}
-
-
 	public Facade getFacade() {
 		return facade;
 	}
 
-
 	public void setFacade(Facade facade) {
 		this.facade = facade;
-	}    
+	}
 }

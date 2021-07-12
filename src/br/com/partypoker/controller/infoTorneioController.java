@@ -17,89 +17,61 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
-public class infoTorneioController implements Initializable{
+public class infoTorneioController implements Initializable {
 
-    @FXML
-    private Label nomeDoTorneioLabel;
+	@FXML
+	private Label nomeDoTorneioLabel;
 
-    @FXML
-    private Label descricaoLabel;
+	@FXML
+	private Label descricaoLabel;
 
-    @FXML
-    private Button ParticiparBttn;
+	@FXML
+	private Button ParticiparBttn;
 
-    @FXML
-    private Label premiacaoLabel;
+	@FXML
+	private Label premiacaoLabel;
 
-    @FXML
-    private ImageView voltarButton;
+	@FXML
+	private ImageView voltarButton;
 
-    @FXML
-    private ImageView closeButton;
+	@FXML
+	private ImageView closeButton;
 
+	private Parent parentInfoTorneio;
+	private Facade facade;
+	private TelasController telasController;
 
-    InicioController inicioController;
-    private Stage stageinfoTorneio;
-    private Scene sceneInfoTorneio;
-    private Parent parentInfoTorneio;
-    private Facade facade;
-    
-	public infoTorneioController(InicioController inicioController, Facade facade) {
-		
+	public infoTorneioController(TelasController telasController, Facade facade) {
+
 		this.facade = facade;
-		this.inicioController = inicioController;
-    	
+		this.telasController = telasController;
 
-    	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/br/com/partypoker/view/InfoTorneio.fxml"));
-        fxmlLoader.setController(this);
-        
-        try {
-        	parentInfoTorneio = (Parent) fxmlLoader.load();
+		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/br/com/partypoker/view/InfoTorneio.fxml"));
+		fxmlLoader.setController(this);
+
+		try {
+			parentInfoTorneio = (Parent) fxmlLoader.load();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
-    
+
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
-		//Colocar dados da mesa para aparecer aqui!!
+		// Colocar dados da mesa para aparecer aqui!!
 	}
 
 	@FXML
 	void participarBttnAction(ActionEvent event) {
 		System.out.println("Entrou!!");
 	}
-	
+
 	@FXML
 	void voltarActionButton(ActionEvent event) {
-		inicioController.getBordePane().setCenter(App.torneioController.getParentTorneio());
-		
-	}
-	
-	public InicioController getInicioController() {
-		return inicioController;
-	}
+		telasController.inicioController.getBordePane().setCenter(telasController.torneioController.getParentTorneio());
 
-	public void setInicioController(InicioController inicioController) {
-		this.inicioController = inicioController;
-	}
-
-	public Stage getStageinfoTorneio() {
-		return stageinfoTorneio;
-	}
-
-	public void setStageinfoTorneio(Stage stageinfoTorneio) {
-		this.stageinfoTorneio = stageinfoTorneio;
-	}
-
-	public Scene getSceneInfoTorneio() {
-		return sceneInfoTorneio;
-	}
-
-	public void setSceneInfoTorneio(Scene sceneInfoTorneio) {
-		this.sceneInfoTorneio = sceneInfoTorneio;
 	}
 
 	public Parent getParentInfoTorneio() {
@@ -165,5 +137,5 @@ public class infoTorneioController implements Initializable{
 	public void setFacade(Facade facade) {
 		this.facade = facade;
 	}
-	
+
 }

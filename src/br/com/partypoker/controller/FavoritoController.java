@@ -13,34 +13,34 @@ import javafx.scene.control.ToggleGroup;
 
 public class FavoritoController {
 
-    @FXML
-    private ListView<?> favoritosTorneioLV;
+	@FXML
+	private ListView<?> favoritosTorneioLV;
 
-    @FXML
-    private ListView<?> favoritosCashGameLV;
+	@FXML
+	private ListView<?> favoritosCashGameLV;
 
-    private Facade facade;
-    private InicioController inicioController;
-//    private Stage stageLugarRapido;
-//    private Scene sceneLugarRapido;
-    private Parent parentFavorito;
-    
-    public FavoritoController(InicioController inicioController, Facade facade) {
-    
-    	this.inicioController = inicioController;
-    	this.facade = facade;
+	private Facade facade;
 
-    	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/br/com/partypoker/view/Favorito.fxml"));
-        fxmlLoader.setController(this);
-        
-        try {
-        	parentFavorito = (Parent) fxmlLoader.load();
+	private Parent parentFavorito;
+
+	private TelasController telasController;
+
+	public FavoritoController(TelasController telasController, Facade facade) {
+
+		this.telasController = telasController;
+		this.facade = facade;
+
+		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/br/com/partypoker/view/Favorito.fxml"));
+		fxmlLoader.setController(this);
+
+		try {
+			parentFavorito = (Parent) fxmlLoader.load();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}   	
+		}
 
-    }
+	}
 
 	public ListView<?> getFavoritosTorneioLV() {
 		return favoritosTorneioLV;
@@ -66,14 +66,6 @@ public class FavoritoController {
 		this.facade = facade;
 	}
 
-	public InicioController getInicioController() {
-		return inicioController;
-	}
-
-	public void setInicioController(InicioController inicioController) {
-		this.inicioController = inicioController;
-	}
-
 	public Parent getParentFavorito() {
 		return parentFavorito;
 	}
@@ -81,5 +73,5 @@ public class FavoritoController {
 	public void setParentFavorito(Parent parentFavorito) {
 		this.parentFavorito = parentFavorito;
 	}
-   
+
 }
