@@ -29,7 +29,7 @@
             </ImageView>
             <Label fx:id="admLabel" layoutX="760.0" layoutY="47.0" onMousePressed="#mudarPanel" text="Administrador">
                <font>
-                  <Font name="SansSerif Bold" size="28.0" />
+                  <Font size="28.0" />
                </font>
             </Label>
             <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="962.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
@@ -43,24 +43,24 @@
                </image>
             </ImageView>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#02112c" height="80.0" layoutY="116.0" stroke="BLACK" strokeType="INSIDE" width="1024.0" />
-            <Label fx:id="cashGameButton" layoutX="26.0" layoutY="140.0" onMousePressed="#mudarPanel" text="Cash Games" textFill="#fcfcfc">
+            <Label fx:id="cashGameButton" layoutX="44.0" layoutY="136.0" onMousePressed="#mudarPanel" text="Cash Games" textFill="#fcfcfc">
                <font>
-                  <Font name="SansSerif Bold" size="28.0" />
+                  <Font size="28.0" />
                </font>
             </Label>
-            <Label fx:id="torneioBttn" layoutX="230.0" layoutY="140.0" onMousePressed="#mudarPanel" text="Torneios" textFill="#fcfcfc">
+            <Label fx:id="torneioBttn" layoutX="251.0" layoutY="136.0" onMousePressed="#mudarPanel" text="Torneios" textFill="#fcfcfc">
                <font>
-                  <Font name="SansSerif Bold" size="28.0" />
+                  <Font size="28.0" />
                </font>
             </Label>
-            <Label fx:id="relatorioBttn" layoutX="552.0" layoutY="140.0" onMousePressed="#mudarPanel" text="Relatórios" textFill="#fcfcfc">
+            <Label fx:id="relatorioBttn" layoutX="553.0" layoutY="136.0" onMousePressed="#mudarPanel" text="Relatórios" textFill="#fcfcfc">
                <font>
-                  <Font name="SansSerif Bold" size="28.0" />
+                  <Font size="28.0" />
                </font>
             </Label>
-            <Label fx:id="usuarioBttn" layoutX="392.0" layoutY="140.0" onMousePressed="#mudarPanel" text="Usuários" textFill="#fcfcfc">
+            <Label fx:id="usuarioBttn" layoutX="404.0" layoutY="136.0" onMousePressed="#mudarPanel" text="Usuários" textFill="#fcfcfc">
                <font>
-                  <Font name="SansSerif Bold" size="28.0" />
+                  <Font size="28.0" />
                </font>
             </Label>
          </children>

@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="506.0" prefWidth="1024.0" style="-fx-background-color: fcfcfc;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="506.0" prefWidth="1024.0" style="-fx-background-color: fcfcfc;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <TextField fx:id="buscarCashGameTF" layoutX="225.0" layoutY="26.0" minHeight="36.0" minWidth="574.0" prefHeight="48.0" prefWidth="574.0" promptText="Buscar Cash Game" styleClass="input" stylesheets="@DarkTheme.css">
          <font>
@@ -19,7 +22,7 @@
       </ImageView>
       <ScrollPane hbarPolicy="NEVER" layoutX="107.0" layoutY="88.0" prefHeight="389.0" prefWidth="805.0">
          <content>
-            <ListView fx:id="listView" prefHeight="388.0" prefWidth="804.0" />
+            <ListView fx:id="listView" prefHeight="387.0" prefWidth="804.0" />
          </content>
       </ScrollPane>
    </children>

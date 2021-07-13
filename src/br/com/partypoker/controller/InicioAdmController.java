@@ -15,6 +15,8 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -47,8 +49,9 @@ public class InicioAdmController implements Initializable {
 
 	public InicioAdmController(TelasController telasController, Facade facade) {
 		super();
+		this.telasController = telasController;
 		this.facade = facade;
-
+		
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/br/com/partypoker/view/InicioAdm.fxml"));
 		fxmlLoader.setController(this);
 
@@ -66,21 +69,58 @@ public class InicioAdmController implements Initializable {
 
 	public void mudarPanel(Event e) {
 		if (e.getSource().equals(cashGameButton)) {
-			System.out.println("CashGame admin");
+			cashGameButton.setFont(Font.font(null, FontWeight.BOLD, 28));
+			torneioBttn.setFont(Font.font(28));
+			relatorioBttn.setFont(Font.font(28));
+			usuarioBttn.setFont(Font.font(28));
 
+			bordePane.setCenter(telasController.cashGameAdmController.getParentCashGameAdm());
 		}
 
 		if (e.getSource().equals(torneioBttn)) {
-			System.out.println("TorneioAdm");
-		}
+			torneioBttn.setFont(Font.font(null, FontWeight.BOLD, 28));
+			cashGameButton.setFont(Font.font(28));
+			relatorioBttn.setFont(Font.font(28));
+			usuarioBttn.setFont(Font.font(28));
 
-		if (e.getSource().equals(usuarioBttn)) {
-			System.out.println("Usuario adm");
+			bordePane.setCenter(telasController.torneioAdmController.getParentCashGameAdm());
 		}
-
-		if (e.getSource().equals(relatorioBttn)) {
-			System.out.println("Relatorio");
-		}
+//
+//		if (e.getSource().equals(lugarRapido)) {
+//			lugarRapido.setFont(Font.font(null, FontWeight.BOLD, 28));
+//			cashGames.setFont(Font.font(28));
+//			torneios.setFont(Font.font(28));
+//			favoritos.setFont(Font.font(28));
+//
+//			bordePane.setCenter(telasController.lugarRapidoController.getParentLugarRapido());
+//		}
+//
+//		if (e.getSource().equals(favoritos)) {
+//			favoritos.setFont(Font.font(null, FontWeight.BOLD, 28));
+//			cashGames.setFont(Font.font(28));
+//			torneios.setFont(Font.font(28));
+//			lugarRapido.setFont(Font.font(28));
+//
+//			bordePane.setCenter(telasController.favoritoController.getParentFavorito());
+//		}
+//
+//	}
+//		if (e.getSource().equals(cashGameButton)) {
+//			System.out.println("CashGame admin");
+//
+//		}
+//
+//		if (e.getSource().equals(torneioBttn)) {
+//			System.out.println("TorneioAdm");
+//		}
+//
+//		if (e.getSource().equals(usuarioBttn)) {
+//			System.out.println("Usuario adm");
+//		}
+//
+//		if (e.getSource().equals(relatorioBttn)) {
+//			System.out.println("Relatorio");
+//		}
 	}
 
 	@Override

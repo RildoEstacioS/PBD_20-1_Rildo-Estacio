@@ -16,7 +16,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
-public class cashGameAdmController implements Initializable {
+public class CashGameAdmController implements Initializable {
 
 	@FXML
 	private TextField buscarCashGameTF;
@@ -45,22 +45,22 @@ public class cashGameAdmController implements Initializable {
 	@FXML
 	private Label plusButton;
 
-	private InicioAdmController inicioAdmController;
-
 	private Parent parentCashGameAdm;
-
 	private Facade facade;
-
-	public cashGameAdmController(InicioAdmController inicioAdmController, Facade facade) {
+	private TelasController telasController;
+	
+	public CashGameAdmController(TelasController telasController, Facade facade) {
 		super();
-		this.inicioAdmController = inicioAdmController;
+		this.telasController = telasController;
 		this.facade = facade;
 
-		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/br/com/partypoker/view/CashGame.fxml"));
+		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/br/com/partypoker/view/CashGameAdm.fxml"));
 
 		fxmlLoader.setController(this);
 		try {
+			
 			parentCashGameAdm = (Parent) fxmlLoader.load();
+		
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -145,14 +145,6 @@ public class cashGameAdmController implements Initializable {
 		this.plusButton = plusButton;
 	}
 
-	public InicioAdmController getInicioAdmController() {
-		return inicioAdmController;
-	}
-
-	public void setInicioAdmController(InicioAdmController inicioAdmController) {
-		this.inicioAdmController = inicioAdmController;
-	}
-
 	public Parent getParentCashGameAdm() {
 		return parentCashGameAdm;
 	}
@@ -160,7 +152,6 @@ public class cashGameAdmController implements Initializable {
 	public void setParentCashGameAdm(Parent parentCashGameAdm) {
 		this.parentCashGameAdm = parentCashGameAdm;
 	}
-
 
 	public Facade getFacade() {
 		return facade;
