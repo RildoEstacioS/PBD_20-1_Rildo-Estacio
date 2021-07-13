@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="506.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField fx:id="buscarUsuarioTF" layoutX="225.0" layoutY="26.0" minHeight="36.0" minWidth="574.0" prefHeight="48.0" prefWidth="574.0" promptText="Buscar Usuario" styleClass="input" stylesheets="@DarkTheme.css">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <ImageView fx:id="buscarBttn" fitHeight="29.0" fitWidth="28.0" layoutX="764.0" layoutY="36.0" opacity="0.3" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/loupe.png" />
+         </image>
+      </ImageView>
+      <ScrollPane hbarPolicy="NEVER" layoutX="112.0" layoutY="93.0" prefHeight="384.0" prefWidth="800.0" styleClass="input" stylesheets="@DarkTheme.css">
+         <content>
+            <ListView fx:id="listViewUsuario" prefHeight="382.0" prefWidth="800.0" styleClass="input" stylesheets="@DarkTheme.css" />
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

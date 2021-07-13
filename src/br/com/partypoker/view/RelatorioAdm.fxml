@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="506.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ScrollPane hbarPolicy="NEVER" layoutX="112.0" layoutY="25.0" prefHeight="452.0" prefWidth="800.0" styleClass="input">
+         <content>
+            <ListView fx:id="listViewRelatorio" prefHeight="450.0" prefWidth="800.0" />
+         </content>
+      </ScrollPane>
+      <Circle fill="#02112c" layoutX="987.0" layoutY="458.0" radius="23.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label fx:id="plusButton" layoutX="970.0" layoutY="419.0" text="+" textFill="WHITE">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

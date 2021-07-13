@@ -85,42 +85,24 @@ public class InicioAdmController implements Initializable {
 
 			bordePane.setCenter(telasController.torneioAdmController.getParentCashGameAdm());
 		}
-//
-//		if (e.getSource().equals(lugarRapido)) {
-//			lugarRapido.setFont(Font.font(null, FontWeight.BOLD, 28));
-//			cashGames.setFont(Font.font(28));
-//			torneios.setFont(Font.font(28));
-//			favoritos.setFont(Font.font(28));
-//
-//			bordePane.setCenter(telasController.lugarRapidoController.getParentLugarRapido());
-//		}
-//
-//		if (e.getSource().equals(favoritos)) {
-//			favoritos.setFont(Font.font(null, FontWeight.BOLD, 28));
-//			cashGames.setFont(Font.font(28));
-//			torneios.setFont(Font.font(28));
-//			lugarRapido.setFont(Font.font(28));
-//
-//			bordePane.setCenter(telasController.favoritoController.getParentFavorito());
-//		}
-//
-//	}
-//		if (e.getSource().equals(cashGameButton)) {
-//			System.out.println("CashGame admin");
-//
-//		}
-//
-//		if (e.getSource().equals(torneioBttn)) {
-//			System.out.println("TorneioAdm");
-//		}
-//
-//		if (e.getSource().equals(usuarioBttn)) {
-//			System.out.println("Usuario adm");
-//		}
-//
-//		if (e.getSource().equals(relatorioBttn)) {
-//			System.out.println("Relatorio");
-//		}
+
+		if (e.getSource().equals(usuarioBttn)) {
+			usuarioBttn.setFont(Font.font(null, FontWeight.BOLD, 28));
+			torneioBttn.setFont(Font.font(28));
+			cashGameButton.setFont(Font.font(28));
+			relatorioBttn.setFont(Font.font(28));
+
+			bordePane.setCenter(telasController.usuarioAdmController.getParentUsuarioAdm());
+		}
+
+		if (e.getSource().equals(relatorioBttn)) {
+			relatorioBttn.setFont(Font.font(null, FontWeight.BOLD, 28));
+			usuarioBttn.setFont(Font.font(28));
+			torneioBttn.setFont(Font.font(28));
+			cashGameButton.setFont(Font.font(28));
+
+			bordePane.setCenter(telasController.relatorioAdmController.getParentRelatorioAdm());
+		}
 	}
 
 	@Override

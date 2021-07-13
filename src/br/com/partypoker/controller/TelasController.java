@@ -22,6 +22,9 @@ public class TelasController {
 	public InicioAdmController inicioAdmController;
 	public CashGameAdmController cashGameAdmController;
 	public TorneioAdmController torneioAdmController;
+	public UsuarioAdmController usuarioAdmController;
+	public RelatorioAdmController relatorioAdmController;
+	
 	
 	public Facade facade;
 	
@@ -49,8 +52,9 @@ public class TelasController {
 	
 		torneioAdmController = new TorneioAdmController(this, facade);
 		cashGameAdmController = new CashGameAdmController(this, facade); 
-//		this.stageGeral = loginController.getStageLogin();
-		
+		usuarioAdmController = new UsuarioAdmController(this, facade);
+		relatorioAdmController = new RelatorioAdmController(this, facade);
+			
 	}
 	
 	
