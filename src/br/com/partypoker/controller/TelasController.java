@@ -24,7 +24,8 @@ public class TelasController {
 	public TorneioAdmController torneioAdmController;
 	public UsuarioAdmController usuarioAdmController;
 	public RelatorioAdmController relatorioAdmController;
-	
+	public NovoCashGameController novoCashGameController;
+	public NovoTorneioAdmController novoTorneioAdmController;
 	
 	public Facade facade;
 	
@@ -54,7 +55,8 @@ public class TelasController {
 		cashGameAdmController = new CashGameAdmController(this, facade); 
 		usuarioAdmController = new UsuarioAdmController(this, facade);
 		relatorioAdmController = new RelatorioAdmController(this, facade);
-			
+		novoCashGameController = new NovoCashGameController(this, facade);
+		novoTorneioAdmController = new NovoTorneioAdmController(this, facade);
 	}
 	
 	

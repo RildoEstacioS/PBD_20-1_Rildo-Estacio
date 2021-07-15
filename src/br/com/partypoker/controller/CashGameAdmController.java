@@ -5,16 +5,15 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import br.com.partypoker.facade.Facade;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
-import javafx.stage.Stage;
 
 public class CashGameAdmController implements Initializable {
 
@@ -67,6 +66,21 @@ public class CashGameAdmController implements Initializable {
 		}
 	}
 
+	@FXML
+	public void bttnCriarCashGame(Event event) {
+		if (event.getSource().equals(plusButton)) {
+			System.out.println("entrou aqui");
+			telasController.inicioAdmController.getBordePane().setCenter(telasController.novoCashGameController.getParentNovoCashGame());
+			
+		}
+	}
+	
+	@FXML
+	public void buscarCashGame(Event event) {
+		
+	}
+	
+	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub

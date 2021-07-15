@@ -28,7 +28,7 @@
          </content>
       </ScrollPane>
       <Circle fill="#02112c" layoutX="987.0" layoutY="458.0" radius="23.0" stroke="BLACK" strokeType="INSIDE" />
-      <Label fx:id="plusButton" layoutX="970.0" layoutY="419.0" text="+" textFill="WHITE">
+      <Label fx:id="plusButtonNovoTorneio" layoutX="970.0" layoutY="419.0" onMousePressed="#criarNovoTorneio" text="+" textFill="WHITE">
          <font>
             <Font size="50.0" />
          </font>

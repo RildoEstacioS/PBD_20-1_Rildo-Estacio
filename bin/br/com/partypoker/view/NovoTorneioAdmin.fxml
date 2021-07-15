@@ -14,27 +14,27 @@
             <Font name="System Bold" size="32.0" />
          </font>
       </Label>
-      <Button fx:id="entrarBttn" layoutX="421.0" layoutY="435.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="182.0" stylesheets="@DarkTheme.css" text="Salvar">
+      <Button fx:id="salvarBttn" layoutX="421.0" layoutY="435.0" mnemonicParsing="false" onAction="#salvarEventButton" prefHeight="61.0" prefWidth="182.0" stylesheets="@DarkTheme.css" text="Salvar">
          <font>
             <Font name="System Bold" size="32.0" />
          </font>
       </Button>
-      <TextField layoutX="258.0" layoutY="102.0" prefHeight="45.0" prefWidth="511.0" promptText="Título" styleClass="input" stylesheets="@DarkTheme.css">
+      <TextField fx:id="tituloTF" layoutX="258.0" layoutY="102.0" prefHeight="45.0" prefWidth="511.0" promptText="Título" styleClass="input" stylesheets="@DarkTheme.css">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </TextField>
-      <TextField layoutX="257.0" layoutY="166.0" prefHeight="45.0" prefWidth="511.0" promptText="Início" styleClass="input" stylesheets="@DarkTheme.css">
+      <TextField fx:id="inicioTF" layoutX="257.0" layoutY="166.0" prefHeight="45.0" prefWidth="511.0" promptText="Início" styleClass="input" stylesheets="@DarkTheme.css">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </TextField>
-      <TextField layoutX="257.0" layoutY="231.0" prefHeight="45.0" prefWidth="511.0" promptText="Início" styleClass="input" stylesheets="@DarkTheme.css">
+      <TextField fx:id="buyinTF" layoutX="257.0" layoutY="231.0" prefHeight="45.0" prefWidth="511.0" promptText="Buy-in" styleClass="input" stylesheets="@DarkTheme.css">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </TextField>
-      <TextArea layoutX="258.0" layoutY="301.0" prefHeight="122.0" prefWidth="511.0" promptText="Descrição" stylesheets="@DarkTheme.css">
+      <TextArea fx:id="descricaoTA" layoutX="258.0" layoutY="301.0" prefHeight="122.0" prefWidth="511.0" promptText="Descrição" styleClass="input" stylesheets="@DarkTheme.css">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

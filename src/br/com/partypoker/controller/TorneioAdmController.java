@@ -5,6 +5,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import br.com.partypoker.facade.Facade;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -28,7 +29,7 @@ public class TorneioAdmController implements Initializable {
     private ListView<?> listViewTorneio;
 
     @FXML
-    private Label plusButton;
+    private Label plusButtonNovoTorneio;
 	
 	private Parent parentTorneioAdm;
 	private Facade facade;
@@ -52,11 +53,20 @@ public class TorneioAdmController implements Initializable {
 		}
 	}
 
+	@FXML
+	public void criarNovoTorneio(Event event) {
+		if (event.getSource().equals(plusButtonNovoTorneio)) {
+			System.out.println("AQUI");
+			telasController.inicioAdmController.getBordePane().setCenter(telasController.novoTorneioAdmController.getParentNovoTorneio());
+		}
+	}
+
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
 
 	}
+	
 
 	public TextField getBuscarTorneioTF() {
 		return buscarTorneioTF;
@@ -83,11 +93,11 @@ public class TorneioAdmController implements Initializable {
 	}
 
 	public Label getPlusButton() {
-		return plusButton;
+		return plusButtonNovoTorneio;
 	}
 
 	public void setPlusButton(Label plusButton) {
-		this.plusButton = plusButton;
+		this.plusButtonNovoTorneio = plusButton;
 	}
 
 	public Parent getParentCashGameAdm() {

@@ -39,7 +39,6 @@ public class CashGameController implements Initializable {
 
 	private ObservableList<CashGame> observableListMesas;
 
-	private Stage stageCashGame;
 	private Parent parentCashGame;
 
 	private Facade facade;
@@ -73,14 +72,6 @@ public class CashGameController implements Initializable {
 
 	}
 
-	public Stage getStageMesa() {
-		return stageCashGame;
-	}
-
-	public void setStageMesa(Stage stageMesa) {
-		this.stageCashGame = stageMesa;
-	}
-
 	public Parent getParentMesa() {
 		return parentCashGame;
 	}
@@ -101,13 +92,6 @@ public class CashGameController implements Initializable {
 		return listView;
 	}
 
-	public Stage getStageCashGame() {
-		return stageCashGame;
-	}
-
-	public void setStageCashGame(Stage stageCashGame) {
-		this.stageCashGame = stageCashGame;
-	}
 
 	public Parent getParentCashGame() {
 		return parentCashGame;
