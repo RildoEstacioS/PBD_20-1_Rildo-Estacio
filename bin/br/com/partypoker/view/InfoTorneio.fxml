@@ -7,38 +7,33 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="608.0" prefWidth="1024.0" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane minHeight="506.0" prefHeight="506.0" prefWidth="1024.0" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="164.0" layoutY="116.0" stylesheets="@DarkTheme.css" text="NomeDoTorneio" AnchorPane.bottomAnchor="489.0" AnchorPane.leftAnchor="133.0">
+      <Label layoutX="123.0" layoutY="44.0" stylesheets="@DarkTheme.css" text="NomeDoTorneio" AnchorPane.bottomAnchor="415.0" AnchorPane.leftAnchor="123.0">
          <font>
             <Font name="System Bold" size="32.0" />
          </font>
       </Label>
-      <Label layoutX="165.0" layoutY="197.0" text="Descrição" AnchorPane.leftAnchor="133.0" AnchorPane.topAnchor="196.0">
+      <Label layoutX="137.0" layoutY="314.0" text="Descrição:" AnchorPane.leftAnchor="137.0" AnchorPane.topAnchor="314.0">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="133.0" layoutY="239.0" prefHeight="112.0" prefWidth="391.0" text="DescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescrição" wrapText="true" AnchorPane.leftAnchor="133.0" AnchorPane.topAnchor="248.0">
+      <Label fx:id="descricaoTA" layoutX="137.0" layoutY="349.0" prefHeight="112.0" prefWidth="544.0" text="DescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescrição" wrapText="true" AnchorPane.leftAnchor="137.0" AnchorPane.topAnchor="349.0">
          <font>
             <Font size="18.0" />
          </font></Label>
-      <Button fx:id="ParticiparBttn" layoutX="768.0" layoutY="481.0" mnemonicParsing="false" onAction="#participarBttnAction" prefHeight="61.0" prefWidth="192.0" stylesheets="@DarkTheme.css" text="Participar" textFill="#fcfcfc" AnchorPane.bottomAnchor="66.0" AnchorPane.leftAnchor="768.0" AnchorPane.rightAnchor="64.0" AnchorPane.topAnchor="481.0">
+      <Button fx:id="ParticiparBttn" layoutX="781.0" layoutY="372.0" mnemonicParsing="false" onAction="#participarBttnAction" prefHeight="61.0" prefWidth="192.0" stylesheets="@DarkTheme.css" text="Participar" textFill="#fcfcfc" AnchorPane.bottomAnchor="68.0" AnchorPane.leftAnchor="781.0" AnchorPane.rightAnchor="51.0" AnchorPane.topAnchor="372.0">
          <font>
             <Font name="System Bold" size="28.0" />
          </font>
       </Button>
-      <Label layoutX="133.0" layoutY="425.0" text="Premiação" AnchorPane.leftAnchor="133.0" AnchorPane.topAnchor="425.0">
+      <Label layoutX="137.0" layoutY="105.0" text="Premiação:" AnchorPane.leftAnchor="137.0" AnchorPane.topAnchor="105.0">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="133.0" layoutY="481.0" text="R$: 10.000,00" AnchorPane.leftAnchor="133.0" AnchorPane.topAnchor="481.0">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
-      <ImageView fx:id="voltarButton" fitHeight="40.0" fitWidth="40.0" layoutX="42.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="voltarButton" fitHeight="40.0" fitWidth="40.0" layoutX="40.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assets/left-arrow%20(1).png" />
          </image>
@@ -48,5 +43,50 @@
             <Image url="@../assets/close.png" />
          </image>
       </ImageView>
+      <Label fx:id="premioLabel" layoutX="275.0" layoutY="109.0" text="Premio">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="137.0" layoutY="150.0" text="Início:">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="inicioLabel" layoutX="219.0" layoutY="154.0" text="Inicio">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="135.0" layoutY="201.0" text="Buy-in:">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="buyinLabel" layoutX="227.0" layoutY="205.0" text="buy-in">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="136.0" layoutY="253.0" text="Rebuy:">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="rebuy" layoutX="232.0" layoutY="257.0" text="rebuy">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="681.0" layoutY="105.0" text="Nº de jogadores:">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="numeroJogadoresLabel" layoutX="886.0" layoutY="109.0" text="jogadores">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

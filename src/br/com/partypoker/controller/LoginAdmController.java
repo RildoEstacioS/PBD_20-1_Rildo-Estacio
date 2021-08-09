@@ -8,6 +8,7 @@ import br.com.partypoker.App;
 import br.com.partypoker.facade.Facade;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -60,8 +61,21 @@ public class LoginAdmController implements Initializable {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		control();
 	}
 
+	
+	public void control() {
+		closeBttn.setOnMousePressed(new EventHandler<Event>() {
+
+			@Override
+			public void handle(Event arg0) {
+				// TODO Auto-generated method stub
+				System.exit(0);
+			}
+		});
+	}
 
 	@FXML
 	void bttnEntrarAdmEvent(Event event) {

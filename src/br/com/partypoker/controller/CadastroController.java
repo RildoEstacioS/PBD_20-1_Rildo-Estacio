@@ -3,7 +3,6 @@ package br.com.partypoker.controller;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
-import br.com.partypoker.App;
 import br.com.partypoker.exception.BusinessException;
 import br.com.partypoker.facade.Facade;
 import br.com.partypoker.model.Jogador;
@@ -11,6 +10,7 @@ import br.com.partypoker.util.Cripto;
 import br.com.partypoker.util.Util;
 import br.com.partypoker.view.Alerts;
 import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -19,13 +19,15 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
-import javafx.stage.StageStyle;
+import javafx.scene.image.ImageView;
 
 public class CadastroController {
 
     @FXML
     private TextField nomeTF;
+
+    @FXML
+    private TextField cpfTF;
 
     @FXML
     private TextField emailTF;
@@ -35,12 +37,16 @@ public class CadastroController {
 
     @FXML
     private PasswordField confirmarTF;
-    @FXML
-    private TextField cpfTF;
 
     @FXML
     private Button cadastrarButton;
 
+    @FXML
+    private ImageView backButton;
+
+    @FXML
+    private ImageView closeCadastrarButton;
+    
     private TelasController telasController;
     
 	private Parent parentCadastrar;
@@ -63,8 +69,30 @@ public class CadastroController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+        
+        control();
+        
     }
     
+    
+   public void control() {
+	   closeCadastrarButton.setOnMousePressed(new EventHandler<Event>() {
+
+		@Override
+		public void handle(Event arg0) {
+			// TODO Auto-generated method stub
+			System.exit(0);
+		}
+	});
+	   
+	   backButton.setOnMousePressed(new EventHandler<Event>() {
+
+		@Override
+		public void handle(Event arg0) {
+			telasController.stageGeral.setScene(telasController.loginController.getSceneLogin());
+		}
+	});
+   }
 
     public void bttnCadastrarAction(Event e) throws BusinessException {
     	if (e.getSource().equals(cadastrarButton)) {
@@ -186,6 +214,26 @@ public class CadastroController {
 
 	public void setFacade(Facade facade) {
 		this.facade = facade;
+	}
+
+
+	public ImageView getBackButton() {
+		return backButton;
+	}
+
+
+	public void setBackButton(ImageView backButton) {
+		this.backButton = backButton;
+	}
+
+
+	public ImageView getCloseCadastrarButton() {
+		return closeCadastrarButton;
+	}
+
+
+	public void setCloseCadastrarButton(ImageView closeCadastrarButton) {
+		this.closeCadastrarButton = closeCadastrarButton;
 	}
 
 }

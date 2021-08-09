@@ -65,6 +65,12 @@ public class InicioAdmController implements Initializable {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		control();
+	}
+	
+	public void control() {
+		
 	}
 
 	public void mudarPanel(Event e) {

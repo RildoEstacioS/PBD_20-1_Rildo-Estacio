@@ -22,8 +22,7 @@ public class App extends Application{
 		
 		telasController = new TelasController();
 		Application.launch(args);
-		
-		
+
 		
 	}
 }

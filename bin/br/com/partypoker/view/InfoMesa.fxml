@@ -7,19 +7,27 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="608.0" prefWidth="1024.0" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane minHeight="506.0" prefHeight="506.0" prefWidth="1024.0" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label fx:id="nomeMesaLabel" layoutX="109.0" layoutY="73.0" text="LabelNomeDaMesa" AnchorPane.bottomAnchor="488.0" AnchorPane.leftAnchor="109.0">
+      <Label fx:id="tipoDeJogoLabel" layoutX="265.0" layoutY="151.0" text="sasasa">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="nomeMesaLabel" layoutX="101.0" layoutY="73.0" text="LabelNomeDaMesa" AnchorPane.bottomAnchor="386.0" AnchorPane.leftAnchor="101.0">
          <font>
             <Font name="System Bold" size="32.0" />
          </font>
       </Label>
-      <Label layoutX="110.0" layoutY="284.0" text="Descrição" AnchorPane.leftAnchor="110.0" AnchorPane.topAnchor="284.0">
+      <Label layoutX="110.0" layoutY="306.0" text="Descrição:" AnchorPane.leftAnchor="110.0" AnchorPane.topAnchor="306.0">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Label fx:id="descricaoTA" layoutX="109.0" layoutY="341.0" prefHeight="112.0" prefWidth="391.0" text="DescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescrição" wrapText="true" AnchorPane.leftAnchor="109.0" AnchorPane.topAnchor="341.0" />
+      <Label fx:id="descricaoTA" layoutX="109.0" layoutY="341.0" prefHeight="112.0" prefWidth="576.0" text="DescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescriçãoDescrição" wrapText="true" AnchorPane.leftAnchor="109.0" AnchorPane.topAnchor="341.0">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
       <Button fx:id="participarBttn" layoutX="787.0" layoutY="453.0" mnemonicParsing="false" onAction="#participarEventButton" prefHeight="61.0" prefWidth="192.0" stylesheets="@DarkTheme.css" text="Participar" textFill="#fcfcfc" AnchorPane.bottomAnchor="94.0" AnchorPane.leftAnchor="787.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="453.0">
          <font>
             <Font name="System Bold" size="28.0" />
@@ -30,10 +38,50 @@
             <Image url="@../assets/left-arrow%20(1).png" />
          </image>
       </ImageView>
-      <ImageView fx:id="closeButton" fitHeight="34.0" fitWidth="26.0" layoutX="987.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="closeButton" fitHeight="34.0" fitWidth="26.0" layoutX="987.0" layoutY="14.0" onMousePressed="#fecharEvent" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assets/close.png" />
          </image>
       </ImageView>
+      <Label layoutX="109.0" layoutY="147.0" text="Tipo de jogo:">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="110.0" layoutY="199.0" text="Buy-in:">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="111.0" layoutY="253.0" text="Rebuy:">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="buyinLabel" layoutX="208.0" layoutY="203.0" text="sasasa">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="rebuyLabel" layoutX="214.0" layoutY="257.0" text="sasasa">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="buyinLabel1" layoutX="747.0" layoutY="147.0" text="Nº Jogadores:">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="numeroJogadoresLabel" layoutX="747.0" layoutY="186.0" text="sasasa">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="ParticiparBttn" layoutX="787.0" layoutY="397.0" mnemonicParsing="false" onAction="#participarBttnAction" prefHeight="61.0" prefWidth="192.0" stylesheets="@DarkTheme.css" text="Participar" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
